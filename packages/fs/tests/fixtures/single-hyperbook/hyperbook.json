@@ -1,0 +1,37 @@
+{
+  "name": "rrennAIbook Documentation",
+  "description": "Documentation for rrennAIbook created with rrennAIbook",
+  "author": {
+    "name": "OpenPatch",
+    "url": "https://openpatch.org"
+  },
+  "links": [
+    {
+      "label": "Contact",
+      "links": [
+        {
+          "label": "Mail",
+          "icon": "📧",
+          "href": "mailto:contact@openpatch.org"
+        },
+        {
+          "label": "Twitter",
+          "icon": "🐦",
+          "href": "https://twitter.com/openpatchorg"
+        },
+        {
+          "label": "Mastodon",
+          "icon": "🐘",
+          "href": "https://fosstodon.org/@openpatch"
+        },
+        {
+          "label": "Matrix (Chat)",
+          "icon": "👨‍💻",
+          "href": "https://matrix.to/#/#rrennAIbook:matrix.org"
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "repo": "https://github.com/openpatch/rrennAIbook/edit/main/website/en"
+}

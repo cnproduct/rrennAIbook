@@ -1,0 +1,131 @@
+.directive-pyide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 8px;
+}
+
+.directive-pyide code-input {
+  margin: 0;
+}
+
+.directive-pyide .container {
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.directive-pyide .output,
+.directive-pyide .input {
+  white-space: pre;
+  height: 100%;
+  border: 1px solid var(--color-spacer);
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.directive-pyide .output {
+  padding: 16px;
+  margin-bottom: 0px;
+  font-family: rrennAIbook-monospace, monospace;
+}
+
+.directive-pyide .hidden {
+  display: none;
+}
+
+.directive-pyide .editor-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.directive-pyide .editor {
+  width: 100%;
+  border: 1px solid var(--color-spacer);
+  flex: 1;
+}
+
+.directive-pyide .buttons {
+  display: flex;
+  border: 1px solid var(--color-spacer);
+  border-radius: 8px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.directive-pyide .buttons.bottom {
+  border: 1px solid var(--color-spacer);
+  border-radius: 8px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.directive-pyide .test-heading {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 8px;
+}
+
+.directive-pyide .test-heading:first-of-type {
+  margin-top: 0;
+}
+
+.directive-pyide button {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-right: 1px solid var(--color-spacer);
+  background-color: var(--color--background);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.directive-pyide .buttons:last-child {
+  border-right: none;
+}
+
+.directive-pyide button.active {
+  background-color: var(--color-spacer);
+}
+
+.directive-pyide button:hover {
+  background-color: var(--color-spacer);
+}
+
+.directive-pyide button.running {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1024px) {
+  .directive-pyide {
+    flex-direction: row;
+    height: calc(100dvh - 128px);
+
+    .output {
+      height: 100%;
+    }
+
+    .container {
+      flex: 1;
+      height: 100% !important;
+    }
+
+    .editor-container {
+      flex: 3;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "Element Alert": {
+    "prefix": [":alert"],
+    "body": [
+      ":::alert{${1|info,success,error,warn|}}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element Download": {
+    "prefix": [":download"],
+    "body": ["::download[${2:title}]{src=\"$1\"}", "$0"]
+  },
+  "Element H5P": {
+    "prefix": [":h5p"],
+    "body": ["::h5p{src=\"$1\"}", "$0"]
+  },
+  "Element Archive": {
+    "prefix": [":archive"],
+    "body": ["::archive[${2:title}]{name=\"$1\"}", "$0"]
+  },
+  "Element Bookmarks": {
+    "prefix": [":bookmarks"],
+    "body": ["::bookmarks", "", "$0"]
+  },
+  "Element Collapsible": {
+    "prefix": [":collapsible"],
+    "body": [
+      ":::collapsible{title=\"${1:title}\" id=\"${2:$RANDOM}\"}",
+      "",
+      "$TM_SELECTED_TEXT",
+      "$0",
+      ":::"
+    ]
+  },
+  "Element Excalidraw": {
+    "prefix": [":excalidraw"],
+    "body": [
+      "::excalidraw{src=\"$1\" aspectRatio=\"${2:16/9}\" autoZoom=${3:true} center=${4:true} edit=${5:false}}",
+      "",
+      "$0"
+    ]
+  },
+  "Element Glossary": {
+    "prefix": [":t", ":term"],
+    "body": [":t[$2]{#${1:id}}$0"]
+  },
+  "Element Mermaid": {
+    "prefix": [":mermaid"],
+    "body": [":::mermaid", "$0", ":::"]
+  },
+  "Element Protect": {
+    "prefix": [":protect"],
+    "body": [
+      ":::protect{password=\"${1:password}\" description=\"${2:description}\"}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element QR": {
+    "prefix": [":qr"],
+    "body": [
+      "::qr{value=\"$CLIPBOARD\" size=\"${2|S,M,L,XL}\" label=\"$3\"}",
+      "$0"
+    ]
+  },
+  "Element Struktog": {
+    "prefix": [":struktog"],
+    "body": ["::struktog{data=\"$CLIPBOARD\"}", "$0"]
+  },
+  "Element Tabs": {
+    "prefix": [":tabs"],
+    "body": [
+      "::::tabs{id=\"$RANDOM\"}",
+      "",
+      ":::tab{title=\"${1:Tab 1}\" id=\"$RANDOM\"}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::",
+      "",
+      "::::"
+    ]
+  },
+  "Element Tab": {
+    "prefix": [":tab"],
+    "body": [
+      ":::tab{title=\"${1:title}\" id=\"$RANDOM\"}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element Tiles": {
+    "prefix": [":tiles"],
+    "body": [
+      ":::tiles",
+      "",
+      "::tile{title=\"${1:Tab 1}\" href=\"$RANDOM\"}",
+      "",
+      "$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element YouTube": {
+    "prefix": [":youtube"],
+    "body": ["::youtube[${1:title}]{#$CLIPBOARD}", "$0"]
+  },
+  "Element Embed": {
+    "prefix": [":embed"],
+    "body": ["::embed{src=\"#$CLIPBOARD\"}", "$0"]
+  },
+  "Element Online-IDE": {
+    "prefix": [":onlineide"],
+    "body": [
+      ":::onlineide{id=\"$RANDOM\"}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element SQL-IDE": {
+    "prefix": [":sqlide"],
+    "body": [
+      ":::onlineide{id=\"$RANDOM\"}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element PlantUML": {
+    "prefix": [":plantuml"],
+    "body": [":::plantuml", "", "$TM_SELECTED_TEXT$0", "", ":::"]
+  },
+  "Element Slideshow": {
+    "prefix": [":slideshow"],
+    "body": [":::slideshow{height=300}", "", "$TM_SELECTED_TEXT$0", "", ":::"]
+  },
+  "Element Audio": {
+    "prefix": [":audio"],
+    "body": ["::audio{src=\"$1\"}", "$0"]
+  },
+  "Element Video": {
+    "prefix": [":video"],
+    "body": ["::video{src=\"$1\"}", "$0"]
+  },
+  "Element Pagelist": {
+    "prefix": [":pagelist"],
+    "body": ["::pagelist{source=\"$1\"}", "$0"]
+  },
+  "Element P5": {
+    "prefix": [":p5"],
+    "body": [
+      ":::p5{height=400}",
+      "",
+      "```javascript",
+      "$TM_SELECTED_TEXT$0",
+      "```",
+      "",
+      ":::"
+    ]
+  },
+  "Element Multievent": {
+    "prefix": [":multievent"],
+    "body": [
+      ":::multievent",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element ABC Music": {
+    "prefix": [":abc", ":abcjs"],
+    "body": [
+      "```abcjs",
+      "X: 1",
+      "T: ${1:Title}",
+      "M: 4/4",
+      "L: 1/8",
+      "K: ${2:Emin}",
+      "$TM_SELECTED_TEXT$0",
+      "```"
+    ]
+  },
+  "Element ABC Music Editor": {
+    "prefix": [":abc-editor", ":abcjs-editor"],
+    "body": [
+      "```abcjs editor",
+      "X: 1",
+      "T: ${1:Title}",
+      "M: 4/4",
+      "L: 1/8",
+      "K: ${2:Emin}",
+      "$TM_SELECTED_TEXT$0",
+      "```"
+    ]
+  },
+  "Element GeoGebra": {
+    "prefix": [":geogebra"],
+    "body": [
+      ":::geogebra{perspective=\"${1:G}\" height=${2:400} width=${3:700}}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element GeoGebra Inline": {
+    "prefix": [":geogebra-inline"],
+    "body": [
+      "::geogebra{src=\"${1:https://www.geogebra.org/m/}\"}"
+    ]
+  },
+  "Element JSXGraph": {
+    "prefix": [":jsxgraph"],
+    "body": [
+      ":::jsxgraph{height=\"${1:500}\" width=\"${2:600}\" boundingbox=\"${3:[-10,10,10,-10]}\"}",
+      "",
+      "```js",
+      "$TM_SELECTED_TEXT$0",
+      "```",
+      "",
+      ":::"
+    ]
+  },
+  "Element Learningmap": {
+    "prefix": [":learningmap"],
+    "body": [
+      "::learningmap{id=\"${1:$RANDOM}\" height=\"${2:600px}\" src=\"${3:map.learningmap}\"}"
+    ]
+  },
+  "Element Textinput": {
+    "prefix": [":textinput"],
+    "body": [
+      "::textinput{placeholder=\"${1:Enter text here}\" height=\"${2:200px}\" id=\"${3:$RANDOM}\"}"
+    ]
+  },
+  "Element Webide": {
+    "prefix": [":webide"],
+    "body": [
+      ":::webide{height=${1:500}}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element Snippet": {
+    "prefix": [":snippet", ":Snippet"],
+    "body": [
+      ":::Snippet{#${1:snippet-name}}",
+      "",
+      "$TM_SELECTED_TEXT$0",
+      "",
+      ":::"
+    ]
+  },
+  "Element Snippet Inline": {
+    "prefix": [":snippet-inline"],
+    "body": [
+      ":Snippet{#${1:snippet-name}}"
+    ]
+  }
+}

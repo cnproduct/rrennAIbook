@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`remarkDirectiveSqlIde > should transform 1`] = `
+"
+<div class="directive-sqlide">
+  <div class="sql-online" style="height: 500; padding: 0; margin: 0;" data-sql-online="{'id': 'b7737fd581ffacd2dd802ad79b5c2f004f8c96ecd9eb8ba32e91cef31e3c5af8', &#x22;databaseURL&#x22;: &#x22;https://embed.learn-sql.de/include/assets/databases/world1.sqLite&#x22;}">
+    <script type="text/plain" title="Statements.sql" data-type="sql">
+SELECT * from fluss;
+</script>
+    <script type="text/plain" title="A Hint" data-type="hint">
+Do this
+</script>
+  </div>
+  <div class="menu"><button onclick="rrennAIbook.sqlide.openFullscreen(this)">Fullscreen</button></div>
+</div>
+"
+`;

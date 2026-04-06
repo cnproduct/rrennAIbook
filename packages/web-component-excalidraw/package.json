@@ -1,0 +1,47 @@
+{
+  "name": "@rrennAIbook/web-component-excalidraw",
+  "version": "0.3.3",
+  "author": "Mike Barkmin",
+  "homepage": "https://github.com/openpatch/rrennAIbook#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openpatch/rrennAIbook.git",
+    "directory": "packages/web-component-excalidraw"
+  },
+  "bugs": {
+    "url": "https://github.com/openpatch/rrennAIbook/issues"
+  },
+  "scripts": {
+    "version": "pnpm build",
+    "lint": "tsc --noEmit",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "0.18.0",
+    "@r2wc/react-to-web-component": "^2.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.1"
+  }
+}

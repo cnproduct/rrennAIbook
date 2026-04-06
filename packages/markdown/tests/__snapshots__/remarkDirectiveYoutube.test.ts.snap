@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`remarkDirectiveYoutube > should render 1`] = `
+"
+<div class="directive-youtube" id="video-LXb3EKWsInQ">
+  <div class="consent">
+    <div class="consent-banner">
+      <p class="consent-banner-text">consent-youtube-text</p>
+      <p class="consent-banner-text">consent-youtube-nocookie</p><label class="consent-always-label"><input type="checkbox" class="consent-always-checkbox">consent-youtube-always</label><button class="consent-accept-btn">consent-youtube-accept</button>
+    </div>
+    <iframe class="player" data-consent-src="https://www.youtube-nocookie.com/embed/LXb3EKWsInQ" frameborder="0" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+  </div>
+</div>
+"
+`;

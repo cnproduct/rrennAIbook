@@ -1,0 +1,36 @@
+{
+  "name": "@rrennAIbook/types",
+  "version": "0.23.0",
+  "author": "Mike Barkmin",
+  "homepage": "https://github.com/openpatch/rrennAIbook#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openpatch/rrennAIbook.git",
+    "directory": "packages/types"
+  },
+  "bugs": {
+    "url": "https://github.com/openpatch/rrennAIbook/issues"
+  },
+  "scripts": {
+    "version": "pnpm build",
+    "lint": "tsc --noEmit",
+    "build": "rimraf dist && pnpm build:pkg && pnpm build:types",
+    "build:pkg": "node ../../scripts/build.mjs",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,371 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Language": {
+            "enum": [
+                "de",
+                "en",
+                "es",
+                "fr",
+                "it",
+                "nl",
+                "pt"
+            ],
+            "type": "string"
+        },
+        "Link": {
+            "anyOf": [
+                {
+                    "properties": {
+                        "href": {
+                            "type": "string"
+                        },
+                        "icon": {
+                            "type": "string"
+                        },
+                        "label": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "href",
+                        "label"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "properties": {
+                        "icon": {
+                            "type": "string"
+                        },
+                        "label": {
+                            "type": "string"
+                        },
+                        "links": {
+                            "items": {
+                                "$ref": "#/definitions/Link"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "required": [
+                        "label",
+                        "links"
+                    ],
+                    "type": "object"
+                }
+            ]
+        }
+    },
+    "properties": {
+        "allowDangerousHtml": {
+            "type": "boolean"
+        },
+        "author": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "basePath": {
+            "type": "string"
+        },
+        "breadcrumb": {
+            "anyOf": [
+                {
+                    "properties": {
+                        "home": {
+                            "type": "string"
+                        },
+                        "separator": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "cloud": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "url"
+            ],
+            "type": "object"
+        },
+        "colors": {
+            "properties": {
+                "brand": {
+                    "format": "color-hex",
+                    "type": "string"
+                },
+                "brandDark": {
+                    "format": "color-hex",
+                    "type": "string"
+                },
+                "brandText": {
+                    "format": "color-hex",
+                    "type": "string"
+                },
+                "inverted": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "description": {
+            "type": "string"
+        },
+        "elements": {
+            "properties": {
+                "bookmarks": {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "const": false,
+                            "type": "boolean"
+                        }
+                    ]
+                },
+                "code": {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "bypassInline": {
+                                    "type": "boolean"
+                                },
+                                "showLineNumbers": {
+                                    "type": "boolean"
+                                },
+                                "theme": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "dark": {
+                                                    "type": "string"
+                                                },
+                                                "light": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "dark",
+                                                "light"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                "excalidraw": {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "aspectRatio": {
+                                    "type": "string"
+                                },
+                                "autoZoom": {
+                                    "type": "boolean"
+                                },
+                                "center": {
+                                    "type": "boolean"
+                                },
+                                "edit": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                "onlineide": {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "height": {
+                                    "type": [
+                                        "string",
+                                        "number"
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                },
+                "sqlide": {
+                    "allOf": [
+                        {
+                            "properties": {
+                                "version": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "db": {
+                                    "type": "string"
+                                },
+                                "height": {
+                                    "type": [
+                                        "string",
+                                        "number"
+                                    ]
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "font": {
+            "type": "string"
+        },
+        "fonts": {
+            "properties": {
+                "body": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "heading": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "importExport": {
+            "type": "boolean"
+        },
+        "language": {
+            "$ref": "#/definitions/Language"
+        },
+        "license": {
+            "type": "string"
+        },
+        "links": {
+            "items": {
+                "$ref": "#/definitions/Link"
+            },
+            "type": "array"
+        },
+        "llms": {
+            "type": "boolean"
+        },
+        "logo": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "qrcode": {
+            "type": "boolean"
+        },
+        "repo": {
+            "anyOf": [
+                {
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "label",
+                        "url"
+                    ],
+                    "type": "object"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "scripts": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "search": {
+            "type": "boolean"
+        },
+        "styles": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "toc": {
+            "type": "boolean"
+        },
+        "trailingSlash": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
+}
+

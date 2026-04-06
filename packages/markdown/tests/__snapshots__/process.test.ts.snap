@@ -1,0 +1,615 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`process > should add showLineNumbers 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Markdown Referenz - rrennAIbook Dokumenation</title><meta property="og:title" value="Markdown Referenz - rrennAIbook Dokumenation"><meta name="description" content="Dokumentation für rrennAIbook erstellt mit rrennAIbook"><meta property="og:description" content="Dokumentation für rrennAIbook erstellt mit rrennAIbook"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png"><link rel="manifest" href="assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="assets/dark-mode-toggle.js"></script><script src="assets/i18n.js" defer></script><script src="assets/dexie.min.js" defer></script><script src="assets/dexie-export-import.js" defer></script><script src="assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="assets/prism/prism.js" defer></script><script src="assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="assets/prism/prism.css"><link rel="stylesheet" href="assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="assets/math/katex.min.css"><link rel="stylesheet" href="assets/shell.css"><link rel="stylesheet" href="assets/content.css"><link rel="stylesheet" href="assets/code.css"><script>
+rrennAIbook_ASSETS = "assets/"
+
+</script><script type="module" src="assets/side-drawer.js" async></script><script src="assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul><li><a class="page" href="/">Los Gehts</a></li></ul><details data-id="_nav:/configuration" class="section  empty"><summary class="name"><span class="label">Konfiguration</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/configuration/book">Buch Konfiguration</a></li><li><a class="page" href="/configuration/page">Seiten Konfiguration</a></li><li><a class="page" href="/configuration/section">Bereich Konfiguration</a></li><li><a class="page" href="/configuration/library">Bibliothek Konfiguration</a></li></ul></div></details><details data-id="_nav:/markdown" class="section active empty" open><summary class="name"><span class="label">Markdown Referenz</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/markdown/image">Bild</a></li><li><a class="page" href="/markdown/emphasis">Hervorhebung</a></li><li><a class="page" href="/markdown/hr">Horizontale Linie</a></li><li><a class="page" href="/markdown/comment">Kommentar</a></li><li><a class="page" href="/markdown/link">Link</a></li><li><a class="page" href="/markdown/list">Liste</a></li><li><a class="page" href="/markdown/code">Quelltext</a></li><li><a class="page" href="/markdown/table">Tabelle</a></li><li><a class="page" href="/markdown/line-break">Zeilenumbruch</a></li><li><a class="page" href="/markdown/quote">Zitat</a></li><li><a class="page" href="/markdown/header">Überschriften</a></li></ul></div></details><details data-id="_nav:/elements" class="section  empty"><summary class="name"><span class="label">Elemente</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/elements/archive">Archiv</a></li><li><a class="page" href="/elements/audio">Audio</a></li><li><a class="page" href="/elements/bitflow">Bitflow</a></li><li><a class="page" href="/elements/download">Download</a></li><li><a class="page" href="/elements/embed">Embed</a></li><li><a class="page" href="/elements/emoji">Emoji</a></li><li><a class="page" href="/elements/excalidraw">Excalidraw</a></li><li><a class="page" href="/elements/protect">Geschützer Bereich</a></li><li><a class="page" href="/elements/glossary">Glossar</a></li><li><a class="page" href="/elements/alert">Hinweise</a></li><li><a class="page" href="/elements/tiles">Kacheln</a></li><li><a class="page" href="/elements/collapsible">Klappkasten</a></li><li><a class="page" href="/elements/bookmarks">Lesezeichen</a></li><li><a class="page" href="/elements/math">Mathmathik</a></li><li><a class="page" href="/elements/mermaid">Mermaid</a></li><li><a class="page" href="/elements/online-ide">Online IDE</a></li><li><a class="page" href="/elements/plantuml">PlantUML</a></li><li><a class="page" href="/elements/qr">QR Code</a></li><li><a class="page" href="/elements/tabs">Reiter</a></li><li><a class="page" href="/elements/sql-ide">SQL IDE</a></li><li><a class="page" href="/elements/scratchblock">Scratchblöcke</a></li><li><a class="page" href="/elements/slideshow">Slideshow</a></li><li><a class="page" href="/elements/snippets">Snippets</a></li><li><a class="page" href="/elements/struktog">Struktog</a></li><li><a class="page" href="/elements/video">Video</a></li><li><a class="page" href="/elements/youtube">YouTube</a></li></ul></div></details><details data-id="_nav:/advanced" class="section  empty"><summary class="name"><span class="label">Fortgeschrittene Features</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/advanced/single-use-templates">Einweg Vorlagen</a></li><li><a class="page" href="/advanced/templates">Vorlagen</a></li></ul></div></details><details data-id="_nav:/hosting" class="section  empty"><summary class="name"><span class="label">Hosting</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/hosting/edugitpages">EduGit Pages</a></li><li><a class="page" href="/hosting/custom">Eigene Lösung</a></li><li><a class="page" href="/hosting/ghpages">GitHub Pages</a></li><li><a class="page" href="/hosting/glpages">GitLab Pages</a></li><li><a class="page" href="/hosting/vercel">Vercel</a></li></ul></div></details></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/"><div class="name">rrennAIbook Dokumenation</div></a><div id="custom-links-header" class="custom-links-menu"><ul class="links-menu"><li class="links-item sub"><a href="#"><div class="icon">🐦</div><div class="label">Kontakt</div></a><ul class="links-sub-menu"><li class="links-item"><a href="mailto:contact@openpatch.org"><div class="label">Mail</div></a></li><li class="links-item"><a href="https://twitter.com/openpatchorg"><div class="icon">🐦</div><div class="label">Twitter</div></a></li><li class="links-item"><a href="https://fosstodon.org/@openpatch"><div class="icon">🐘</div><div class="label">Mastodon</div></a></li><li class="links-item"><a href="https://matrix.to/#/#rrennAIbook:matrix.org"><div class="icon">👨‍💻</div><div class="label">Matrix (Chat)</div></a></li></ul></li></ul></div><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul><li><a class="page" href="/">Los Gehts</a></li></ul><details data-id="_nav:/configuration" class="section  empty"><summary class="name"><span class="label">Konfiguration</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/configuration/book">Buch Konfiguration</a></li><li><a class="page" href="/configuration/page">Seiten Konfiguration</a></li><li><a class="page" href="/configuration/section">Bereich Konfiguration</a></li><li><a class="page" href="/configuration/library">Bibliothek Konfiguration</a></li></ul></div></details><details data-id="_nav:/markdown" class="section active empty" open><summary class="name"><span class="label">Markdown Referenz</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/markdown/image">Bild</a></li><li><a class="page" href="/markdown/emphasis">Hervorhebung</a></li><li><a class="page" href="/markdown/hr">Horizontale Linie</a></li><li><a class="page" href="/markdown/comment">Kommentar</a></li><li><a class="page" href="/markdown/link">Link</a></li><li><a class="page" href="/markdown/list">Liste</a></li><li><a class="page" href="/markdown/code">Quelltext</a></li><li><a class="page" href="/markdown/table">Tabelle</a></li><li><a class="page" href="/markdown/line-break">Zeilenumbruch</a></li><li><a class="page" href="/markdown/quote">Zitat</a></li><li><a class="page" href="/markdown/header">Überschriften</a></li></ul></div></details><details data-id="_nav:/elements" class="section  empty"><summary class="name"><span class="label">Elemente</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/elements/archive">Archiv</a></li><li><a class="page" href="/elements/audio">Audio</a></li><li><a class="page" href="/elements/bitflow">Bitflow</a></li><li><a class="page" href="/elements/download">Download</a></li><li><a class="page" href="/elements/embed">Embed</a></li><li><a class="page" href="/elements/emoji">Emoji</a></li><li><a class="page" href="/elements/excalidraw">Excalidraw</a></li><li><a class="page" href="/elements/protect">Geschützer Bereich</a></li><li><a class="page" href="/elements/glossary">Glossar</a></li><li><a class="page" href="/elements/alert">Hinweise</a></li><li><a class="page" href="/elements/tiles">Kacheln</a></li><li><a class="page" href="/elements/collapsible">Klappkasten</a></li><li><a class="page" href="/elements/bookmarks">Lesezeichen</a></li><li><a class="page" href="/elements/math">Mathmathik</a></li><li><a class="page" href="/elements/mermaid">Mermaid</a></li><li><a class="page" href="/elements/online-ide">Online IDE</a></li><li><a class="page" href="/elements/plantuml">PlantUML</a></li><li><a class="page" href="/elements/qr">QR Code</a></li><li><a class="page" href="/elements/tabs">Reiter</a></li><li><a class="page" href="/elements/sql-ide">SQL IDE</a></li><li><a class="page" href="/elements/scratchblock">Scratchblöcke</a></li><li><a class="page" href="/elements/slideshow">Slideshow</a></li><li><a class="page" href="/elements/snippets">Snippets</a></li><li><a class="page" href="/elements/struktog">Struktog</a></li><li><a class="page" href="/elements/video">Video</a></li><li><a class="page" href="/elements/youtube">YouTube</a></li></ul></div></details><details data-id="_nav:/advanced" class="section  empty"><summary class="name"><span class="label">Fortgeschrittene Features</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/advanced/single-use-templates">Einweg Vorlagen</a></li><li><a class="page" href="/advanced/templates">Vorlagen</a></li></ul></div></details><details data-id="_nav:/hosting" class="section  empty"><summary class="name"><span class="label">Hosting</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/hosting/edugitpages">EduGit Pages</a></li><li><a class="page" href="/hosting/custom">Eigene Lösung</a></li><li><a class="page" href="/hosting/ghpages">GitHub Pages</a></li><li><a class="page" href="/hosting/glpages">GitLab Pages</a></li><li><a class="page" href="/hosting/vercel">Vercel</a></li></ul></div></details></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <figure data-rehype-pretty-code-figure="">
+    <figcaption data-rehype-pretty-code-title="" data-language="python" data-theme="github-dark github-light">my.py</figcaption>
+    <pre style="--shiki-dark:#e1e4e8;--shiki-light:#24292e;--shiki-dark-bg:#24292e;--shiki-light-bg:#fff" tabindex="0" data-language="python" data-theme="github-dark github-light"><code data-line-numbers="" data-language="python" data-theme="github-dark github-light" style="display: grid;" data-line-numbers-max-digits="1"><span data-line="" data-highlighted-line=""><span style="--shiki-dark:#F97583;--shiki-light:#D73A49">def</span><span style="--shiki-dark:#B392F0;--shiki-light:#6F42C1"> func</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E">():</span></span>
+<span data-line=""><span style="--shiki-dark:#F97583;--shiki-light:#D73A49">  pass</span></span><button type="button" data="def func():
+  pass" title="Copy code" aria-label="Copy code" class="rehype-pretty-copy" data-name="rehype-pretty-copy-button" onclick="navigator.clipboard.writeText(this.attributes.data.value);this.classList.add('rehype-pretty-copied');window.setTimeout(() => this.classList.remove('rehype-pretty-copied'), 3000);"><span class="ready"></span><span class="success"></span></button><style>:root {--copy-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23adadad' d='M16.187 9.5H12.25a1.75 1.75 0 0 0-1.75 1.75v28.5c0 .967.784 1.75 1.75 1.75h23.5a1.75 1.75 0 0 0 1.75-1.75v-28.5a1.75 1.75 0 0 0-1.75-1.75h-3.937a4.25 4.25 0 0 1-4.063 3h-7.5a4.25 4.25 0 0 1-4.063-3M31.813 7h3.937A4.25 4.25 0 0 1 40 11.25v28.5A4.25 4.25 0 0 1 35.75 44h-23.5A4.25 4.25 0 0 1 8 39.75v-28.5A4.25 4.25 0 0 1 12.25 7h3.937a4.25 4.25 0 0 1 4.063-3h7.5a4.25 4.25 0 0 1 4.063 3M18.5 8.25c0 .966.784 1.75 1.75 1.75h7.5a1.75 1.75 0 1 0 0-3.5h-7.5a1.75 1.75 0 0 0-1.75 1.75'/%3E%3C/svg%3E");--success-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2366ff85' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E");}pre:has(code) {position: relative;}button[data='<span>'] {width: 0;height: 0;display: none;visibility: hidden;}pre button.rehype-pretty-copy {right: 1px;padding: 0;width: 24px;height: 24px;display: flex;margin-top: 2px;margin-right: 8px;position: absolute;border-radius: 25%;& span {width: 100%;aspect-ratio: 1 / 1;}& .ready {background-image: var(--copy-icon);}& .success {display: none; background-image: var(--success-icon);}}&.rehype-pretty-copied {& .success {display: block;} & .ready {display: none;}}pre button.rehype-pretty-copy.rehype-pretty-copied {opacity: 1;& .ready { display: none; }& .success { display: block; }}</style></code></pre>
+  </figure>
+</div>
+<dialog id="share-dialog">
+  <div class="container">
+    <h2 class="title">Create Shareable URL</h2><label class="standalone-option"><input type="checkbox" id="share-standalone-checkbox" onchange="rrennAIbook.share.updatePreview()"> Standalone Mode</label>
+    <h3 class="sections-title">Select Sections</h3>
+    <div class="sections-list"></div>
+    <div class="url-preview" id="share-url-preview"></div><button class="copy-button" onclick="rrennAIbook.share.copyUrl()">Copy Shareable URL</button>
+  </div><button class="close" onclick="rrennAIbook.share.close()"><div class="close-icon"></div></button>
+</dialog>
+</article><div class="jump-container"><a class="jump previous" href="/configuration/library">Bibliothek Konfiguration</a><a class="jump next" href="/markdown/image">Bild</a></div><div class="meta"><a class="edit-github" href="https://github.com/openpatch/rrennAIbook/edit/main/website/de/book/markdown/index.md">✎ GitHub</a><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026 by <a href="https://openpatch.org">OpenPatch</a></span></div><div id="custom-links-footer"><ul class="links-item sub"><li><a href="#"><div class="icon">🐦</div><div class="label">Kontakt</div></a><ul class="links-sub-menu"><li class="links-item"><a href="mailto:contact@openpatch.org"><div class="label">Mail</div></a></li><li class="links-item"><a href="https://twitter.com/openpatchorg"><div class="icon">🐦</div><div class="label">Twitter</div></a></li><li class="links-item"><a href="https://fosstodon.org/@openpatch"><div class="icon">🐘</div><div class="label">Mastodon</div></a></li><li class="links-item"><a href="https://matrix.to/#/#rrennAIbook:matrix.org"><div class="icon">👨‍💻</div><div class="label">Matrix (Chat)</div></a></li></ul></li></ul></div></main></div><script src="assets/bootstrap.js" defer></script><script src="assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should hide copy button for block code 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <figure data-rehype-pretty-code-figure="">
+    <pre style="--shiki-dark:#e1e4e8;--shiki-light:#24292e;--shiki-dark-bg:#24292e;--shiki-light-bg:#fff" tabindex="0" data-language="js" data-theme="github-dark github-light"><code data-language="js" data-theme="github-dark github-light" style="display: grid;"><span data-line=""><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E">hide </span><span style="--shiki-dark:#79B8FF;--shiki-light:#005CC5">this</span><span style="--shiki-dark:#E1E4E8;--shiki-light:#24292E"> block code</span></span><button type="button" data="hide this block code" title="Copy code" aria-label="Copy code" class="rehype-pretty-copy" data-name="rehype-pretty-copy-button" onclick="navigator.clipboard.writeText(this.attributes.data.value);this.classList.add('rehype-pretty-copied');window.setTimeout(() => this.classList.remove('rehype-pretty-copied'), 3000);"><span class="ready"></span><span class="success"></span></button><style>:root {--copy-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23adadad' d='M16.187 9.5H12.25a1.75 1.75 0 0 0-1.75 1.75v28.5c0 .967.784 1.75 1.75 1.75h23.5a1.75 1.75 0 0 0 1.75-1.75v-28.5a1.75 1.75 0 0 0-1.75-1.75h-3.937a4.25 4.25 0 0 1-4.063 3h-7.5a4.25 4.25 0 0 1-4.063-3M31.813 7h3.937A4.25 4.25 0 0 1 40 11.25v28.5A4.25 4.25 0 0 1 35.75 44h-23.5A4.25 4.25 0 0 1 8 39.75v-28.5A4.25 4.25 0 0 1 12.25 7h3.937a4.25 4.25 0 0 1 4.063-3h7.5a4.25 4.25 0 0 1 4.063 3M18.5 8.25c0 .966.784 1.75 1.75 1.75h7.5a1.75 1.75 0 1 0 0-3.5h-7.5a1.75 1.75 0 0 0-1.75 1.75'/%3E%3C/svg%3E");--success-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2366ff85' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E");}pre:has(code) {position: relative;}button[data='<span>'] {width: 0;height: 0;display: none;visibility: hidden;}pre button.rehype-pretty-copy {right: 1px;padding: 0;width: 24px;height: 24px;display: flex;margin-top: 2px;margin-right: 8px;position: absolute;border-radius: 25%;& span {width: 100%;aspect-ratio: 1 / 1;}& .ready {background-image: var(--copy-icon);}& .success {display: none; background-image: var(--success-icon);}}&.rehype-pretty-copied {& .success {display: block;} & .ready {display: none;}}pre button.rehype-pretty-copy.rehype-pretty-copied {opacity: 1;& .ready { display: none; }& .success { display: block; }}</style></code></pre>
+  </figure>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should include copy button for block code 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <figure data-rehype-pretty-code-figure="">
+    <pre style="--shiki-dark:#e1e4e8;--shiki-light:#24292e;--shiki-dark-bg:#24292e;--shiki-light-bg:#fff" tabindex="0" data-language="plaintext" data-theme="github-dark github-light"><code data-language="plaintext" data-theme="github-dark github-light" style="display: grid;"><span data-line=""><span>test this block code</span></span><button type="button" data="test this block code" title="Copy code" aria-label="Copy code" class="rehype-pretty-copy" data-name="rehype-pretty-copy-button" onclick="navigator.clipboard.writeText(this.attributes.data.value);this.classList.add('rehype-pretty-copied');window.setTimeout(() => this.classList.remove('rehype-pretty-copied'), 3000);"><span class="ready"></span><span class="success"></span></button><style>:root {--copy-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23adadad' d='M16.187 9.5H12.25a1.75 1.75 0 0 0-1.75 1.75v28.5c0 .967.784 1.75 1.75 1.75h23.5a1.75 1.75 0 0 0 1.75-1.75v-28.5a1.75 1.75 0 0 0-1.75-1.75h-3.937a4.25 4.25 0 0 1-4.063 3h-7.5a4.25 4.25 0 0 1-4.063-3M31.813 7h3.937A4.25 4.25 0 0 1 40 11.25v28.5A4.25 4.25 0 0 1 35.75 44h-23.5A4.25 4.25 0 0 1 8 39.75v-28.5A4.25 4.25 0 0 1 12.25 7h3.937a4.25 4.25 0 0 1 4.063-3h7.5a4.25 4.25 0 0 1 4.063 3M18.5 8.25c0 .966.784 1.75 1.75 1.75h7.5a1.75 1.75 0 1 0 0-3.5h-7.5a1.75 1.75 0 0 0-1.75 1.75'/%3E%3C/svg%3E");--success-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2366ff85' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E");}pre:has(code) {position: relative;}button[data='<span>'] {width: 0;height: 0;display: none;visibility: hidden;}pre button.rehype-pretty-copy {right: 1px;padding: 0;width: 24px;height: 24px;display: flex;margin-top: 2px;margin-right: 8px;position: absolute;border-radius: 25%;& span {width: 100%;aspect-ratio: 1 / 1;}& .ready {background-image: var(--copy-icon);}& .success {display: none; background-image: var(--success-icon);}}&.rehype-pretty-copied {& .success {display: block;} & .ready {display: none;}}pre button.rehype-pretty-copy.rehype-pretty-copied {opacity: 1;& .ready { display: none; }& .success { display: block; }}</style></code></pre>
+  </figure>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should include copy button for inline code 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <p><span data-rehype-pretty-code-figure=""><code data-language="plaintext" data-theme="github-dark github-light" style="--shiki-dark:#e1e4e8;--shiki-light:#24292e;--shiki-dark-bg:#24292e;--shiki-light-bg:#fff"><span data-line=""><span>test this inline code</span></span><button type="button" data="test this inline code" title="Copy code" aria-label="Copy code" class="rehype-pretty-copy" data-name="rehype-pretty-copy-button" onclick="navigator.clipboard.writeText(this.attributes.data.value);this.classList.add('rehype-pretty-copied');window.setTimeout(() => this.classList.remove('rehype-pretty-copied'), 3000);"><span class="ready"></span><span class="success"></span></button><style>:root {--copy-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23adadad' d='M16.187 9.5H12.25a1.75 1.75 0 0 0-1.75 1.75v28.5c0 .967.784 1.75 1.75 1.75h23.5a1.75 1.75 0 0 0 1.75-1.75v-28.5a1.75 1.75 0 0 0-1.75-1.75h-3.937a4.25 4.25 0 0 1-4.063 3h-7.5a4.25 4.25 0 0 1-4.063-3M31.813 7h3.937A4.25 4.25 0 0 1 40 11.25v28.5A4.25 4.25 0 0 1 35.75 44h-23.5A4.25 4.25 0 0 1 8 39.75v-28.5A4.25 4.25 0 0 1 12.25 7h3.937a4.25 4.25 0 0 1 4.063-3h7.5a4.25 4.25 0 0 1 4.063 3M18.5 8.25c0 .966.784 1.75 1.75 1.75h7.5a1.75 1.75 0 1 0 0-3.5h-7.5a1.75 1.75 0 0 0-1.75 1.75'/%3E%3C/svg%3E");--success-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2366ff85' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E");}pre:has(code) {position: relative;}button[data='<span>'] {width: 0;height: 0;display: none;visibility: hidden;}pre button.rehype-pretty-copy {right: 1px;padding: 0;width: 24px;height: 24px;display: flex;margin-top: 2px;margin-right: 8px;position: absolute;border-radius: 25%;& span {width: 100%;aspect-ratio: 1 / 1;}& .ready {background-image: var(--copy-icon);}& .success {display: none; background-image: var(--success-icon);}}&.rehype-pretty-copied {& .success {display: block;} & .ready {display: none;}}pre button.rehype-pretty-copy.rehype-pretty-copied {opacity: 1;& .ready { display: none; }& .success { display: block; }}</style></code></span></p>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should not include copy button for inline code 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <p><span><code>test this inline code</code></span></p>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should result in a heading with a colon 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul>
+          <li class="level-1"><a href="#heading-11">Heading 1:1</a></li>
+        </ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <h1 id="heading-11"><a href="#heading-11" class="heading"><span>Heading 1:1</span></a><button class="bookmark" onclick="rrennAIbook.ui.toggleBookmark(&#x22;#heading-11&#x22;, &#x22;Heading 1:1&#x22;)" title="Toggle Bookmark" data-key="#heading-11">🔖</button></h1>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should result in two link 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <p>
+    Du kannst das Programm am schnellsten per
+    <a href="https://de.wikipedia.org/Kopieren_und_Einf%C3%BCgen" target="_blank" rel="noopener noreferrer">Kopieren und Einfügen</a>
+    in den Editor übernehmen. Du musst aber aufpassen: Wie du weißt
+    sind die Einrückungen (Leer- und <a href="https://de.wikipedia.org/Tabulatorzeichen" target="_blank" rel="noopener noreferrer">Tabulatorzeichen</a>
+    )
+    in Python Teil des Programms .
+  </p>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script></body></html>"
+`;
+
+exports[`process > should transform 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Hi - My rrennAIbook</title><meta property="og:title" value="Hi - My rrennAIbook"><meta name="description" content="undefined"><meta property="og:description" content="undefined"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="/assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="/assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="/assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="/assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="/assets/dark-mode-toggle.js"></script><script src="/assets/i18n.js" defer></script><script src="/assets/dexie.min.js" defer></script><script src="/assets/dexie-export-import.js" defer></script><script src="/assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="/assets/prism/prism.js" defer></script><script src="/assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="/assets/prism/prism.css"><link rel="stylesheet" href="/assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="/assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="/assets/math/katex.min.css"><link rel="stylesheet" href="/assets/shell.css"><link rel="stylesheet" href="/assets/content.css"><link rel="stylesheet" href="/assets/code.css"><script>
+rrennAIbook_ASSETS = "/assets/"
+
+</script><script type="module" src="/assets/side-drawer.js" async></script><script src="/assets/qrcode.js" async></script><link rel="stylesheet" href="/assets/directive-tabs/style.css"><link rel="stylesheet" href="/assets/directive-youtube/style.css"></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/book/"><div class="name">My rrennAIbook</div></a><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul></ul></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+  <div class="directive-tabs"><input type="radio" name="tabs-e6623695a74b72863efad18d50defcb1f52fb26928e406ca74b727bb38e7c8e6" id="tab-e6623695a74b72863efad18d50defcb1f52fb26928e406ca74b727bb38e7c8e6-java" data-tab-id="java" data-tabs-id="code" class="tab-input" checked><input type="radio" name="tabs-e6623695a74b72863efad18d50defcb1f52fb26928e406ca74b727bb38e7c8e6" id="tab-e6623695a74b72863efad18d50defcb1f52fb26928e406ca74b727bb38e7c8e6-python" data-tab-id="python" data-tabs-id="code" class="tab-input">
+    <div class="tabs" data-tabs-id="code"><label for="tab-e6623695a74b72863efad18d50defcb1f52fb26928e406ca74b727bb38e7c8e6-java" data-tab-id="java" data-tabs-id="code" class="tab active">Java</label><label for="tab-e6623695a74b72863efad18d50defcb1f52fb26928e406ca74b727bb38e7c8e6-python" data-tab-id="python" data-tabs-id="code" class="tab">Python</label></div>
+    <div class="tabpanel active" data-tab-id="java" data-tabs-id="code">
+      <p>Java</p>
+    </div>
+    <div class="tabpanel" data-tab-id="python" data-tabs-id="code">
+      <p>Python</p>
+    </div>
+  </div>
+  <p>Another tabs cluster with the same ids.</p>
+  <div class="directive-tabs"><input type="radio" name="tabs-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449" id="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-2990934dbcfd5acd0b539d89a9953b6d79d2f6aa2eef5c9033ee8b9f04795cf7" data-tab-id="2990934dbcfd5acd0b539d89a9953b6d79d2f6aa2eef5c9033ee8b9f04795cf7" data-tabs-id="code" class="tab-input" checked><input type="radio" name="tabs-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449" id="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-python" data-tab-id="python" data-tabs-id="code" class="tab-input"><input type="radio" name="tabs-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449" id="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-c" data-tab-id="c" data-tabs-id="code" class="tab-input"><input type="radio" name="tabs-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449" id="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-c" data-tab-id="c" data-tabs-id="code" class="tab-input">
+    <div class="tabs" data-tabs-id="code"><label for="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-2990934dbcfd5acd0b539d89a9953b6d79d2f6aa2eef5c9033ee8b9f04795cf7" data-tab-id="2990934dbcfd5acd0b539d89a9953b6d79d2f6aa2eef5c9033ee8b9f04795cf7" data-tabs-id="code" class="tab active">Java</label><label for="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-python" data-tab-id="python" data-tabs-id="code" class="tab">Python</label><label for="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-c" data-tab-id="c" data-tabs-id="code" class="tab">C</label><label for="tab-2ebeb94b8fd58f5d9ef2963538cca30f3521760b724793c8570058850e7f6449-c" data-tab-id="c" data-tabs-id="code" class="tab">YouTube</label></div>
+    <div class="tabpanel active" data-tab-id="2990934dbcfd5acd0b539d89a9953b6d79d2f6aa2eef5c9033ee8b9f04795cf7" data-tabs-id="code">
+      <p>Java</p>
+    </div>
+    <div class="tabpanel" data-tab-id="python" data-tabs-id="code">
+      <p>Python</p>
+    </div>
+    <div class="tabpanel" data-tab-id="c" data-tabs-id="code">
+      <p>C</p>
+    </div>
+    <div class="tabpanel" data-tab-id="c" data-tabs-id="code">
+      <div class="directive-youtube" id="video-1234">
+        <div class="consent">
+          <div class="consent-banner">
+            <p class="consent-banner-text">Clicking the play button will load a YouTube video via YouTube-NoCookie. However, a connection will still be established and the necessary data will be transmitted.</p>
+            <p class="consent-banner-text">We use YouTube-NoCookie to protect your privacy.</p><label class="consent-always-label"><input type="checkbox" class="consent-always-checkbox">Always allow YouTube videos</label><button class="consent-accept-btn">Accept and play</button>
+          </div>
+          <iframe class="player" data-consent-src="https://www.youtube-nocookie.com/embed/1234" frameborder="0" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</article><div class="jump-container"></div><div class="meta"><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026</span></div></main></div><script src="/assets/bootstrap.js" defer></script><script src="/assets/ui.js" defer></script><script src="/assets/directive-tabs/client.js" defer></script><script src="/assets/directive-youtube/client.js" defer></script></body></html>"
+`;
+
+exports[`process > should transfrom complex context 1`] = `
+"<!doctype html><html lang="es" class="no-js"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1,, interactive-widget=resizes-content"><title>Markdown Referenz - rrennAIbook Dokumenation</title><meta property="og:title" value="Markdown Referenz - rrennAIbook Dokumenation"><meta name="description" content="Dokumentation für rrennAIbook erstellt mit rrennAIbook"><meta property="og:description" content="Dokumentation für rrennAIbook erstellt mit rrennAIbook"><meta name="keywords"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png"><link rel="manifest" href="assets/favicons/manifest.webmanifest"><link rel="stylesheet" href="assets/normalize.css"><style>
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color-brand: #007864;
+  --color-brand-dark: #b5e3d8;
+  --color-brand-text: white;
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+</style><noscript id="dark-mode-toggle-stylesheets"><link rel="stylesheet" href="assets/light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="assets/dark.css" media="(prefers-color-scheme: dark)"></noscript><script>
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');</script><script src="assets/dark-mode-toggle-stylesheets-loader.js"></script><script type="module" src="assets/dark-mode-toggle.js"></script><script src="assets/i18n.js" defer></script><script src="assets/dexie.min.js" defer></script><script src="assets/dexie-export-import.js" defer></script><script src="assets/store.js" defer></script><script>
+window.Prism = window.Prism || {};
+window.Prism.manual = true;</script><script src="assets/prism/prism.js" defer></script><script src="assets/prism/prism-typst.js" defer></script><link rel="stylesheet" href="assets/prism/prism.css"><link rel="stylesheet" href="assets/prism/prism-theme-github-dark.css" media="(prefers-color-scheme: dark)"><link rel="stylesheet" href="assets/prism/prism-theme-github-light.css" media="(prefers-color-scheme: light)"><link rel="stylesheet" href="assets/math/katex.min.css"><link rel="stylesheet" href="assets/shell.css"><link rel="stylesheet" href="assets/content.css"><link rel="stylesheet" href="assets/code.css"><script>
+rrennAIbook_ASSETS = "assets/"
+
+</script><script type="module" src="assets/side-drawer.js" async></script><script src="assets/qrcode.js" async></script></head><body><div class="main-grid"><header><div class="mobile-nav"><button aria-label="Nav Toggle" class="toggle" onclick="rrennAIbook.ui.navToggle()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></button><side-drawer id="nav-drawer"><div class="nav-drawer-content"><nav><ul><li><a class="page" href="/">Los Gehts</a></li></ul><details data-id="_nav:/configuration" class="section  empty"><summary class="name"><span class="label">Konfiguration</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/configuration/book">Buch Konfiguration</a></li><li><a class="page" href="/configuration/page">Seiten Konfiguration</a></li><li><a class="page" href="/configuration/section">Bereich Konfiguration</a></li><li><a class="page" href="/configuration/library">Bibliothek Konfiguration</a></li></ul></div></details><details data-id="_nav:/markdown" class="section active empty" open><summary class="name"><span class="label">Markdown Referenz</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/markdown/image">Bild</a></li><li><a class="page" href="/markdown/emphasis">Hervorhebung</a></li><li><a class="page" href="/markdown/hr">Horizontale Linie</a></li><li><a class="page" href="/markdown/comment">Kommentar</a></li><li><a class="page" href="/markdown/link">Link</a></li><li><a class="page" href="/markdown/list">Liste</a></li><li><a class="page" href="/markdown/code">Quelltext</a></li><li><a class="page" href="/markdown/table">Tabelle</a></li><li><a class="page" href="/markdown/line-break">Zeilenumbruch</a></li><li><a class="page" href="/markdown/quote">Zitat</a></li><li><a class="page" href="/markdown/header">Überschriften</a></li></ul></div></details><details data-id="_nav:/elements" class="section  empty"><summary class="name"><span class="label">Elemente</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/elements/archive">Archiv</a></li><li><a class="page" href="/elements/audio">Audio</a></li><li><a class="page" href="/elements/bitflow">Bitflow</a></li><li><a class="page" href="/elements/download">Download</a></li><li><a class="page" href="/elements/embed">Embed</a></li><li><a class="page" href="/elements/emoji">Emoji</a></li><li><a class="page" href="/elements/excalidraw">Excalidraw</a></li><li><a class="page" href="/elements/protect">Geschützer Bereich</a></li><li><a class="page" href="/elements/glossary">Glossar</a></li><li><a class="page" href="/elements/alert">Hinweise</a></li><li><a class="page" href="/elements/tiles">Kacheln</a></li><li><a class="page" href="/elements/collapsible">Klappkasten</a></li><li><a class="page" href="/elements/bookmarks">Lesezeichen</a></li><li><a class="page" href="/elements/math">Mathmathik</a></li><li><a class="page" href="/elements/mermaid">Mermaid</a></li><li><a class="page" href="/elements/online-ide">Online IDE</a></li><li><a class="page" href="/elements/plantuml">PlantUML</a></li><li><a class="page" href="/elements/qr">QR Code</a></li><li><a class="page" href="/elements/tabs">Reiter</a></li><li><a class="page" href="/elements/sql-ide">SQL IDE</a></li><li><a class="page" href="/elements/scratchblock">Scratchblöcke</a></li><li><a class="page" href="/elements/slideshow">Slideshow</a></li><li><a class="page" href="/elements/snippets">Snippets</a></li><li><a class="page" href="/elements/struktog">Struktog</a></li><li><a class="page" href="/elements/video">Video</a></li><li><a class="page" href="/elements/youtube">YouTube</a></li></ul></div></details><details data-id="_nav:/advanced" class="section  empty"><summary class="name"><span class="label">Fortgeschrittene Features</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/advanced/single-use-templates">Einweg Vorlagen</a></li><li><a class="page" href="/advanced/templates">Vorlagen</a></li></ul></div></details><details data-id="_nav:/hosting" class="section  empty"><summary class="name"><span class="label">Hosting</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/hosting/edugitpages">EduGit Pages</a></li><li><a class="page" href="/hosting/custom">Eigene Lösung</a></li><li><a class="page" href="/hosting/ghpages">GitHub Pages</a></li><li><a class="page" href="/hosting/glpages">GitLab Pages</a></li><li><a class="page" href="/hosting/vercel">Vercel</a></li></ul></div></details></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div></side-drawer></div><a class="branding" href="/"><div class="name">rrennAIbook Dokumenation</div></a><div id="custom-links-header" class="custom-links-menu"><ul class="links-menu"><li class="links-item sub"><a href="#"><div class="icon">🐦</div><div class="label">Kontakt</div></a><ul class="links-sub-menu"><li class="links-item"><a href="mailto:contact@openpatch.org"><div class="label">Mail</div></a></li><li class="links-item"><a href="https://twitter.com/openpatchorg"><div class="icon">🐦</div><div class="label">Twitter</div></a></li><li class="links-item"><a href="https://fosstodon.org/@openpatch"><div class="icon">🐘</div><div class="label">Mastodon</div></a></li><li class="links-item"><a href="https://matrix.to/#/#rrennAIbook:matrix.org"><div class="icon">👨‍💻</div><div class="label">Matrix (Chat)</div></a></li></ul></li></ul></div><button id="share-button" class="icon-button" title="Share" onclick="rrennAIbook.share.open()"><div class="share-icon"></div></button><dark-mode-toggle id="dark-mode-toggle" appearence="switch" title="Toggle between Dark and Light Mode" permanent></dark-mode-toggle></header><div class="sidebar"><nav><ul><li><a class="page" href="/">Los Gehts</a></li></ul><details data-id="_nav:/configuration" class="section  empty"><summary class="name"><span class="label">Konfiguration</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/configuration/book">Buch Konfiguration</a></li><li><a class="page" href="/configuration/page">Seiten Konfiguration</a></li><li><a class="page" href="/configuration/section">Bereich Konfiguration</a></li><li><a class="page" href="/configuration/library">Bibliothek Konfiguration</a></li></ul></div></details><details data-id="_nav:/markdown" class="section active empty" open><summary class="name"><span class="label">Markdown Referenz</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/markdown/image">Bild</a></li><li><a class="page" href="/markdown/emphasis">Hervorhebung</a></li><li><a class="page" href="/markdown/hr">Horizontale Linie</a></li><li><a class="page" href="/markdown/comment">Kommentar</a></li><li><a class="page" href="/markdown/link">Link</a></li><li><a class="page" href="/markdown/list">Liste</a></li><li><a class="page" href="/markdown/code">Quelltext</a></li><li><a class="page" href="/markdown/table">Tabelle</a></li><li><a class="page" href="/markdown/line-break">Zeilenumbruch</a></li><li><a class="page" href="/markdown/quote">Zitat</a></li><li><a class="page" href="/markdown/header">Überschriften</a></li></ul></div></details><details data-id="_nav:/elements" class="section  empty"><summary class="name"><span class="label">Elemente</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/elements/archive">Archiv</a></li><li><a class="page" href="/elements/audio">Audio</a></li><li><a class="page" href="/elements/bitflow">Bitflow</a></li><li><a class="page" href="/elements/download">Download</a></li><li><a class="page" href="/elements/embed">Embed</a></li><li><a class="page" href="/elements/emoji">Emoji</a></li><li><a class="page" href="/elements/excalidraw">Excalidraw</a></li><li><a class="page" href="/elements/protect">Geschützer Bereich</a></li><li><a class="page" href="/elements/glossary">Glossar</a></li><li><a class="page" href="/elements/alert">Hinweise</a></li><li><a class="page" href="/elements/tiles">Kacheln</a></li><li><a class="page" href="/elements/collapsible">Klappkasten</a></li><li><a class="page" href="/elements/bookmarks">Lesezeichen</a></li><li><a class="page" href="/elements/math">Mathmathik</a></li><li><a class="page" href="/elements/mermaid">Mermaid</a></li><li><a class="page" href="/elements/online-ide">Online IDE</a></li><li><a class="page" href="/elements/plantuml">PlantUML</a></li><li><a class="page" href="/elements/qr">QR Code</a></li><li><a class="page" href="/elements/tabs">Reiter</a></li><li><a class="page" href="/elements/sql-ide">SQL IDE</a></li><li><a class="page" href="/elements/scratchblock">Scratchblöcke</a></li><li><a class="page" href="/elements/slideshow">Slideshow</a></li><li><a class="page" href="/elements/snippets">Snippets</a></li><li><a class="page" href="/elements/struktog">Struktog</a></li><li><a class="page" href="/elements/video">Video</a></li><li><a class="page" href="/elements/youtube">YouTube</a></li></ul></div></details><details data-id="_nav:/advanced" class="section  empty"><summary class="name"><span class="label">Fortgeschrittene Features</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/advanced/single-use-templates">Einweg Vorlagen</a></li><li><a class="page" href="/advanced/templates">Vorlagen</a></li></ul></div></details><details data-id="_nav:/hosting" class="section  empty"><summary class="name"><span class="label">Hosting</span></summary><div class="links"><ul class="pages"><li><a class="page" href="/hosting/edugitpages">EduGit Pages</a></li><li><a class="page" href="/hosting/custom">Eigene Lösung</a></li><li><a class="page" href="/hosting/ghpages">GitHub Pages</a></li><li><a class="page" href="/hosting/glpages">GitLab Pages</a></li><li><a class="page" href="/hosting/vercel">Vercel</a></li></ul></div></details></nav><a class="author" href="https://rrennAIbook.openpatch.org">Powered by <b>rrennAIbook</b></a></div><main><article>
+<div class="rrennAIbook-markdown">
+  <div class="floating-buttons-container" id="floating-buttons-container"><button id="toc-toggle" onclick="rrennAIbook.ui.tocToggle()" title="Table of Contents"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div></button></div>
+  <side-drawer id="toc-drawer" right>
+    <div class="toc-drawer-content">
+      <nav class="toc">
+        <ul></ul>
+      </nav>
+    </div>
+  </side-drawer>
+</div>
+<dialog id="share-dialog">
+  <div class="container">
+    <h2 class="title">Create Shareable URL</h2><label class="standalone-option"><input type="checkbox" id="share-standalone-checkbox" onchange="rrennAIbook.share.updatePreview()"> Standalone Mode</label>
+    <h3 class="sections-title">Select Sections</h3>
+    <div class="sections-list"></div>
+    <div class="url-preview" id="share-url-preview"></div><button class="copy-button" onclick="rrennAIbook.share.copyUrl()">Copy Shareable URL</button>
+  </div><button class="close" onclick="rrennAIbook.share.close()"><div class="close-icon"></div></button>
+</dialog>
+</article><div class="jump-container"><a class="jump previous" href="/configuration/library">Bibliothek Konfiguration</a><a class="jump next" href="/markdown/image">Bild</a></div><div class="meta"><a class="edit-github" href="https://github.com/openpatch/rrennAIbook/edit/main/website/de/book/markdown/index.md">✎ GitHub</a><a href="#" onclick="rrennAIbook.store.reset()"><span class="reset-icon" title="Reset rrennAIbook"></span></a><span class="copyright">© Copyright 2026 by <a href="https://openpatch.org">OpenPatch</a></span></div><div id="custom-links-footer"><ul class="links-item sub"><li><a href="#"><div class="icon">🐦</div><div class="label">Kontakt</div></a><ul class="links-sub-menu"><li class="links-item"><a href="mailto:contact@openpatch.org"><div class="label">Mail</div></a></li><li class="links-item"><a href="https://twitter.com/openpatchorg"><div class="icon">🐦</div><div class="label">Twitter</div></a></li><li class="links-item"><a href="https://fosstodon.org/@openpatch"><div class="icon">🐘</div><div class="label">Mastodon</div></a></li><li class="links-item"><a href="https://matrix.to/#/#rrennAIbook:matrix.org"><div class="icon">👨‍💻</div><div class="label">Matrix (Chat)</div></a></li></ul></li></ul></div></main></div><script src="assets/bootstrap.js" defer></script><script src="assets/ui.js" defer></script></body></html>"
+`;

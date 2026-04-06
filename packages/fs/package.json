@@ -1,0 +1,59 @@
+{
+  "name": "@rrennAIbook/fs",
+  "version": "0.25.0",
+  "author": "Mike Barkmin",
+  "homepage": "https://github.com/openpatch/rrennAIbook#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.js",
+    "./index.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openpatch/rrennAIbook.git",
+    "directory": "packages/fs"
+  },
+  "bugs": {
+    "url": "https://github.com/openpatch/rrennAIbook/issues"
+  },
+  "scripts": {
+    "version": "pnpm build",
+    "lint": "tsc --noEmit",
+    "test": "vitest",
+    "build": "rimraf dist && pnpm build:pkg && pnpm build:types",
+    "build:pkg": "node ../../scripts/build.mjs",
+    "build:types": "tsc --project tsconfig.build.json --declaration --emitDeclarationOnly"
+  },
+  "bundle": [
+    "handlebars"
+  ],
+  "dependencies": {
+    "chalk": "5.4.1",
+    "find-up": "^7.0.0",
+    "gray-matter": "4.0.3",
+    "mdast-util-directive": "^3.1.0",
+    "mdast-util-from-markdown": "^2.0.2",
+    "micromark-extension-directive": "^4.0.0",
+    "mime-types": "^3.0.2",
+    "unist-util-visit": "^5.1.0",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@rrennAIbook/types": "workspace:*",
+    "@types/mdast": "^4.0.4",
+    "@types/mime-types": "^3.0.1",
+    "handlebars": "^4.7.8",
+    "ms": "^2.1.3",
+    "vitest": "^4.0.18"
+  }
+}

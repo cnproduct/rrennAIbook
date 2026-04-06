@@ -1,0 +1,149 @@
+.directive-tabs > .tabs {
+  display: flex;
+  /* browser decide if x is ok to scroll and show bars on, y hidden */
+  overflow: auto hidden;
+  /* prevent scroll chaining on x scroll */
+  overscroll-behavior-x: contain;
+  /* scrolling should snap children on x */
+  scroll-snap-type: x mandatory;
+  border-style: solid;
+  border-width: 1px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  background-color: var(--color-nav);
+  border-color: var(--color-spacer);
+}
+
+/* Hide radio inputs */
+.directive-tabs .tab-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.directive-tabs > .tabs .tab {
+  background: transparent;
+  display: inline-flex;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  font-size: 100%;
+  padding: 8px 16px;
+  transition: 0.3s;
+  border-bottom: 4px solid transparent;
+  color: var(--color-text);
+}
+
+.directive-tabs > .tabpanel {
+  padding: 6px 12px;
+  padding-top: 12px;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  margin-bottom: 0;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-color: var(--color-spacer);
+  display: none;
+}
+
+.directive-tabs .tabs .tab:hover {
+  border-bottom-color: var(--color-spacer);
+  color: var(--color-brand);
+}
+
+/* Style active tab based on radio button state using :has() */
+/* Check each input position and style the corresponding label */
+.directive-tabs:has(> .tab-input:nth-of-type(1):checked) .tabs .tab:nth-of-type(1) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(2):checked) .tabs .tab:nth-of-type(2) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(3):checked) .tabs .tab:nth-of-type(3) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(4):checked) .tabs .tab:nth-of-type(4) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(5):checked) .tabs .tab:nth-of-type(5) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(6):checked) .tabs .tab:nth-of-type(6) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(7):checked) .tabs .tab:nth-of-type(7) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(8):checked) .tabs .tab:nth-of-type(8) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(9):checked) .tabs .tab:nth-of-type(9) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.directive-tabs:has(> .tab-input:nth-of-type(10):checked) .tabs .tab:nth-of-type(10) {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+/* Show tabpanel based on checked radio input using general sibling combinator */
+/* Note: nth-of-type counts by element type, and .tabs div is the first div */
+.directive-tabs > .tab-input:nth-of-type(1):checked ~ .tabpanel:nth-of-type(2) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(2):checked ~ .tabpanel:nth-of-type(3) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(3):checked ~ .tabpanel:nth-of-type(4) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(4):checked ~ .tabpanel:nth-of-type(5) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(5):checked ~ .tabpanel:nth-of-type(6) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(6):checked ~ .tabpanel:nth-of-type(7) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(7):checked ~ .tabpanel:nth-of-type(8) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(8):checked ~ .tabpanel:nth-of-type(9) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(9):checked ~ .tabpanel:nth-of-type(10) {
+  display: block;
+}
+
+.directive-tabs > .tab-input:nth-of-type(10):checked ~ .tabpanel:nth-of-type(11) {
+  display: block;
+}
+

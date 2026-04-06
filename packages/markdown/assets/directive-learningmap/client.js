@@ -1,0 +1,67 @@
+/// <reference path="../rrennAIbook.types.js" />
+
+/**
+ * Learning map visualization and progress tracking.
+ * @type {rrennAIbookLearningmap}
+ * @memberof rrennAIbook
+ * @see rrennAIbook.store
+ */
+rrennAIbook.learningmap = (function () {
+  async function init(root) {
+    const elems = root.getElementsByClassName("directive-learningmap");
+
+    for (let elem of elems) {
+      const map = elem.getElementsByTagName("rrennAIbook-learningmap")[0];
+      if (map) {
+        const result = await rrennAIbook.store.db.learningmap.get(elem.id);
+        if (result) {
+          map.initialState = result;
+        }
+        map.addEventListener("change", function (event) {
+          rrennAIbook.store.db.learningmap
+            .update(elem.id, {
+              id: elem.id,
+              nodes: event.detail.nodes,
+              x: event.detail.x,
+              y: event.detail.y,
+              zoom: event.detail.zoom,
+            })
+            .then((updated) => {
+              if (updated == 0) {
+                rrennAIbook.store.db.learningmap.put({
+                  id: elem.id,
+                  nodes: event.detail.nodes,
+                  x: event.detail.x,
+                  y: event.detail.y,
+                  zoom: event.detail.zoom,
+                });
+              }
+            });
+        });
+      }
+    }
+  }
+
+  // Initialize existing elements on document load
+  document.addEventListener("DOMContentLoaded", () => {
+    init(document);
+  });
+
+  // Observe for new elements added to the DOM
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeType === 1) {
+          // Element node
+          init(node);
+        }
+      });
+    });
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  return {
+    init,
+  };
+})();

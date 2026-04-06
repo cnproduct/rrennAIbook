@@ -1,0 +1,1257 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`extractLines > should extract lines and not add ellipsis on first and last line 1`] = `
+"Line 1
+// ...
+Line 4
+Line 5
+Line 6
+// ...
+Line 10"
+`;
+
+exports[`extractLines > should extract lines by range 1`] = `
+"...
+Line 2
+Line 3
+Line 4
+..."
+`;
+
+exports[`extractLines > should extract lines with custom ellipsis 1`] = `
+"Line 1
+// ...
+Line 4
+Line 5
+Line 6
+// ...
+Line 8
+// ..."
+`;
+
+exports[`extractLines > should extract lines with gaps 1`] = `
+"Line 1
+...
+Line 4
+Line 5
+Line 6
+...
+Line 8
+..."
+`;
+
+exports[`extractLines > should extract lines with no ellipsis 1`] = `
+"Line 1
+Line 4
+Line 5
+Line 6
+Line 8"
+`;
+
+exports[`extractLines > should return full content 1`] = `
+"Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+Line 6
+Line 7
+Line 8
+Line 9
+Line 10"
+`;
+
+exports[`getMarkdown > should get markdown for single use template 1`] = `
+{
+  "content": "# Single Use Template
+
+TEST
+
+Hi!
+",
+  "data": {},
+}
+`;
+
+exports[`getMarkdown > should get markdown from template 1`] = `
+{
+  "content": "
+Example use of a template.
+",
+  "data": {
+    "name": "Use Template1 with YAML",
+  },
+}
+`;
+
+exports[`getMarkdown > should get markdown from template for index 1`] = `
+{
+  "content": "
+Example use of a template.
+",
+  "data": {
+    "name": "Use Template1 with YAML",
+  },
+}
+`;
+
+exports[`getMarkdown > should render snippet with rrennAIbook 1`] = `
+{
+  "content": "rrennAIbook Documentation
+
+https://github.com/openpatch/rrennAIbook/edit/main/website/en
+
+",
+  "data": {},
+}
+`;
+
+exports[`getMarkdown > should render snippet with parentheses 1`] = `
+{
+  "content": "<div style="background:var(--color-block); border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+
+<div style="background:red; border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+",
+  "data": {},
+}
+`;
+
+exports[`getMarkdown > should render snippet with whitespace 1`] = `
+{
+  "content": ""My Title"
+
+This is a test description!
+
+",
+  "data": {},
+}
+`;
+
+exports[`list > should get references 1`] = `
+[
+  {
+    "elements": [],
+    "extension": ".md",
+    "folder": "glossary",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "OOP",
+      },
+    },
+    "name": "oop",
+    "path": {
+      "absolute": "single-rrennAIbook/glossary/oop.md",
+      "directory": "",
+      "href": "/glossary/oop",
+      "permalink": null,
+      "relative": "oop.md",
+    },
+    "references": [
+      {
+        "extension": ".md",
+        "folder": "book",
+        "markdown": {
+          "content": "
+:t[OOP]{#oop}
+",
+          "data": {
+            "name": "Paradigms",
+          },
+        },
+        "name": "paradigms",
+        "path": {
+          "absolute": "single-rrennAIbook/book/paradigms.md",
+          "directory": "",
+          "href": "/paradigms",
+          "permalink": null,
+          "relative": "paradigms.md",
+        },
+        "root": "single-rrennAIbook",
+      },
+      {
+        "extension": ".md",
+        "folder": "book",
+        "markdown": {
+          "content": "
+:::excalidraw{src=""}
+
+:::
+
+::youtube{#123}
+
+:t[OOP]{#oop}",
+          "data": {
+            "virtual": true,
+          },
+        },
+        "name": "index",
+        "path": {
+          "absolute": "single-rrennAIbook/book/subsection/index.md",
+          "directory": "subsection",
+          "href": "/subsection",
+          "permalink": null,
+          "relative": "subsection/index.md",
+        },
+        "root": "single-rrennAIbook",
+      },
+    ],
+    "root": "single-rrennAIbook",
+  },
+]
+`;
+
+exports[`list > should list all 1`] = `
+[
+  {
+    "elements": [],
+    "extension": ".md",
+    "folder": "glossary",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "OOP",
+      },
+    },
+    "name": "oop",
+    "path": {
+      "absolute": "single-rrennAIbook/glossary/oop.md",
+      "directory": "",
+      "href": "/glossary/oop",
+      "permalink": null,
+      "relative": "oop.md",
+    },
+    "references": [
+      {
+        "extension": ".md",
+        "folder": "book",
+        "markdown": {
+          "content": "
+:t[OOP]{#oop}
+",
+          "data": {
+            "name": "Paradigms",
+          },
+        },
+        "name": "paradigms",
+        "path": {
+          "absolute": "single-rrennAIbook/book/paradigms.md",
+          "directory": "",
+          "href": "/paradigms",
+          "permalink": null,
+          "relative": "paradigms.md",
+        },
+        "root": "single-rrennAIbook",
+      },
+      {
+        "extension": ".md",
+        "folder": "book",
+        "markdown": {
+          "content": "
+:::excalidraw{src=""}
+
+:::
+
+::youtube{#123}
+
+:t[OOP]{#oop}",
+          "data": {
+            "virtual": true,
+          },
+        },
+        "name": "index",
+        "path": {
+          "absolute": "single-rrennAIbook/book/subsection/index.md",
+          "directory": "subsection",
+          "href": "/subsection",
+          "permalink": null,
+          "relative": "subsection/index.md",
+        },
+        "root": "single-rrennAIbook",
+      },
+    ],
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {},
+    },
+    "name": "Has Spaces",
+    "path": {
+      "absolute": "single-rrennAIbook/book/Has Spaces.md",
+      "directory": "",
+      "href": "/Has Spaces",
+      "permalink": null,
+      "relative": "Has Spaces.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "rrennAIbook Documentation
+
+https://github.com/openpatch/rrennAIbook/edit/main/website/en
+
+",
+      "data": {},
+    },
+    "name": "rrennAIbook-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/rrennAIbook-test.md",
+      "directory": "",
+      "href": "/rrennAIbook-test",
+      "permalink": null,
+      "relative": "rrennAIbook-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+:t[OOP]{#oop}
+",
+      "data": {
+        "name": "Paradigms",
+      },
+    },
+    "name": "paradigms",
+    "path": {
+      "absolute": "single-rrennAIbook/book/paradigms.md",
+      "directory": "",
+      "href": "/paradigms",
+      "permalink": null,
+      "relative": "paradigms.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "<div style="background:var(--color-block); border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+
+<div style="background:red; border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+",
+      "data": {},
+    },
+    "name": "parentheses-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/parentheses-test.md",
+      "directory": "",
+      "href": "/parentheses-test",
+      "permalink": null,
+      "relative": "parentheses-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": ""My Title"
+
+This is a test description!
+
+",
+      "data": {},
+    },
+    "name": "whitespace-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/whitespace-test.md",
+      "directory": "",
+      "href": "/whitespace-test",
+      "permalink": null,
+      "relative": "whitespace-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "Du kannst das Programm am schnellsten per 
+[Kopieren und Einfügen](https://de.wikipedia.org/Kopieren_und_Einfügen)
+ 
+in den Editor übernehmen. Du musst aber aufpassen: Wie du weißt 
+sind die Einrückungen (Leer- und [Tabulatorzeichen](https://de.wikipedia.org/Tabulatorzeichen)
+) 
+in Python Teil des Programms .
+",
+      "data": {},
+    },
+    "name": "wikipedia",
+    "path": {
+      "absolute": "single-rrennAIbook/book/wikipedia.md",
+      "directory": "",
+      "href": "/wikipedia",
+      "permalink": null,
+      "relative": "wikipedia.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "Home",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/index.md",
+      "directory": "",
+      "href": "/",
+      "permalink": null,
+      "relative": "index.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.json",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {},
+    },
+    "name": "empty",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/empty.md.json",
+      "directory": "subsection",
+      "href": "/subsection/empty",
+      "permalink": null,
+      "relative": "subsection/empty.md.json",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "use-template1",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/use-template1.md.yml",
+      "directory": "subsection",
+      "href": "/subsection/use-template1",
+      "permalink": null,
+      "relative": "subsection/use-template1.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+:::excalidraw{src=""}
+
+:::
+
+::youtube{#123}
+
+:t[OOP]{#oop}",
+      "data": {
+        "virtual": true,
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/index.md",
+      "directory": "subsection",
+      "href": "/subsection",
+      "permalink": null,
+      "relative": "subsection/index.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+# Test
+",
+      "data": {
+        "name": "Test",
+      },
+    },
+    "name": "test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection2/test.md",
+      "directory": "subsection2",
+      "href": "/subsection2/test",
+      "permalink": null,
+      "relative": "subsection2/test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection2/index.md.yml",
+      "directory": "subsection2",
+      "href": "/subsection2",
+      "permalink": null,
+      "relative": "subsection2/index.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.hbs",
+    "folder": "book",
+    "markdown": {
+      "content": "# Single Use Template
+
+TEST
+
+Hi!
+",
+      "data": {},
+    },
+    "name": "single-template",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/single-template.md.hbs",
+      "directory": "subsection3",
+      "href": "/subsection3/single-template",
+      "permalink": null,
+      "relative": "subsection3/single-template.md.hbs",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/index.md.yml",
+      "directory": "subsection3",
+      "href": "/subsection3",
+      "permalink": null,
+      "relative": "subsection3/index.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "Test",
+        "permaid": "01",
+      },
+    },
+    "name": "test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/subsection31/test.md",
+      "directory": "subsection3/subsection31",
+      "href": "/subsection3/subsection31/test",
+      "permalink": "/@/01",
+      "relative": "subsection3/subsection31/test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {},
+    },
+    "name": "Has Spaces",
+    "path": {
+      "absolute": "single-rrennAIbook/book/Has Spaces.md",
+      "directory": "",
+      "href": "/Has Spaces",
+      "permalink": null,
+      "relative": "Has Spaces.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "rrennAIbook Documentation
+
+https://github.com/openpatch/rrennAIbook/edit/main/website/en
+
+",
+      "data": {},
+    },
+    "name": "rrennAIbook-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/rrennAIbook-test.md",
+      "directory": "",
+      "href": "/rrennAIbook-test",
+      "permalink": null,
+      "relative": "rrennAIbook-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+:t[OOP]{#oop}
+",
+      "data": {
+        "name": "Paradigms",
+      },
+    },
+    "name": "paradigms",
+    "path": {
+      "absolute": "single-rrennAIbook/book/paradigms.md",
+      "directory": "",
+      "href": "/paradigms",
+      "permalink": null,
+      "relative": "paradigms.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "<div style="background:var(--color-block); border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+
+<div style="background:red; border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+",
+      "data": {},
+    },
+    "name": "parentheses-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/parentheses-test.md",
+      "directory": "",
+      "href": "/parentheses-test",
+      "permalink": null,
+      "relative": "parentheses-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": ""My Title"
+
+This is a test description!
+
+",
+      "data": {},
+    },
+    "name": "whitespace-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/whitespace-test.md",
+      "directory": "",
+      "href": "/whitespace-test",
+      "permalink": null,
+      "relative": "whitespace-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "Du kannst das Programm am schnellsten per 
+[Kopieren und Einfügen](https://de.wikipedia.org/Kopieren_und_Einfügen)
+ 
+in den Editor übernehmen. Du musst aber aufpassen: Wie du weißt 
+sind die Einrückungen (Leer- und [Tabulatorzeichen](https://de.wikipedia.org/Tabulatorzeichen)
+) 
+in Python Teil des Programms .
+",
+      "data": {},
+    },
+    "name": "wikipedia",
+    "path": {
+      "absolute": "single-rrennAIbook/book/wikipedia.md",
+      "directory": "",
+      "href": "/wikipedia",
+      "permalink": null,
+      "relative": "wikipedia.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "Home",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/index.md",
+      "directory": "",
+      "href": "/",
+      "permalink": null,
+      "relative": "index.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.json",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {},
+    },
+    "name": "empty",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/empty.md.json",
+      "directory": "subsection",
+      "href": "/subsection/empty",
+      "permalink": null,
+      "relative": "subsection/empty.md.json",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "use-template1",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/use-template1.md.yml",
+      "directory": "subsection",
+      "href": "/subsection/use-template1",
+      "permalink": null,
+      "relative": "subsection/use-template1.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+:::excalidraw{src=""}
+
+:::
+
+::youtube{#123}
+
+:t[OOP]{#oop}",
+      "data": {
+        "virtual": true,
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/index.md",
+      "directory": "subsection",
+      "href": "/subsection",
+      "permalink": null,
+      "relative": "subsection/index.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+# Test
+",
+      "data": {
+        "name": "Test",
+      },
+    },
+    "name": "test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection2/test.md",
+      "directory": "subsection2",
+      "href": "/subsection2/test",
+      "permalink": null,
+      "relative": "subsection2/test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection2/index.md.yml",
+      "directory": "subsection2",
+      "href": "/subsection2",
+      "permalink": null,
+      "relative": "subsection2/index.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.hbs",
+    "folder": "book",
+    "markdown": {
+      "content": "# Single Use Template
+
+TEST
+
+Hi!
+",
+      "data": {},
+    },
+    "name": "single-template",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/single-template.md.hbs",
+      "directory": "subsection3",
+      "href": "/subsection3/single-template",
+      "permalink": null,
+      "relative": "subsection3/single-template.md.hbs",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/index.md.yml",
+      "directory": "subsection3",
+      "href": "/subsection3",
+      "permalink": null,
+      "relative": "subsection3/index.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "Test",
+        "permaid": "01",
+      },
+    },
+    "name": "test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/subsection31/test.md",
+      "directory": "subsection3/subsection31",
+      "href": "/subsection3/subsection31/test",
+      "permalink": "/@/01",
+      "relative": "subsection3/subsection31/test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+]
+`;
+
+exports[`list > should list for folder book 1`] = `
+[
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {},
+    },
+    "name": "Has Spaces",
+    "path": {
+      "absolute": "single-rrennAIbook/book/Has Spaces.md",
+      "directory": "",
+      "href": "/Has Spaces",
+      "permalink": null,
+      "relative": "Has Spaces.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "rrennAIbook Documentation
+
+https://github.com/openpatch/rrennAIbook/edit/main/website/en
+
+",
+      "data": {},
+    },
+    "name": "rrennAIbook-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/rrennAIbook-test.md",
+      "directory": "",
+      "href": "/rrennAIbook-test",
+      "permalink": null,
+      "relative": "rrennAIbook-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+:t[OOP]{#oop}
+",
+      "data": {
+        "name": "Paradigms",
+      },
+    },
+    "name": "paradigms",
+    "path": {
+      "absolute": "single-rrennAIbook/book/paradigms.md",
+      "directory": "",
+      "href": "/paradigms",
+      "permalink": null,
+      "relative": "paradigms.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "<div style="background:var(--color-block); border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+
+<div style="background:red; border: 1px solid black;">
+    
+Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. 
+
+</div>
+
+",
+      "data": {},
+    },
+    "name": "parentheses-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/parentheses-test.md",
+      "directory": "",
+      "href": "/parentheses-test",
+      "permalink": null,
+      "relative": "parentheses-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": ""My Title"
+
+This is a test description!
+
+",
+      "data": {},
+    },
+    "name": "whitespace-test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/whitespace-test.md",
+      "directory": "",
+      "href": "/whitespace-test",
+      "permalink": null,
+      "relative": "whitespace-test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "Du kannst das Programm am schnellsten per 
+[Kopieren und Einfügen](https://de.wikipedia.org/Kopieren_und_Einfügen)
+ 
+in den Editor übernehmen. Du musst aber aufpassen: Wie du weißt 
+sind die Einrückungen (Leer- und [Tabulatorzeichen](https://de.wikipedia.org/Tabulatorzeichen)
+) 
+in Python Teil des Programms .
+",
+      "data": {},
+    },
+    "name": "wikipedia",
+    "path": {
+      "absolute": "single-rrennAIbook/book/wikipedia.md",
+      "directory": "",
+      "href": "/wikipedia",
+      "permalink": null,
+      "relative": "wikipedia.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "Home",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/index.md",
+      "directory": "",
+      "href": "/",
+      "permalink": null,
+      "relative": "index.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.json",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {},
+    },
+    "name": "empty",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/empty.md.json",
+      "directory": "subsection",
+      "href": "/subsection/empty",
+      "permalink": null,
+      "relative": "subsection/empty.md.json",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "use-template1",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/use-template1.md.yml",
+      "directory": "subsection",
+      "href": "/subsection/use-template1",
+      "permalink": null,
+      "relative": "subsection/use-template1.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+:::excalidraw{src=""}
+
+:::
+
+::youtube{#123}
+
+:t[OOP]{#oop}",
+      "data": {
+        "virtual": true,
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection/index.md",
+      "directory": "subsection",
+      "href": "/subsection",
+      "permalink": null,
+      "relative": "subsection/index.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "
+# Test
+",
+      "data": {
+        "name": "Test",
+      },
+    },
+    "name": "test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection2/test.md",
+      "directory": "subsection2",
+      "href": "/subsection2/test",
+      "permalink": null,
+      "relative": "subsection2/test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection2/index.md.yml",
+      "directory": "subsection2",
+      "href": "/subsection2",
+      "permalink": null,
+      "relative": "subsection2/index.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.hbs",
+    "folder": "book",
+    "markdown": {
+      "content": "# Single Use Template
+
+TEST
+
+Hi!
+",
+      "data": {},
+    },
+    "name": "single-template",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/single-template.md.hbs",
+      "directory": "subsection3",
+      "href": "/subsection3/single-template",
+      "permalink": null,
+      "relative": "subsection3/single-template.md.hbs",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md.yml",
+    "folder": "book",
+    "markdown": {
+      "content": "
+Example use of a template.
+",
+      "data": {
+        "name": "Use Template1 with YAML",
+      },
+    },
+    "name": "index",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/index.md.yml",
+      "directory": "subsection3",
+      "href": "/subsection3",
+      "permalink": null,
+      "relative": "subsection3/index.md.yml",
+    },
+    "root": "single-rrennAIbook",
+  },
+  {
+    "extension": ".md",
+    "folder": "book",
+    "markdown": {
+      "content": "",
+      "data": {
+        "name": "Test",
+        "permaid": "01",
+      },
+    },
+    "name": "test",
+    "path": {
+      "absolute": "single-rrennAIbook/book/subsection3/subsection31/test.md",
+      "directory": "subsection3/subsection31",
+      "href": "/subsection3/subsection31/test",
+      "permalink": "/@/01",
+      "relative": "subsection3/subsection31/test.md",
+    },
+    "root": "single-rrennAIbook",
+  },
+]
+`;

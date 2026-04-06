@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`rrennAIbook > should get navigation 1`] = `
+{
+  "current": {
+    "href": "/paradigms",
+    "isEmpty": false,
+    "name": "Paradigms",
+    "navigation": undefined,
+    "path": {
+      "absolute": "single-rrennAIbook/book/paradigms.md",
+      "directory": "",
+      "href": "/paradigms",
+      "permalink": null,
+      "relative": "paradigms.md",
+    },
+    "repo": "https://github.com/openpatch/rrennAIbook/edit/main/website/en/book/paradigms.md",
+  },
+  "next": {
+    "href": "/rrennAIbook-test",
+    "isEmpty": false,
+    "name": "rrennAIbook-test",
+    "navigation": undefined,
+    "path": {
+      "absolute": "single-rrennAIbook/book/rrennAIbook-test.md",
+      "directory": "",
+      "href": "/rrennAIbook-test",
+      "permalink": null,
+      "relative": "rrennAIbook-test.md",
+    },
+    "repo": "https://github.com/openpatch/rrennAIbook/edit/main/website/en/book/rrennAIbook-test.md",
+  },
+  "previous": null,
+}
+`;

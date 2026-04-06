@@ -1,0 +1,35 @@
+.directive-sqlide {
+  border: 1px solid var(--color-spacer);
+  border-radius: 8px;
+  background: #1e1e1e;
+  overflow: hidden;
+
+  .jo_iconButton.img_whole-window-dark {
+    display: none;
+  }
+
+  .joe_javaOnlineDiv {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .jo_result-body tr:nth-child(2n+1) {
+    background: var(--table-odd);
+  }
+}
+
+.directive-sqlide .menu {
+  display: flex;
+  border-top: 1px solid var(--color-spacer);
+}
+
+.directive-sqlide .menu button {
+  flex: 1;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.2rem;
+  background: var(--color-nav);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,248 @@
+{
+  "name": "rrennAIbook-studio",
+  "private": true,
+  "publisher": "openpatch",
+  "displayName": "rrennAIbook",
+  "description": "Extension for showing markdownfiles using the rrennAIbook markdown renderer.",
+  "icon": "assets/images/rrennAIbook-logo.png",
+  "repository": {
+    "url": "https://github.com/openpatch/rrennAIbook/",
+    "directory": "packages/vscode-extension"
+  },
+  "homepage": "https://rrennAIbook.openpatch.org",
+  "main": "./out/extension.js",
+  "version": "0.49.36",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "vscode",
+    "vscode-extension",
+    "rrennAIbook"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "workspaceContains:**/rrennAIbook.json",
+    "onLanguage:markdown",
+    "onLanguage:handlebars"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "rrennAIbook",
+      "order": 20,
+      "properties": {
+        "rrennAIbook.root": {
+          "type": "string",
+          "default": "",
+          "description": "The root folder of your rrennAIbook project. You need to set this, if your rrennAIbook is located in a subfolder of your workspace folder."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "rrennAIbook.sidePreview",
+        "title": "Show Side Preview",
+        "category": "rrennAIbook",
+        "icon": {
+          "light": "./assets/icons/PreviewOnRightPane_16x.svg",
+          "dark": "./assets/icons/PreviewOnRightPane_16x_dark.svg"
+        }
+      },
+      {
+        "command": "rrennAIbook.startDevServer",
+        "title": "Start Dev Server",
+        "category": "rrennAIbook"
+      },
+      {
+        "command": "rrennAIbook.new",
+        "title": "Create New rrennAIbook",
+        "category": "rrennAIbook"
+      },
+      {
+        "command": "rrennAIbook.openIndexMd",
+        "title": "Open book/index.md",
+        "category": "rrennAIbook"
+      },
+      {
+        "command": "rrennAIbook.createNewPage",
+        "title": "Create New Page in Book Folder",
+        "category": "rrennAIbook"
+      },
+      {
+        "command": "rrennAIbook.openDocumentation",
+        "title": "Open rrennAIbook Documentation",
+        "category": "rrennAIbook"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "rrennAIbook.sidePreview",
+          "when": "(editorLangId == markdown || editorLangId == handlebars ) && config.rrennAIbook.preview.showPreviewOptionInMenuBar",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "rrennAIbook.sidePreview",
+        "key": "ctrl+q s",
+        "mac": "cmd+q s",
+        "when": "editorTextFocus"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snipptes/rrennAIbook.code-snippets"
+      },
+      {
+        "language": "handlebars",
+        "path": "./snipptes/rrennAIbook.code-snippets"
+      }
+    ],
+    "grammars": [
+      {
+        "scopeName": "markdown.rrennAIbook",
+        "path": "./syntaxes/rrennAIbook.json",
+        "injectTo": [
+          "text.html.markdown",
+          "text.html.handlebars"
+        ]
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": [
+          "rrennAIbook.json"
+        ],
+        "url": "./schemas/rrennAIbook.schema.json"
+      },
+      {
+        "fileMatch": [
+          "hyperlibrary.json"
+        ],
+        "url": "./schemas/hyperlibrary.schema.json"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "rrennAIbook.gettingStarted",
+        "title": "Getting Started with rrennAIbook",
+        "description": "Learn how to create and edit your first rrennAIbook.",
+        "steps": [
+          {
+            "id": "createrrennAIbook",
+            "title": "Create a new rrennAIbook",
+            "description": "Create your first rrennAIbook project with all necessary files and folders.\n[Create rrennAIbook](command:rrennAIbook.new)",
+            "media": {
+              "markdown": "assets/walkthrough/create-rrennAIbook.md"
+            }
+          },
+          {
+            "id": "editIndexMd",
+            "title": "Edit index.md",
+            "description": "Open and edit the main page of your book. This is the first page users will see.\n[Open index.md](command:rrennAIbook.openIndexMd)",
+            "media": {
+              "markdown": "assets/walkthrough/edit-index.md"
+            },
+            "completionEvents": [
+              "onCommand:rrennAIbook.openIndexMd"
+            ]
+          },
+          {
+            "id": "createNewPage",
+            "title": "Create a new page",
+            "description": "Add a new page to your book to organize your content.\n[Create new page](command:rrennAIbook.createNewPage)",
+            "media": {
+              "markdown": "assets/walkthrough/create-page.md"
+            },
+            "completionEvents": [
+              "onCommand:rrennAIbook.createNewPage"
+            ]
+          },
+          {
+            "id": "insertSnippet",
+            "title": "Insert a snippet",
+            "description": "Use snippets to quickly add rrennAIbook elements like alerts, videos, and more. Type `:` in a markdown file to see available snippets.\n[Open Snippet Documentation](https://rrennAIbook.openpatch.org)",
+            "media": {
+              "markdown": "assets/walkthrough/insert-snippet.md"
+            }
+          },
+          {
+            "id": "changeFrontmatter",
+            "title": "Change page frontmatter",
+            "description": "Customize your page by editing the frontmatter at the top of any markdown file. You can set the title, description, and more.",
+            "media": {
+              "markdown": "assets/walkthrough/frontmatter.md"
+            }
+          },
+          {
+            "id": "done",
+            "title": "You're all set! 🎉",
+            "description": "Congratulations! You've learned the basics of rrennAIbook. Now you can:\n- Use the preview to see your changes\n- Explore more snippets and elements\n- Deploy your rrennAIbook online\n[Open Documentation](command:rrennAIbook.openDocumentation)",
+            "media": {
+              "markdown": "assets/walkthrough/done.md"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm compile",
+    "vscode:package": "vsce package",
+    "vscode:publish": "vsce publish --packagePath $(find . -iname *.vsix)",
+    "ovsx:publish": "ovsx publish $(find . -iname *.vsix)",
+    "build": "npm-run-all compile:*",
+    "compile": "npm-run-all compile:*",
+    "compile:extension": "webpack  --config ./webpack.extension.config.js --mode production",
+    "compile:schema-rrennAIbook": "typescript-json-schema ../../packages/types/src/index.ts rrennAIbookJson --out ./schemas/rrennAIbook.schema.json --required",
+    "compile:schema-hyperlibrary": "typescript-json-schema ../../packages/types/src/index.ts HyperlibraryJson --out ./schemas/hyperlibrary.schema.json --required",
+    "watch": "npm-run-all -p watch:*",
+    "watch:extension": "webpack --config ./webpack.extension.config.js --watch --mode development",
+    "open": "code --extensionDevelopmentPath=$PWD",
+    "pretest": "pnpm compile && pnpm lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@rrennAIbook/types": "workspace:*",
+    "@types/glob": "8.1.0",
+    "@types/node": "20.12.12",
+    "@types/vscode": "1.71.0",
+    "@typescript-eslint/eslint-plugin": "8.53.1",
+    "@typescript-eslint/parser": "8.53.1",
+    "@vscode/vsce": "3.7.1",
+    "buffer": "6.0.3",
+    "copy-webpack-plugin": "12.0.2",
+    "css-loader": "7.1.2",
+    "eslint": "9.39.2",
+    "file-loader": "6.2.0",
+    "glob": "11.0.1",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "npm-run-all": "4.1.5",
+    "ovsx": "0.10.8",
+    "prettier": "3.4.2",
+    "sass": "1.97.3",
+    "sass-loader": "16.0.6",
+    "style-loader": "4.0.0",
+    "ts-loader": "9.5.4",
+    "typescript": "5.7.3",
+    "typescript-json-schema": "0.67.1",
+    "webpack": "5.97.1",
+    "webpack-cli": "6.0.1"
+  },
+  "dependencies": {
+    "@rrennAIbook/fs": "workspace:*",
+    "@rrennAIbook/markdown": "workspace:*",
+    "create-rrennAIbook": "workspace:*"
+  },
+  "vsce": {
+    "dependencies": false,
+    "skipDuplicate": true
+  }
+}

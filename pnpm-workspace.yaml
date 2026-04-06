@@ -1,0 +1,14 @@
+packages:
+  - packages/*
+  - templates/*
+  - platforms/*
+  - '!**/test/**'
+
+ignoredBuiltDependencies:
+  - esbuild
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@vscode/vsce-sign'
+  - better-sqlite3
+  - sharp

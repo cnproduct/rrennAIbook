@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`remarkDirectiveCollapsible > should transform 1`] = `
+"
+<details class="directive-collapsible" data-id="48a91852d8b55f194376022d3c14c87e99166e435eaab279a0c2d92523d39aec">
+  <summary>Hallo</summary>
+  <div class="content">
+    <p>This is a panel</p>
+    <audio src="/Free_Test_Data_1MB_MP3.mp3" thumbnail="/group-people.png" title="Hallo" author="Max Mustermann"></audio>
+    <details class="directive-collapsible" data-id="13caa90143e8b1bb873970593700aa49da40b6c2c3ecf175995eba4b14ff9ee7">
+      <summary>Nested</summary>
+      <div class="content">
+        <p>This is a stacked collapsible</p>
+        <youtube id="124">Test</youtube>
+      </div>
+    </details>
+    <p>This is normal Test in-between.</p>
+    <details class="directive-collapsible" data-id="a80605f62a0075b79b15495e23cea3724d30c97d2f5433bd070ab97ac596a5e0">
+      <summary>With an Image</summary>
+      <div class="content">
+        <p>
+          <img src="/test.jpg" alt="">
+        </p>
+      </div>
+    </details>
+  </div>
+</details>
+"
+`;

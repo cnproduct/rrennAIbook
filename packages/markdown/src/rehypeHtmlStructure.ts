@@ -1,0 +1,798 @@
+// Register directive nodes in mdast:
+/// <reference types="mdast-util-directive" />
+//
+import { rrennAIbookContext } from "@rrennAIbook/types";
+import { ElementContent, Root } from "hast";
+import { VFile } from "vfile";
+
+function parseFont(font: string): [string, string] {
+  const parts = font.split(":");
+  if (parts.length == 2) {
+    return [parts[0], parts[1]];
+  }
+
+  return [parts[0], "100%"];
+}
+
+const makeSearchScripts = (ctx: rrennAIbookContext): ElementContent[] => {
+  const elements: ElementContent[] = [];
+  if (ctx.config.search) {
+    elements.push({
+      type: "element",
+      tagName: "script",
+      properties: {
+        src: ctx.makeUrl(["lunr.min.js"], "assets"),
+        defer: true,
+      },
+      children: [],
+    });
+
+    if (ctx.config.language && ctx.config.language !== "en") {
+      elements.push({
+        type: "element",
+        tagName: "script",
+        properties: {
+          src: ctx.makeUrl(
+            ["lunr-languages", "lunr.stemmer.support.min.js"],
+            "assets",
+          ),
+          defer: true,
+        },
+        children: [],
+      });
+      elements.push({
+        type: "element",
+        tagName: "script",
+        properties: {
+          src: ctx.makeUrl(
+            ["lunr-languages", `lunr.${ctx.config.language}.min.js`],
+            "assets",
+          ),
+          defer: true,
+        },
+        children: [],
+      });
+    }
+    elements.push({
+      type: "element",
+      tagName: "script",
+      properties: {
+        src: ctx.makeUrl(["search.js"], "assets"),
+        defer: true,
+      },
+      children: [],
+    });
+  }
+
+  return elements;
+};
+
+const makeRootCssElement = ({
+  makeUrl,
+  config: { colors, font, fonts },
+}: rrennAIbookContext): ElementContent => {
+  let rootCss = `
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+`;
+  rootCss += `
+:root {
+  --color-brand: ${colors?.brand || "#007864"};
+  --color-brand-dark: ${colors?.brandDark || colors?.brand || "#b5e3d8"};
+  --color-brand-text: ${colors?.brandText || "white"};
+  --main-width: 980px;
+  --header-height: 3.75rem;
+  --nav-width: minmax(300px, 0.33fr);
+  --nav-font-size: 0.9rem;
+  --element-gap: 1.5rem;
+}`;
+
+  if (font) {
+    rootCss += `
+@font-face {
+  font-family: rrennAIbook-heading;
+  src: url(${makeUrl(parseFont(font)[0], "public")});
+  size-adjust: ${parseFont(font)[1]};
+  font-display: swap;
+}
+@font-face {
+  font-family: rrennAIbook-body;
+  src: url(${makeUrl(parseFont(font)[0], "public")});
+  size-adjust: ${parseFont(font)[1]};
+  font-display: swap;
+}
+`;
+  }
+  if (fonts?.body) {
+    rootCss += `
+@font-face {
+  font-family: rrennAIbook-body;
+  src: url(${makeUrl(parseFont(fonts.body)[0], "public")});
+  size-adjust: ${parseFont(fonts.body)[1]};
+  font-display: swap;
+}
+`;
+  }
+  if (fonts?.heading) {
+    rootCss += `
+@font-face {
+  font-family: rrennAIbook-heading;
+  src: url(${makeUrl(parseFont(fonts.heading)[0], "public")});
+  size-adjust: ${parseFont(fonts.heading)[1]};
+  font-display: swap;
+}
+`;
+  }
+
+  if (fonts?.code) {
+    rootCss += `
+@font-face {
+  font-family: rrennAIbook-code;
+  src: url(${makeUrl(parseFont(fonts.code)[0], "public")});
+  size-adjust: ${parseFont(fonts.code)[1]};
+  font-display: swap;
+}
+`;
+  }
+
+  rootCss += `
+body {
+  overscroll-behavior-x: none;
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: rrennAIbook-body;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+`;
+
+  return {
+    type: "element",
+    tagName: "style",
+    properties: {},
+    children: [
+      {
+        type: "raw",
+        value: rootCss,
+      },
+    ],
+  };
+};
+
+export default (ctx: rrennAIbookContext) => () => {
+  const {
+    makeUrl,
+    config,
+    navigation: { current: currentPage },
+  } = ctx;
+  return (tree: Root, file: VFile) => {
+    const directives = file.data.directives || {};
+    const js = file.data.js || [];
+    const css = file.data.css || [];
+    const originalChildren = tree.children as ElementContent[];
+
+    tree.children = [
+      {
+        type: "doctype",
+        data: "html",
+      },
+      {
+        type: "element",
+        tagName: "html",
+        properties: {
+          lang: config.language || "es",
+          class: "no-js",
+        },
+        children: [
+          {
+            type: "element",
+            tagName: "head",
+            properties: {},
+            children: [
+              {
+                type: "element",
+                tagName: "meta",
+                properties: {
+                  charset: "UTF-8",
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "meta",
+                properties: {
+                  name: "viewport",
+                  content:
+                    "width=device-width, initial-scale=1,, interactive-widget=resizes-content",
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "title",
+                properties: {},
+                children: [
+                  {
+                    type: "text",
+                    value: currentPage?.name
+                      ? `${currentPage?.name} - ${config.name}`
+                      : config.name,
+                  },
+                ],
+              },
+              {
+                type: "element",
+                tagName: "meta",
+                properties: {
+                  property: "og:title",
+                  value: currentPage?.name
+                    ? `${currentPage?.name} - ${config.name}`
+                    : config.name,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "meta",
+                properties: {
+                  name: "description",
+                  content: `${currentPage?.description || config.description}`,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "meta",
+                properties: {
+                  property: "og:description",
+                  content: `${currentPage?.description || config.description}`,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "meta",
+                properties: {
+                  name: "keywords",
+                  content: currentPage?.keywords
+                    ? `${currentPage?.keywords.join("")}`
+                    : undefined,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "icon",
+                  type: "image/x-icon",
+                  href: makeUrl(["/favicon.ico"], "public"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "apple-touch-icon",
+                  sizes: "180x180",
+                  href: makeUrl(["favicons", "apple-touch-icon.png"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "manifest",
+                  href: makeUrl(["favicons", "manifest.webmanifest"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(["normalize.css"], "assets"),
+                },
+                children: [],
+              },
+              makeRootCssElement(ctx),
+              {
+                type: "element",
+                tagName: "noscript",
+                properties: {
+                  id: "dark-mode-toggle-stylesheets",
+                },
+                children: [
+                  {
+                    type: "element",
+                    tagName: "link",
+                    properties: {
+                      rel: "stylesheet",
+                      href: makeUrl(["light.css"], "assets"),
+                      media: "(prefers-color-scheme: light)",
+                    },
+                    children: [],
+                  },
+                  {
+                    type: "element",
+                    tagName: "link",
+                    properties: {
+                      rel: "stylesheet",
+                      href: makeUrl(["dark.css"], "assets"),
+                      media: "(prefers-color-scheme: dark)",
+                    },
+                    children: [],
+                  },
+                ],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {},
+                children: [
+                  {
+                    type: "raw",
+                    value: `
+// Remove no-js class as soon as JavaScript is available
+document.documentElement.classList.remove('no-js');`,
+                  },
+                ],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(
+                    ["dark-mode-toggle-stylesheets-loader.js"],
+                    "assets",
+                  ),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  type: "module",
+                  src: makeUrl(["dark-mode-toggle.js"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["i18n.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["dexie.min.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["dexie-export-import.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["store.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {},
+                children: [
+                  {
+                    type: "raw",
+                    value: `
+window.Prism = window.Prism || {};
+window.Prism.manual = true;`,
+                  },
+                ],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["prism", "prism.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["prism", "prism-typst.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(["prism", "prism.css"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(
+                    ["prism", "prism-theme-github-dark.css"],
+                    "assets",
+                  ),
+                  media: "(prefers-color-scheme: dark)",
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(
+                    ["prism", "prism-theme-github-light.css"],
+                    "assets",
+                  ),
+                  media: "(prefers-color-scheme: light)",
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(["math", "katex.min.css"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(["shell.css"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(["content.css"], "assets"),
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "link",
+                properties: {
+                  rel: "stylesheet",
+                  href: makeUrl(["code.css"], "assets"),
+                },
+                children: [],
+              },
+              ...css.map(
+                (style) =>
+                  ({
+                    type: "element",
+                    tagName: "link",
+                    properties: {
+                      rel: "stylesheet",
+                      href: makeUrl(style, "assets"),
+                    },
+                    children: [],
+                  }) as ElementContent,
+              ),
+              ...(ctx.config.styles || []).map(
+                (style) =>
+                  ({
+                    type: "element",
+                    tagName: "link",
+                    properties: {
+                      rel: "stylesheet",
+                      href: style.includes("://")
+                        ? style
+                        : makeUrl(style, "public"),
+                    },
+                    children: [],
+                  }) as ElementContent,
+              ),
+              ...(ctx.navigation.current?.styles || []).map(
+                (style) =>
+                  ({
+                    type: "element",
+                    tagName: "link",
+                    properties: {
+                      rel: "stylesheet",
+                      href: style.includes("://")
+                        ? style
+                        : makeUrl(style, "public", currentPage || undefined),
+                    },
+                    children: [],
+                  }) as ElementContent,
+              ),
+              {
+                type: "element",
+                tagName: "script",
+                properties: {},
+                children: [
+                  {
+                    type: "raw",
+                    value: `
+rrennAIbook_ASSETS = "${makeUrl("/", "assets")}"
+${ctx.config.cloud ? `rrennAIbook_CLOUD = ${JSON.stringify(ctx.config.cloud).replace(/</g, '\\u003c')}` : ""}
+`,
+                  },
+                ],
+              },
+              ...((ctx.config.version ?? "console") === "console" && ctx.version
+                ? [
+                    {
+                      type: "element" as const,
+                      tagName: "script",
+                      properties: {},
+                      children: [
+                        {
+                          type: "raw" as const,
+                          value: `
+console.log(
+  "%c" +
+  "rrennAIbook v${ctx.version}",
+  "font-family: monospace; font-size: 16px;"
+);`,
+                        },
+                      ],
+                    } as ElementContent,
+                  ]
+                : []),
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  type: "module",
+                  src: makeUrl(["side-drawer.js"], "assets"),
+                  async: true,
+                },
+                children: [],
+              },
+              ...makeSearchScripts(ctx),
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["qrcode.js"], "assets"),
+                  async: true,
+                },
+                children: [],
+              },
+              ...js.map(
+                (script) =>
+                  ({
+                    type: "element",
+                    tagName: "script",
+                    properties: {
+                      src: makeUrl(script, "assets"),
+                    },
+                    children: [],
+                  }) as ElementContent,
+              ),
+              ...Object.entries(directives).flatMap(([directive, { styles }]) =>
+                styles.map(
+                  (style) =>
+                    ({
+                      type: "element",
+                      tagName: "link",
+                      properties: {
+                        rel: "stylesheet",
+                        href: style.includes("://")
+                          ? style
+                          : makeUrl(
+                              ["directive-" + directive, style],
+                              "assets",
+                            ),
+                      },
+                      children: [],
+                    }) as ElementContent,
+                ),
+              ),
+              ...Object.entries(directives).flatMap(
+                ([directive, { scripts }]) =>
+                  scripts
+                    .filter(
+                      (script) =>
+                        typeof script === "object" &&
+                        script.position === "head",
+                    )
+                    .map((script) => {
+                      if (typeof script === "object") {
+                        const { position, versioned, src, ...properties } =
+                          script;
+                        let scriptSrc = script.src.includes("://")
+                          ? script.src
+                          : makeUrl(
+                              ["directive-" + directive, script.src],
+                              "assets",
+                            );
+
+                        if (!versioned) {
+                          scriptSrc = scriptSrc.split("?")[0];
+                        }
+                        return {
+                          type: "element",
+                          tagName: "script",
+                          properties: {
+                            ...properties,
+                            src: scriptSrc,
+                          },
+                          children: [],
+                        } as ElementContent;
+                      }
+                      return null;
+                    })
+                    .filter((s) => s !== null),
+              ),
+            ],
+          },
+          {
+            type: "element",
+            tagName: "body",
+            properties: {},
+            children: [
+              ...originalChildren,
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["bootstrap.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              {
+                type: "element",
+                tagName: "script",
+                properties: {
+                  src: makeUrl(["ui.js"], "assets"),
+                  defer: true,
+                },
+                children: [],
+              },
+              ...(ctx.config.cloud
+                ? [
+                    {
+                      type: "element",
+                      tagName: "script",
+                      properties: {
+                        src: makeUrl(["cloud.js"], "assets"),
+                        defer: true,
+                      },
+                      children: [],
+                    } as ElementContent,
+                  ]
+                : []),
+              ...Object.entries(directives).flatMap(
+                ([directive, { scripts }]) =>
+                  scripts
+                    .filter(
+                      (script) =>
+                        typeof script !== "object" || script.position == "body",
+                    )
+                    .map((script) => {
+                      if (typeof script === "object") {
+                        const { position, versioned, src, ...properties } =
+                          script;
+                        let scriptSrc = script.src.includes("://")
+                          ? script.src
+                          : makeUrl(
+                              ["directive-" + directive, script.src],
+                              "assets",
+                            );
+
+                        if (!versioned) {
+                          scriptSrc = scriptSrc.split("?")[0];
+                        }
+                        return {
+                          type: "element",
+                          tagName: "script",
+                          properties: {
+                            ...properties,
+                            src: scriptSrc,
+                          },
+                          children: [],
+                        } as ElementContent;
+                      }
+                      return {
+                        type: "element",
+                        tagName: "script",
+                        properties: {
+                          src: script.includes("://")
+                            ? script
+                            : makeUrl(
+                                ["directive-" + directive, script],
+                                "assets",
+                              ),
+                          defer: true,
+                        },
+                        children: [],
+                      } as ElementContent;
+                    }),
+              ),
+              ...(ctx.config.scripts || []).map(
+                (script) =>
+                  ({
+                    type: "element",
+                    tagName: "script",
+                    properties: {
+                      src: script.includes("://")
+                        ? script
+                        : makeUrl(script, "public"),
+                      defer: true,
+                    },
+                    children: [],
+                  }) as ElementContent,
+              ),
+              ...(ctx.navigation.current?.scripts || []).map(
+                (script) =>
+                  ({
+                    type: "element",
+                    tagName: "script",
+                    properties: {
+                      src: script.includes("://")
+                        ? script
+                        : makeUrl(script, "public", currentPage || undefined),
+                      defer: true,
+                    },
+                    children: [],
+                  }) as ElementContent,
+              ),
+            ],
+          },
+        ],
+      },
+    ];
+  };
+};

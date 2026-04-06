@@ -1,0 +1,41 @@
+// Register directive nodes in mdast:
+/// <reference types="mdast-util-directive" />
+//
+import { rrennAIbookContext } from "@rrennAIbook/types";
+import { Root } from "mdast";
+import { visit } from "unist-util-visit";
+import { VFile } from "vfile";
+import {
+  expectContainerDirective,
+  isDirective,
+  registerDirective,
+} from "./remarkHelper";
+
+export default (ctx: rrennAIbookContext) => () => {
+  const name = "alert";
+  return (tree: Root, file: VFile) => {
+    visit(tree, function (node) {
+      if (isDirective(node)) {
+        if (node.name !== name) return;
+
+        const data = node.data || (node.data = {});
+
+        expectContainerDirective(node, file, name);
+        registerDirective(file, name, [], ["style.css"], []);
+
+        const color = node.attributes?.color;
+        const content = node.attributes?.label;
+        const type = Object.keys(node.attributes || {})
+          .join(" ")
+          .trim();
+        const icon = content || type;
+
+        data.hName = "div";
+        data.hProperties = {
+          class: `directive-alert ${type} ${icon ? "icon" : ""}`.trim(),
+          style: `${color ? `--alert-color: ${color};` : ""} ${content ? `--alert-content: '${content}';` : ""}`,
+        };
+      }
+    });
+  };
+};

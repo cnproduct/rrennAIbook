@@ -1,0 +1,52 @@
+.rrennAIbook-markdown ul {
+    list-style: none;
+}
+
+.rrennAIbook-markdown ul li {
+    margin: 0 0 0 0;
+    position: relative;
+}
+
+.rrennAIbook-markdown ul li::before {
+    --size: 8px;
+    position: absolute;
+    content: "";
+    background-color: var(--color-brand);
+    left: calc(-1 * var(--size) - 10px);
+    top: 8px;
+    color: var(--color-background);
+    text-align: center;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    border-radius: 50%;
+
+}
+
+.rrennAIbook-markdown ol {
+    counter-reset: rrennAIbook-ol-counter;
+    list-style: none;
+}
+
+.rrennAIbook-markdown ol li {
+    counter-increment: rrennAIbook-ol-counter;
+    margin: 0;
+    position: relative;
+    list-style: none;
+}
+
+.rrennAIbook-markdown ol li::before {
+    --size: 20px;
+    position: absolute;
+    content: counter(rrennAIbook-ol-counter);
+    background-color: var(--color-brand);
+    left: calc(-1 * var(--size) - 8px);
+    top: 2px;
+    transform: rotate(-10deg);
+    color: var(--color-background);
+    text-align: center;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    border-radius: 20%;
+}

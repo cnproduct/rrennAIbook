@@ -1,0 +1,122 @@
+// Register directive nodes in mdast:
+/// <reference types="mdast-util-directive" />
+//
+import { rrennAIbookContext } from "@rrennAIbook/types";
+import { Comment, Element, Text } from "hast";
+import { Root } from "mdast";
+import { visit } from "unist-util-visit";
+import { VFile } from "vfile";
+import {
+  expectContainerDirective,
+  expectLeafDirective,
+  isDirective,
+  registerDirective,
+} from "./remarkHelper";
+import { Raw } from "mdast-util-to-hast";
+import githubEmojiMap from "./github-emojis.json";
+
+export default (ctx: rrennAIbookContext) => () => {
+  return (tree: Root, file: VFile) => {
+    visit(tree, function (node) {
+      if (isDirective(node)) {
+        if (node.name !== "tiles") return;
+
+        const data = node.data || (node.data = {});
+
+        if (node.name === "tiles") {
+          expectContainerDirective(node, file, "tiles");
+          data.hName = "div";
+          data.hProperties = {
+            class: "directive-tiles",
+          };
+          registerDirective(file, "tiles", [], ["style.css"], ["tile"]);
+
+          const tilesChildren: (Text | Comment | Element | Raw)[] = [];
+          node.children.filter(isDirective).forEach((node) => {
+            if (node.name !== "tile") {
+              return;
+            }
+            const { title, size = "M", icon, href } = node.attributes || {};
+            expectLeafDirective(node, file, "tile");
+
+            if (!title) {
+              file.fail(
+                `[tiles] A title is required (${ctx.navigation.current?.href})`,
+                node,
+              );
+            }
+
+            const tileChildren: (Text | Comment | Element | Raw)[] = [
+              {
+                type: "element",
+                tagName: "a",
+                properties: {
+                  class: "tile-title",
+                  href: href ? ctx.makeUrl(href, "public", ctx.navigation.current || undefined) : undefined,
+                },
+                children: [
+                  {
+                    type: "text",
+                    value: title,
+                  },
+                ],
+              },
+            ];
+
+            if (icon) {
+              const emojiMatch = icon.match(/^:([+\w-]+):$/);
+              if (emojiMatch) {
+                const emojiName = emojiMatch[1];
+                // @ts-ignore
+                const emoji = githubEmojiMap[emojiName] ?? icon;
+                tileChildren.push({
+                  type: "element",
+                  tagName: "span",
+                  properties: {
+                    class: "tile-icon tile-icon-emoji",
+                  },
+                  children: [
+                    {
+                      type: "text",
+                      value: emoji,
+                    },
+                  ],
+                });
+              } else {
+                tileChildren.push({
+                  type: "element",
+                  tagName: "img",
+                  properties: {
+                    class: "tile-icon",
+                    src: ctx.makeUrl(icon, "public"),
+                  },
+                  children: [],
+                });
+              }
+            }
+
+            tilesChildren.push({
+              type: "element",
+              tagName: "li",
+              properties: {
+                class: `tile ${size} ${href ? "link" : ""}`,
+              },
+              children: tileChildren,
+            });
+          });
+
+          data.hChildren = [
+            {
+              type: "element",
+              tagName: "ul",
+              properties: {
+                class: "tiles",
+              },
+              children: tilesChildren,
+            },
+          ];
+        }
+      }
+    });
+  };
+};

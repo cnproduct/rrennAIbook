@@ -1,0 +1,6 @@
+{
+  "template": "template-demo",
+  "name": "Templates - Demo",
+  "description": "Hi I am a template demo\n for JSON",
+  "src": "main.c"
+}

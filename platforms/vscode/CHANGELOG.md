@@ -1,0 +1,2649 @@
+# @rrennAIbook/vscode-extension
+
+## 0.49.36
+
+### Patch Changes
+
+- Updated dependencies [[`1b84619`](https://github.com/openpatch/rrennAIbook/commit/1b84619ead4f6f7661c2a3b04b69fb6b89d47504)]:
+  - @rrennAIbook/markdown@0.60.2
+
+## 0.49.35
+
+### Patch Changes
+
+- Updated dependencies [[`87f8c55`](https://github.com/openpatch/rrennAIbook/commit/87f8c5506431f1b44e34026b142c415ab2d5ac04)]:
+  - @rrennAIbook/markdown@0.60.1
+
+## 0.49.34
+
+### Patch Changes
+
+- Updated dependencies [[`dcff5a6`](https://github.com/openpatch/rrennAIbook/commit/dcff5a6f67fe9536f7a039f89b272c13a9c4bf73), [`0f0748c`](https://github.com/openpatch/rrennAIbook/commit/0f0748cc1ee56a536d07d95f3a630a3a917909a5)]:
+  - @rrennAIbook/markdown@0.60.0
+  - create-rrennAIbook@0.3.6
+  - @rrennAIbook/fs@0.25.0
+
+## 0.49.33
+
+### Patch Changes
+
+- Updated dependencies [[`2e0b614`](https://github.com/openpatch/rrennAIbook/commit/2e0b614996e72057e3237ccbc2fdd04752b534c3)]:
+  - @rrennAIbook/markdown@0.59.4
+
+## 0.49.32
+
+### Patch Changes
+
+- Updated dependencies [[`63a7dfe`](https://github.com/openpatch/rrennAIbook/commit/63a7dfea04aa26c2b5c840f0000fee25ebd6a05c)]:
+  - @rrennAIbook/markdown@0.59.3
+
+## 0.49.31
+
+### Patch Changes
+
+- Updated dependencies [[`6fb9623`](https://github.com/openpatch/rrennAIbook/commit/6fb9623db85eccc4cdb023c1b168e696908cfc5e)]:
+  - @rrennAIbook/markdown@0.59.2
+
+## 0.49.30
+
+### Patch Changes
+
+- Updated dependencies [[`816309a`](https://github.com/openpatch/rrennAIbook/commit/816309a4c43ef69fb9a12434cbf3f1c6a2d813c2)]:
+  - @rrennAIbook/markdown@0.59.1
+
+## 0.49.29
+
+### Patch Changes
+
+- Updated dependencies [[`d474152`](https://github.com/openpatch/rrennAIbook/commit/d47415218d4ceadff26395d957d274aeaa315689)]:
+  - @rrennAIbook/markdown@0.59.0
+  - @rrennAIbook/fs@0.25.0
+
+## 0.49.28
+
+### Patch Changes
+
+- Updated dependencies [[`2e0f062`](https://github.com/openpatch/rrennAIbook/commit/2e0f062e7368bacecd063e32f6060c1431bc6631)]:
+  - @rrennAIbook/markdown@0.58.4
+
+## 0.49.27
+
+### Patch Changes
+
+- Updated dependencies [[`146b7e2`](https://github.com/openpatch/rrennAIbook/commit/146b7e2bd3df8dbd66a835152f555e9ad45e90eb)]:
+  - @rrennAIbook/markdown@0.58.3
+
+## 0.49.26
+
+### Patch Changes
+
+- Updated dependencies [[`a0e379b`](https://github.com/openpatch/rrennAIbook/commit/a0e379bb0be20dd2c8e582d32b3481a463d48e6f)]:
+  - @rrennAIbook/markdown@0.58.2
+
+## 0.49.25
+
+### Patch Changes
+
+- Updated dependencies [[`bd5620b`](https://github.com/openpatch/rrennAIbook/commit/bd5620bd54d51cd05759bb894a4624e5d1175854)]:
+  - @rrennAIbook/markdown@0.58.1
+
+## 0.49.24
+
+### Patch Changes
+
+- Updated dependencies [[`7aa3666`](https://github.com/openpatch/rrennAIbook/commit/7aa3666ffc93f22c496254c64dbf3ee2641a1c97)]:
+  - @rrennAIbook/markdown@0.58.0
+
+## 0.49.23
+
+### Patch Changes
+
+- Updated dependencies [[`bb3a336`](https://github.com/openpatch/rrennAIbook/commit/bb3a3365f9b10d5f56e2e3c38b655ad5777f7618)]:
+  - @rrennAIbook/markdown@0.57.0
+
+## 0.49.22
+
+### Patch Changes
+
+- Updated dependencies [[`b39a52a`](https://github.com/openpatch/rrennAIbook/commit/b39a52a0b1b1a37cb0b5b256ba7f43093e2ee946)]:
+  - @rrennAIbook/markdown@0.56.0
+
+## 0.49.21
+
+### Patch Changes
+
+- [`d98c9ca`](https://github.com/openpatch/rrennAIbook/commit/d98c9cac95017c0bfa098929218bc94ff758a906) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Move to an event driven architecture for rrennAIbook cloud
+
+- Updated dependencies [[`d98c9ca`](https://github.com/openpatch/rrennAIbook/commit/d98c9cac95017c0bfa098929218bc94ff758a906), [`3d77fd8`](https://github.com/openpatch/rrennAIbook/commit/3d77fd83942ccb9e8fe7fae86b03689ee739bae0)]:
+  - @rrennAIbook/markdown@0.55.4
+  - create-rrennAIbook@0.3.5
+  - @rrennAIbook/fs@0.24.2
+
+## 0.49.20
+
+### Patch Changes
+
+- Updated dependencies [[`0332c62`](https://github.com/openpatch/rrennAIbook/commit/0332c62c717900b73746a631d2293b946d80b44a)]:
+  - @rrennAIbook/markdown@0.55.3
+
+## 0.49.19
+
+### Patch Changes
+
+- Updated dependencies [[`74f520c`](https://github.com/openpatch/rrennAIbook/commit/74f520c92b5fda0eb72b536c7ba91b52bf0b97e9)]:
+  - @rrennAIbook/markdown@0.55.2
+
+## 0.49.18
+
+### Patch Changes
+
+- Updated dependencies [[`0d029e3`](https://github.com/openpatch/rrennAIbook/commit/0d029e3d4287e7054c25f40d42aadb4eb308f740)]:
+  - @rrennAIbook/markdown@0.55.1
+
+## 0.49.17
+
+### Patch Changes
+
+- Updated dependencies [[`4b64ec3`](https://github.com/openpatch/rrennAIbook/commit/4b64ec3be33fcda363e5cc724adcfadfc3c42649)]:
+  - @rrennAIbook/markdown@0.55.0
+  - create-rrennAIbook@0.3.4
+  - @rrennAIbook/fs@0.24.2
+
+## 0.49.16
+
+### Patch Changes
+
+- Updated dependencies [[`78a5ff3`](https://github.com/openpatch/rrennAIbook/commit/78a5ff37534742ee79f2f7422914d4a091a805f6)]:
+  - @rrennAIbook/markdown@0.54.0
+  - create-rrennAIbook@0.3.3
+  - @rrennAIbook/fs@0.24.2
+
+## 0.49.15
+
+### Patch Changes
+
+- Updated dependencies [[`2f3a35d`](https://github.com/openpatch/rrennAIbook/commit/2f3a35dd37cddc190b81ec8cfa3682aaba77a1d7)]:
+  - @rrennAIbook/markdown@0.53.0
+
+## 0.49.14
+
+### Patch Changes
+
+- Updated dependencies [[`75dfa0d`](https://github.com/openpatch/rrennAIbook/commit/75dfa0d202c1245ece7fb088e23047fdf31c6568)]:
+  - @rrennAIbook/markdown@0.52.1
+
+## 0.49.13
+
+### Patch Changes
+
+- Updated dependencies [[`25fabdf`](https://github.com/openpatch/rrennAIbook/commit/25fabdfe4a6af538f41041b233c3e5a02cf1b7f4), [`f81de0c`](https://github.com/openpatch/rrennAIbook/commit/f81de0c24a93a7a126f5358b7f1ed94139e8ee4f)]:
+  - @rrennAIbook/markdown@0.52.0
+
+## 0.49.12
+
+### Patch Changes
+
+- Updated dependencies [[`b28ca89`](https://github.com/openpatch/rrennAIbook/commit/b28ca894f26084fdf2e644e33d546efd7e55434f)]:
+  - @rrennAIbook/markdown@0.51.0
+
+## 0.49.11
+
+### Patch Changes
+
+- Updated dependencies [[`aca86a0`](https://github.com/openpatch/rrennAIbook/commit/aca86a0be14cc351a27ba998ac86e52dc9332a43)]:
+  - @rrennAIbook/markdown@0.50.1
+
+## 0.49.10
+
+### Patch Changes
+
+- Updated dependencies [[`291f477`](https://github.com/openpatch/rrennAIbook/commit/291f4772664aabaf5d5cd8a553ba1b1757855641)]:
+  - @rrennAIbook/markdown@0.50.0
+
+## 0.49.9
+
+### Patch Changes
+
+- Updated dependencies [[`54963f2`](https://github.com/openpatch/rrennAIbook/commit/54963f2e022cb90de6c74d1d28b80e34b51cb2bd)]:
+  - @rrennAIbook/markdown@0.49.0
+
+## 0.49.8
+
+### Patch Changes
+
+- Updated dependencies [[`3e9f9a9`](https://github.com/openpatch/rrennAIbook/commit/3e9f9a9a7b6dc48222ee10cb07ba4fa20fae5cb3)]:
+  - @rrennAIbook/markdown@0.48.7
+
+## 0.49.7
+
+### Patch Changes
+
+- Updated dependencies [[`28097df`](https://github.com/openpatch/rrennAIbook/commit/28097dfc6f7544d363789aa6368cd43935225886)]:
+  - @rrennAIbook/fs@0.24.2
+  - @rrennAIbook/markdown@0.48.6
+
+## 0.49.6
+
+### Patch Changes
+
+- Updated dependencies [[`2298714`](https://github.com/openpatch/rrennAIbook/commit/22987149f801f5e1372ad0aaf89aea601172238f)]:
+  - @rrennAIbook/markdown@0.48.6
+
+## 0.49.5
+
+### Patch Changes
+
+- Updated dependencies [[`1d4f6df`](https://github.com/openpatch/rrennAIbook/commit/1d4f6df7e35ebc54b56dee024249e969da3856fe)]:
+  - @rrennAIbook/markdown@0.48.5
+
+## 0.49.4
+
+### Patch Changes
+
+- Updated dependencies [[`f8d67df`](https://github.com/openpatch/rrennAIbook/commit/f8d67df980e25ed17c88d80d0ffb36ef71f0b633)]:
+  - @rrennAIbook/markdown@0.48.4
+  - @rrennAIbook/fs@0.24.1
+
+## 0.49.3
+
+### Patch Changes
+
+- Updated dependencies [[`503080e`](https://github.com/openpatch/rrennAIbook/commit/503080e0a8f1ede496e000e59802fcfad9d9ebc1)]:
+  - @rrennAIbook/markdown@0.48.3
+
+## 0.49.2
+
+### Patch Changes
+
+- Updated dependencies [[`9857116`](https://github.com/openpatch/rrennAIbook/commit/9857116239e8e0ccef14979605b937f17620cd1b)]:
+  - @rrennAIbook/markdown@0.48.2
+
+## 0.49.1
+
+### Patch Changes
+
+- Updated dependencies [[`ca5d844`](https://github.com/openpatch/rrennAIbook/commit/ca5d8441084ed4adf295f19556a5cc5d29a0e07f)]:
+  - @rrennAIbook/markdown@0.48.1
+
+## 0.49.0
+
+### Minor Changes
+
+- [`a51613f`](https://github.com/openpatch/rrennAIbook/commit/a51613fe7a8a0ac2b8f521bdae1405e18193f62f) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add new `navigation` field for pages and sections, and improve styling coherence.
+
+### Patch Changes
+
+- Updated dependencies [[`a51613f`](https://github.com/openpatch/rrennAIbook/commit/a51613fe7a8a0ac2b8f521bdae1405e18193f62f)]:
+  - @rrennAIbook/fs@0.24.0
+  - @rrennAIbook/markdown@0.48.0
+  - create-rrennAIbook@0.3.2
+
+## 0.48.16
+
+### Patch Changes
+
+- [`7bc2a65`](https://github.com/openpatch/rrennAIbook/commit/7bc2a655f3dc4c9766fa29bb71cc6349f735f198) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Bump versions
+
+- Updated dependencies [[`7bc2a65`](https://github.com/openpatch/rrennAIbook/commit/7bc2a655f3dc4c9766fa29bb71cc6349f735f198)]:
+  - @rrennAIbook/markdown@0.47.2
+
+## 0.48.15
+
+### Patch Changes
+
+- [`6fb2e9a`](https://github.com/openpatch/rrennAIbook/commit/6fb2e9a117ed251aeacbe16ffb3cae3d838bbf27) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix various typos and bugs:
+  - Fix "Buildung" typo in build progress messages (should be "Building")
+  - Fix "lanuage" typo in error message (should be "language")
+  - Fix incorrect MIME type "plain/text" to "text/plain" in dev server
+  - Fix "aspectRation" typo to "aspectRatio" in types and VSCode schema
+  - Fix CSS property "aspectRatio:" to "aspect-ratio:" in embed directive
+  - Fix incorrect repository URL in README (openpath → openpatch)
+  - Update minimum Node.js version from 12.22.0 to 18
+- Updated dependencies [[`8f3efe1`](https://github.com/openpatch/rrennAIbook/commit/8f3efe19ff44fde0b174cc50c0904b8bd09b753f), [`db806c9`](https://github.com/openpatch/rrennAIbook/commit/db806c9f23fbac79bb23c14629efce74cfd8f08f), [`6fb2e9a`](https://github.com/openpatch/rrennAIbook/commit/6fb2e9a117ed251aeacbe16ffb3cae3d838bbf27)]:
+  - @rrennAIbook/fs@0.23.0
+  - @rrennAIbook/markdown@0.47.1
+  - create-rrennAIbook@0.3.1
+
+## 0.48.14
+
+### Patch Changes
+
+- Updated dependencies [[`285212a`](https://github.com/openpatch/rrennAIbook/commit/285212a9ebc8aca431881d74e76528bdf4f2dc75)]:
+  - @rrennAIbook/fs@0.22.0
+
+## 0.48.13
+
+### Patch Changes
+
+- Updated dependencies [[`04ca48e`](https://github.com/openpatch/rrennAIbook/commit/04ca48e607d799c770c3b69708549f0206d9c58d)]:
+  - @rrennAIbook/markdown@0.47.0
+
+## 0.48.12
+
+### Patch Changes
+
+- Updated dependencies [[`47310d3`](https://github.com/openpatch/rrennAIbook/commit/47310d3406aff746924e498d3197db76a73d8826)]:
+  - @rrennAIbook/markdown@0.46.2
+
+## 0.48.11
+
+### Patch Changes
+
+- Updated dependencies [[`b0ebc52`](https://github.com/openpatch/rrennAIbook/commit/b0ebc52bccd63ced735757709013ed6c37adca0a)]:
+  - @rrennAIbook/fs@0.21.2
+
+## 0.48.10
+
+### Patch Changes
+
+- [`c5ae1cc`](https://github.com/openpatch/rrennAIbook/commit/c5ae1cc46e8b552e8c85725f94f197999da4fe5f) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix path resolving when having an index.md in a directory.
+
+- Updated dependencies [[`c5ae1cc`](https://github.com/openpatch/rrennAIbook/commit/c5ae1cc46e8b552e8c85725f94f197999da4fe5f)]:
+  - @rrennAIbook/fs@0.21.1
+
+## 0.48.9
+
+### Patch Changes
+
+- Updated dependencies [[`0cc1647`](https://github.com/openpatch/rrennAIbook/commit/0cc164760073bc95656e76c647fdeba7a187f3f0)]:
+  - @rrennAIbook/markdown@0.46.1
+
+## 0.48.8
+
+### Patch Changes
+
+- Updated dependencies [[`66a7234`](https://github.com/openpatch/rrennAIbook/commit/66a72340b367920e12349c988104fda6ebbcf3fc)]:
+  - @rrennAIbook/markdown@0.46.0
+
+## 0.48.7
+
+### Patch Changes
+
+- Updated dependencies [[`f01224f`](https://github.com/openpatch/rrennAIbook/commit/f01224f0a16deff51271fec740d0001eef544c39)]:
+  - @rrennAIbook/markdown@0.45.0
+
+## 0.48.6
+
+### Patch Changes
+
+- Updated dependencies [[`d2b1c7c`](https://github.com/openpatch/rrennAIbook/commit/d2b1c7c453c8c81486727aa8b2f07cb0f0d268ef)]:
+  - @rrennAIbook/markdown@0.44.1
+
+## 0.48.5
+
+### Patch Changes
+
+- Updated dependencies [[`28ec20e`](https://github.com/openpatch/rrennAIbook/commit/28ec20ee0da8d31ca166023b9fc645c047bb0a1a), [`5c6def7`](https://github.com/openpatch/rrennAIbook/commit/5c6def7d6a740fac7a0dc75b1172fd71b1de57c9)]:
+  - @rrennAIbook/markdown@0.44.0
+
+## 0.48.4
+
+### Patch Changes
+
+- [`208b695`](https://github.com/openpatch/rrennAIbook/commit/208b695f7a8eab8def611f7b94ffaf5b9988aded) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update pyodide to version 0.29.0
+
+- Updated dependencies [[`208b695`](https://github.com/openpatch/rrennAIbook/commit/208b695f7a8eab8def611f7b94ffaf5b9988aded)]:
+  - @rrennAIbook/markdown@0.43.5
+
+## 0.48.3
+
+### Patch Changes
+
+- [`ed1497c`](https://github.com/openpatch/rrennAIbook/commit/ed1497cd7fe00bf542300380a9db62f98bc2a4b9) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update learningmap
+
+- Updated dependencies [[`ed1497c`](https://github.com/openpatch/rrennAIbook/commit/ed1497cd7fe00bf542300380a9db62f98bc2a4b9)]:
+  - @rrennAIbook/markdown@0.43.4
+
+## 0.48.2
+
+### Patch Changes
+
+- [`cfcd5da`](https://github.com/openpatch/rrennAIbook/commit/cfcd5da9e82099ea8169ba7ec95099d3eafbc93a) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update learningmap
+
+- Updated dependencies [[`cfcd5da`](https://github.com/openpatch/rrennAIbook/commit/cfcd5da9e82099ea8169ba7ec95099d3eafbc93a)]:
+  - @rrennAIbook/markdown@0.43.3
+
+## 0.48.1
+
+### Patch Changes
+
+- Updated dependencies [[`0888090`](https://github.com/openpatch/rrennAIbook/commit/088809075420a86cf14ade8f162eaf2cd99c9012)]:
+  - create-rrennAIbook@0.3.0
+
+## 0.48.0
+
+### Minor Changes
+
+- [`c6fcba4`](https://github.com/openpatch/rrennAIbook/commit/c6fcba4e8e87e12dbaaaf4d83a322d6fe0541462) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add create-rrennAIbook package for using `npx create rrennAIbook`
+
+- [`9f93524`](https://github.com/openpatch/rrennAIbook/commit/9f935246904d22b73393fe9d7b2f4aae49011e78) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Improve the new command and make it accessible in the vs code extension.
+
+### Patch Changes
+
+- Updated dependencies [[`c6fcba4`](https://github.com/openpatch/rrennAIbook/commit/c6fcba4e8e87e12dbaaaf4d83a322d6fe0541462), [`9f93524`](https://github.com/openpatch/rrennAIbook/commit/9f935246904d22b73393fe9d7b2f4aae49011e78)]:
+  - create-rrennAIbook@0.2.0
+
+## 0.47.2
+
+### Patch Changes
+
+- [`129dd60`](https://github.com/openpatch/rrennAIbook/commit/129dd60eb5a871de0d5ed9b4610e9b342c459a98) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update learningmap
+
+- Updated dependencies [[`129dd60`](https://github.com/openpatch/rrennAIbook/commit/129dd60eb5a871de0d5ed9b4610e9b342c459a98)]:
+  - @rrennAIbook/markdown@0.43.2
+
+## 0.47.1
+
+### Patch Changes
+
+- [`9a36558`](https://github.com/openpatch/rrennAIbook/commit/9a36558b0f90b05c972071953ce5f36203e93016) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update dependencies
+
+- Updated dependencies [[`9a36558`](https://github.com/openpatch/rrennAIbook/commit/9a36558b0f90b05c972071953ce5f36203e93016)]:
+  - @rrennAIbook/markdown@0.43.1
+
+## 0.47.0
+
+### Minor Changes
+
+- [`159473a`](https://github.com/openpatch/rrennAIbook/commit/159473aa378de2596eb0f0d493a3a6a48dc007f1) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Support relative links in next and prev of the frontmatter
+
+### Patch Changes
+
+- Updated dependencies [[`159473a`](https://github.com/openpatch/rrennAIbook/commit/159473aa378de2596eb0f0d493a3a6a48dc007f1)]:
+  - @rrennAIbook/fs@0.21.0
+
+## 0.46.0
+
+### Minor Changes
+
+- [`64f904b`](https://github.com/openpatch/rrennAIbook/commit/64f904b59afe0cd480887fc88205676fa45bef1d) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Prev and next buttons are now visible even in if hide is true. You have to manually disable them with prev: and next: .
+
+### Patch Changes
+
+- Updated dependencies [[`64f904b`](https://github.com/openpatch/rrennAIbook/commit/64f904b59afe0cd480887fc88205676fa45bef1d)]:
+  - @rrennAIbook/markdown@0.43.0
+
+## 0.45.3
+
+### Patch Changes
+
+- [`3b9cef9`](https://github.com/openpatch/rrennAIbook/commit/3b9cef9fb15c3be43fbc967736f9cbfec0e67e25) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix scripts and styles not working in vs code
+
+- Updated dependencies [[`3b9cef9`](https://github.com/openpatch/rrennAIbook/commit/3b9cef9fb15c3be43fbc967736f9cbfec0e67e25)]:
+  - @rrennAIbook/markdown@0.42.3
+
+## 0.45.2
+
+### Patch Changes
+
+- [`93f4966`](https://github.com/openpatch/rrennAIbook/commit/93f496654b2730d955ce2ddb766dfd98fefd9c68) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix glossary pages not using custom scripts and styles
+
+## 0.45.1
+
+### Patch Changes
+
+- [`39f323c`](https://github.com/openpatch/rrennAIbook/commit/39f323c88062ec28700c659aa44d2766232f8d38) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix completion including duplicated beginning
+
+## 0.45.0
+
+### Minor Changes
+
+- [`79edf2d`](https://github.com/openpatch/rrennAIbook/commit/79edf2d6593a68f801d274e84113fa13be002d4e) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Improve completion providers and preview rendering
+
+## 0.44.3
+
+### Patch Changes
+
+- [`8766f62`](https://github.com/openpatch/rrennAIbook/commit/8766f62c2450b8fc3fa1dae49323ec9cb2ae2a12) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix images have doubled base paths
+
+- [`8766f62`](https://github.com/openpatch/rrennAIbook/commit/8766f62c2450b8fc3fa1dae49323ec9cb2ae2a12) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix vscode always showing pages in standalone mode.
+
+- Updated dependencies [[`8766f62`](https://github.com/openpatch/rrennAIbook/commit/8766f62c2450b8fc3fa1dae49323ec9cb2ae2a12)]:
+  - @rrennAIbook/markdown@0.42.2
+
+## 0.44.2
+
+### Patch Changes
+
+- [`ec71ba3`](https://github.com/openpatch/rrennAIbook/commit/ec71ba3916fdb690203e471a5568643a9ff95cb7) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix learningmap with relative src not loading in VSCode extension
+
+## 0.44.1
+
+### Patch Changes
+
+- [`601c959`](https://github.com/openpatch/rrennAIbook/commit/601c959da43b7437378f590e6e92fb8b7a6a3baa) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix learningmap not learning from relative path
+
+- Updated dependencies [[`601c959`](https://github.com/openpatch/rrennAIbook/commit/601c959da43b7437378f590e6e92fb8b7a6a3baa)]:
+  - @rrennAIbook/markdown@0.42.1
+
+## 0.44.0
+
+### Minor Changes
+
+- [`1846430`](https://github.com/openpatch/rrennAIbook/commit/1846430dc148766c210104ab8ccbc9aca0bc71b8) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add complete state persistence to multievent directive with visual feedback restoration
+
+  The multievent directive now saves and restores its complete state, including all visual feedback from evaluations. When users reload the page, they can see whether their task was evaluated as correct or incorrect.
+
+  Features:
+
+  - New `multievent` table in Dexie store with schema `id, state`
+  - Automatic state saving on all user interactions (input changes, button clicks, evaluations)
+  - Complete restoration of visual feedback including:
+    - Green highlighting (#9f0) for correct answers
+    - Orange striped backgrounds (#f90) for incorrect answers
+    - Error indicators (🔍/🔎) next to items needing attention
+    - Evaluation button state with green border when completed
+    - Success/failure hint visibility
+    - HangMan (word puzzle) progress and error display
+    - Word search button states and highlighting
+  - State is saved per multievent instance and per page URL
+  - Seamless integration with existing export/import functionality
+
+### Patch Changes
+
+- Updated dependencies [[`1846430`](https://github.com/openpatch/rrennAIbook/commit/1846430dc148766c210104ab8ccbc9aca0bc71b8)]:
+  - @rrennAIbook/markdown@0.42.0
+
+## 0.43.0
+
+### Minor Changes
+
+- [#1035](https://github.com/openpatch/rrennAIbook/pull/1035) [`c4fddb6`](https://github.com/openpatch/rrennAIbook/commit/c4fddb66b15ab2808998296a0e7aa51a6e565193) Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - Add custom data table to Dexie store for user-managed state persistence
+
+  This adds a new `custom` table to the rrennAIbook Dexie store, enabling users to persist arbitrary JSON data in the browser's IndexedDB.
+
+  Features:
+
+  - New `custom` table with schema `id, payload` for storing user-defined data
+  - Comprehensive documentation in the advanced section showing how to use the API
+  - Automatic inclusion in existing export/import functionality
+  - Full support for storing and retrieving JSON data using `store.custom.put()` and `store.custom.get()`
+
+### Patch Changes
+
+- Updated dependencies [[`c4fddb6`](https://github.com/openpatch/rrennAIbook/commit/c4fddb66b15ab2808998296a0e7aa51a6e565193)]:
+  - @rrennAIbook/markdown@0.41.0
+
+## 0.42.0
+
+### Minor Changes
+
+- Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - Add custom data table to Dexie store for user-managed state persistence
+
+  This adds a new `custom` table to the rrennAIbook Dexie store, enabling users to persist arbitrary JSON data in the browser's IndexedDB.
+
+  Features:
+
+  - New `custom` table with schema `id, payload` for storing user-defined data
+  - Comprehensive documentation in the advanced section showing how to use the API
+  - Automatic inclusion in existing export/import functionality
+  - Full support for storing and retrieving JSON data using `store.custom.put()` and `store.custom.get()`
+
+### Patch Changes
+
+- Updated dependencies:
+  - @rrennAIbook/markdown@0.40.0
+
+## 0.41.0
+
+### Minor Changes
+
+- [`4a94df7`](https://github.com/openpatch/rrennAIbook/commit/4a94df7c951e8dc0e4bbaf0cbfff03a87decd230) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Open external links in a new tab
+
+### Patch Changes
+
+- Updated dependencies [[`4a94df7`](https://github.com/openpatch/rrennAIbook/commit/4a94df7c951e8dc0e4bbaf0cbfff03a87decd230)]:
+  - @rrennAIbook/markdown@0.39.0
+
+## 0.40.0
+
+### Minor Changes
+
+- [#1027](https://github.com/openpatch/rrennAIbook/pull/1027) [`cf0b13a`](https://github.com/openpatch/rrennAIbook/commit/cf0b13abb37ead597a3b7b961fd9a347b2e89bd6) Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - Add new textinput directive for persistent text input with Dexie store integration
+
+  This adds a new `::textinput` markdown directive that creates interactive text input areas with automatic persistence to the browser's Dexie database.
+
+  Features:
+
+  - Customizable placeholder and height attributes
+  - Automatic save with debouncing for performance
+  - Multiple independent inputs via custom IDs
+  - Full light and dark mode support
+  - Responsive design with error handling
+
+### Patch Changes
+
+- Updated dependencies [[`cf0b13a`](https://github.com/openpatch/rrennAIbook/commit/cf0b13abb37ead597a3b7b961fd9a347b2e89bd6)]:
+  - @rrennAIbook/markdown@0.38.0
+
+## 0.39.2
+
+### Patch Changes
+
+- [`08b5a56`](https://github.com/openpatch/rrennAIbook/commit/08b5a56a3a34f55af81b0094070f8760de7fcc88) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix favicon path
+
+- Fix relative path
+
+- Updated dependencies [[`08b5a56`](https://github.com/openpatch/rrennAIbook/commit/08b5a56a3a34f55af81b0094070f8760de7fcc88)]:
+  - @rrennAIbook/markdown@0.37.2
+
+## 0.39.1
+
+### Patch Changes
+
+- [`4048965`](https://github.com/openpatch/rrennAIbook/commit/4048965a0071ccf874c31c99375ec549a7170a3f) Thanks [@github-actions[bot]](https://github.com/github-actions%5Bbot%5D)! - Fix sqlide custom db not using the correct url
+
+- Updated dependencies [[`4048965`](https://github.com/openpatch/rrennAIbook/commit/4048965a0071ccf874c31c99375ec549a7170a3f)]:
+  - @rrennAIbook/markdown@0.37.1
+
+## 0.39.0
+
+### Minor Changes
+
+- [`5373ec3`](https://github.com/openpatch/rrennAIbook/commit/5373ec312c2ede462422003300e325d3d8439dad) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Use learningmap web component for the real project
+
+### Patch Changes
+
+- Updated dependencies [[`5373ec3`](https://github.com/openpatch/rrennAIbook/commit/5373ec312c2ede462422003300e325d3d8439dad)]:
+  - @rrennAIbook/markdown@0.37.0
+
+## 0.38.5
+
+### Patch Changes
+
+- [`18ef87a`](https://github.com/openpatch/rrennAIbook/commit/18ef87abfa7e98ed93e6c174040b4954add08cfc) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Change last fix to keep backward-compatability
+
+- Updated dependencies [[`18ef87a`](https://github.com/openpatch/rrennAIbook/commit/18ef87abfa7e98ed93e6c174040b4954add08cfc)]:
+  - @rrennAIbook/markdown@0.36.2
+
+## 0.38.4
+
+### Patch Changes
+
+- [`0bfb0bd`](https://github.com/openpatch/rrennAIbook/commit/0bfb0bdfc3a2f4b8d5645765953784373de55ebf) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix GeoGebra not loading the correct file
+
+- Updated dependencies [[`0bfb0bd`](https://github.com/openpatch/rrennAIbook/commit/0bfb0bdfc3a2f4b8d5645765953784373de55ebf)]:
+  - @rrennAIbook/markdown@0.36.1
+
+## 0.38.3
+
+### Patch Changes
+
+- [`e7fa21c`](https://github.com/openpatch/rrennAIbook/commit/e7fa21c76bc94b80542141daae2e0b83ce1074c4) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix saving width and height in learningmaps
+
+- Updated dependencies []:
+  - @rrennAIbook/markdown@0.36.0
+
+## 0.38.2
+
+### Patch Changes
+
+- Updated dependencies [[`ae25b60`](https://github.com/openpatch/rrennAIbook/commit/ae25b605ab2b4945c62d4d9e83955af57fa50b00)]:
+  - @rrennAIbook/markdown@0.36.0
+  - @rrennAIbook/fs@0.20.0
+
+## 0.38.1
+
+### Patch Changes
+
+- Updated dependencies [[`9c96045`](https://github.com/openpatch/rrennAIbook/commit/9c96045020c45dc06cc2da8e86de2fa6c2ba2a32)]:
+  - @rrennAIbook/markdown@0.35.1
+
+## 0.38.0
+
+### Minor Changes
+
+- [#1011](https://github.com/openpatch/rrennAIbook/pull/1011) [`f6f1b25`](https://github.com/openpatch/rrennAIbook/commit/f6f1b25f7a07e2cfcd8c2cfeb1807788aaa6c307) Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - Vastly improved learningmap element
+
+### Patch Changes
+
+- Updated dependencies [[`f6f1b25`](https://github.com/openpatch/rrennAIbook/commit/f6f1b25f7a07e2cfcd8c2cfeb1807788aaa6c307)]:
+  - @rrennAIbook/markdown@0.35.0
+  - @rrennAIbook/fs@0.20.0
+
+## 0.37.2
+
+### Patch Changes
+
+- [`fa3ecfa`](https://github.com/openpatch/rrennAIbook/commit/fa3ecfa082f6f13c292f504d4260910a0425c3bb) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Retain scroll position in dev-mode when the page reloads.
+
+## 0.37.1
+
+### Patch Changes
+
+- [`44f6627`](https://github.com/openpatch/rrennAIbook/commit/44f6627748f55bc49d10a59455a500c006334c93) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix url not prefixed correctly in learningmaps
+
+- Updated dependencies [[`44f6627`](https://github.com/openpatch/rrennAIbook/commit/44f6627748f55bc49d10a59455a500c006334c93)]:
+  - @rrennAIbook/markdown@0.34.1
+
+## 0.37.0
+
+### Minor Changes
+
+- [`25a216f`](https://github.com/openpatch/rrennAIbook/commit/25a216f4f3d4b63f2c1db89880e7e0ee29d84da8) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add learningmap element
+
+### Patch Changes
+
+- Updated dependencies [[`25a216f`](https://github.com/openpatch/rrennAIbook/commit/25a216f4f3d4b63f2c1db89880e7e0ee29d84da8)]:
+  - @rrennAIbook/markdown@0.34.0
+
+## 0.36.3
+
+### Patch Changes
+
+- [`5c65176`](https://github.com/openpatch/rrennAIbook/commit/5c65176472e27865696574ec398d5480899b96df) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix all IDEs not showing the correct code
+
+- Updated dependencies [[`5c65176`](https://github.com/openpatch/rrennAIbook/commit/5c65176472e27865696574ec398d5480899b96df)]:
+  - @rrennAIbook/markdown@0.33.3
+
+## 0.36.2
+
+### Patch Changes
+
+- [`6f41f96`](https://github.com/openpatch/rrennAIbook/commit/6f41f963ad592c2aa45e122a7c4fd89c3f596a75) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix alert not working correctly in other container elements
+
+- Updated dependencies [[`6f41f96`](https://github.com/openpatch/rrennAIbook/commit/6f41f963ad592c2aa45e122a7c4fd89c3f596a75)]:
+  - @rrennAIbook/markdown@0.33.2
+
+## 0.36.1
+
+### Patch Changes
+
+- [`b585d55`](https://github.com/openpatch/rrennAIbook/commit/b585d55638e4efb97ef71def8619dd8fd979845d) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix alignment when using a block element after an image.
+
+- Updated dependencies [[`b585d55`](https://github.com/openpatch/rrennAIbook/commit/b585d55638e4efb97ef71def8619dd8fd979845d)]:
+  - @rrennAIbook/markdown@0.33.1
+
+## 0.36.0
+
+### Minor Changes
+
+- [`287dd41`](https://github.com/openpatch/rrennAIbook/commit/287dd41e1bece7b5ba1295c4f9db19934c34b611) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Autoload math display libraries in all h5p elements.
+
+- [`7ef905d`](https://github.com/openpatch/rrennAIbook/commit/7ef905d4f19828034d57af230a0ab2335689d9a3) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add c and l variables to snippets to allow for dynamic amount of colons.
+
+### Patch Changes
+
+- Updated dependencies [[`287dd41`](https://github.com/openpatch/rrennAIbook/commit/287dd41e1bece7b5ba1295c4f9db19934c34b611), [`7ef905d`](https://github.com/openpatch/rrennAIbook/commit/7ef905d4f19828034d57af230a0ab2335689d9a3)]:
+  - @rrennAIbook/markdown@0.33.0
+  - @rrennAIbook/fs@0.19.0
+
+## 0.35.0
+
+### Minor Changes
+
+- [`f9e5bb7`](https://github.com/openpatch/rrennAIbook/commit/f9e5bb7be1970a6e1fb9fa444f4b6063dfa5fbd6) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Use alert color for headings, links and bold text
+
+### Patch Changes
+
+- Updated dependencies [[`f9e5bb7`](https://github.com/openpatch/rrennAIbook/commit/f9e5bb7be1970a6e1fb9fa444f4b6063dfa5fbd6)]:
+  - @rrennAIbook/markdown@0.32.0
+
+## 0.34.0
+
+### Minor Changes
+
+- [`e6dabb8`](https://github.com/openpatch/rrennAIbook/commit/e6dabb8e4a47930c21ae479cabc25c6727215206) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add custom alerts
+
+### Patch Changes
+
+- Updated dependencies [[`e6dabb8`](https://github.com/openpatch/rrennAIbook/commit/e6dabb8e4a47930c21ae479cabc25c6727215206)]:
+  - @rrennAIbook/markdown@0.31.0
+
+## 0.33.0
+
+### Minor Changes
+
+- [`3f6ac8c`](https://github.com/openpatch/rrennAIbook/commit/3f6ac8cc3009d5eb7a1085119d046a5602b277b9) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add image positioning and styling options
+
+### Patch Changes
+
+- Updated dependencies [[`3f6ac8c`](https://github.com/openpatch/rrennAIbook/commit/3f6ac8cc3009d5eb7a1085119d046a5602b277b9)]:
+  - @rrennAIbook/markdown@0.30.0
+
+## 0.32.7
+
+### Patch Changes
+
+- [`e3d104d`](https://github.com/openpatch/rrennAIbook/commit/e3d104d8d6154ef35474a919e7d995bdc579ad67) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Use js extension instead of mjs to improve compatability with common servers.
+
+- [`bfd5fd0`](https://github.com/openpatch/rrennAIbook/commit/bfd5fd0a58f7a19a4a3b22e82fc0e2b16c43fe73) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix sub and superscript interfering with links.
+
+- Updated dependencies [[`e3d104d`](https://github.com/openpatch/rrennAIbook/commit/e3d104d8d6154ef35474a919e7d995bdc579ad67), [`bfd5fd0`](https://github.com/openpatch/rrennAIbook/commit/bfd5fd0a58f7a19a4a3b22e82fc0e2b16c43fe73)]:
+  - @rrennAIbook/markdown@0.29.5
+
+## 0.32.6
+
+### Patch Changes
+
+- [`cc0aad9`](https://github.com/openpatch/rrennAIbook/commit/cc0aad93558dfce8072c31549bd7c8d9e5a927b6) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - fix toc configuration one more time
+
+- Updated dependencies [[`cc0aad9`](https://github.com/openpatch/rrennAIbook/commit/cc0aad93558dfce8072c31549bd7c8d9e5a927b6)]:
+  - @rrennAIbook/markdown@0.29.4
+
+## 0.32.5
+
+### Patch Changes
+
+- [`29a1464`](https://github.com/openpatch/rrennAIbook/commit/29a146441bf28fe85c2e755c7119da1a7d39340e) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix toc and qrcode configurations not working correct.
+
+- Updated dependencies [[`29a1464`](https://github.com/openpatch/rrennAIbook/commit/29a146441bf28fe85c2e755c7119da1a7d39340e)]:
+  - @rrennAIbook/markdown@0.29.3
+  - @rrennAIbook/fs@0.18.3
+
+## 0.32.4
+
+### Patch Changes
+
+- [#992](https://github.com/openpatch/rrennAIbook/pull/992) [`a30a565`](https://github.com/openpatch/rrennAIbook/commit/a30a565778ae53b377d7da5c85f2d22f949d4a92) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update emoji shortcodes.
+
+- Updated dependencies [[`a30a565`](https://github.com/openpatch/rrennAIbook/commit/a30a565778ae53b377d7da5c85f2d22f949d4a92)]:
+  - @rrennAIbook/markdown@0.29.2
+
+## 0.32.3
+
+### Patch Changes
+
+- [`c18ba75`](https://github.com/openpatch/rrennAIbook/commit/c18ba75d415e3d23eb1fafb7ebe69eac082457e0) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix colons in headings not working. Fix spaces in filenames causing trouble. Add option to disable code highlighting and copy button for inline code blocks.
+
+- Updated dependencies [[`c18ba75`](https://github.com/openpatch/rrennAIbook/commit/c18ba75d415e3d23eb1fafb7ebe69eac082457e0)]:
+  - @rrennAIbook/fs@0.18.3
+  - @rrennAIbook/markdown@0.29.1
+
+## 0.32.2
+
+### Patch Changes
+
+- [`91587c4`](https://github.com/openpatch/rrennAIbook/commit/91587c465412956142c0798a65258ebbfb8986bf) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix build crashes if index.md is empty
+
+- Updated dependencies [[`91587c4`](https://github.com/openpatch/rrennAIbook/commit/91587c465412956142c0798a65258ebbfb8986bf)]:
+  - @rrennAIbook/fs@0.18.2
+
+## 0.32.1
+
+### Patch Changes
+
+- [`e93c807`](https://github.com/openpatch/rrennAIbook/commit/e93c807db31d22bdc1b30d88bece90f1f7360912) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix sections need a index.md
+
+- Updated dependencies [[`e93c807`](https://github.com/openpatch/rrennAIbook/commit/e93c807db31d22bdc1b30d88bece90f1f7360912)]:
+  - @rrennAIbook/fs@0.18.1
+
+## 0.32.0
+
+### Minor Changes
+
+- [`b914f85`](https://github.com/openpatch/rrennAIbook/commit/b914f8580aaae9969cb2be97b5ab6f1e7ce8564f) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - You can now collocate images, videos, and other additional files directly within your book directory. This means you can reference media using relative paths, making it much easier to:
+
+  - Organize your content intuitively
+  - Collaborate with others
+  - Share or version-control your rrennAIbook with media included
+
+  Example usage:
+
+  ```md
+  ![Image in the same directory as this markdown file](./image.png)
+  ![Image one directory up relative to this markdown file](../image.png)
+  ```
+
+  This improvement enables a more seamless and portable authoring experience—no more managing separate static folders or absolute paths.
+
+### Patch Changes
+
+- Updated dependencies [[`b914f85`](https://github.com/openpatch/rrennAIbook/commit/b914f8580aaae9969cb2be97b5ab6f1e7ce8564f)]:
+  - @rrennAIbook/fs@0.18.0
+  - @rrennAIbook/markdown@0.29.0
+
+## 0.31.5
+
+### Patch Changes
+
+- [`829d71d`](https://github.com/openpatch/rrennAIbook/commit/829d71dc228d2fd4ba1d75d0c58095326afcfaa6) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Do not parse e.g. :1 as a element. Only parse the documented elements.
+
+- Updated dependencies [[`829d71d`](https://github.com/openpatch/rrennAIbook/commit/829d71dc228d2fd4ba1d75d0c58095326afcfaa6)]:
+  - @rrennAIbook/markdown@0.28.5
+
+## 0.31.4
+
+### Patch Changes
+
+- [`d2a02f5`](https://github.com/openpatch/rrennAIbook/commit/d2a02f502f69f1f216750ffd33ef84bcbab72d94) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix qr codes not showing correctly
+
+- Updated dependencies [[`d2a02f5`](https://github.com/openpatch/rrennAIbook/commit/d2a02f502f69f1f216750ffd33ef84bcbab72d94)]:
+  - @rrennAIbook/markdown@0.28.4
+
+## 0.31.3
+
+### Patch Changes
+
+- [`5544ee7`](https://github.com/openpatch/rrennAIbook/commit/5544ee723a8b3b201509480718aa55c4868c9cf3) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Default to youtube-nocookie
+
+- Updated dependencies [[`5544ee7`](https://github.com/openpatch/rrennAIbook/commit/5544ee723a8b3b201509480718aa55c4868c9cf3)]:
+  - @rrennAIbook/markdown@0.28.3
+
+## 0.31.2
+
+### Patch Changes
+
+- [`7910a8e`](https://github.com/openpatch/rrennAIbook/commit/7910a8ee4a002c54dafc1d5d29d0e5f0b49b04e8) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Improve table responsive design.
+
+- Updated dependencies [[`7910a8e`](https://github.com/openpatch/rrennAIbook/commit/7910a8ee4a002c54dafc1d5d29d0e5f0b49b04e8)]:
+  - @rrennAIbook/markdown@0.28.2
+
+## 0.31.1
+
+### Patch Changes
+
+- [`38fb9b5`](https://github.com/openpatch/rrennAIbook/commit/38fb9b565ec8eb865507401d07cd04eee4909a53) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - fix syntax for multievent
+
+- [`b4b9593`](https://github.com/openpatch/rrennAIbook/commit/b4b9593aa46c33b47aa311e6aa7c8d0117bd753b) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - update dependencies
+
+- Updated dependencies [[`b4b9593`](https://github.com/openpatch/rrennAIbook/commit/b4b9593aa46c33b47aa311e6aa7c8d0117bd753b)]:
+  - @rrennAIbook/markdown@0.28.1
+  - @rrennAIbook/fs@0.17.3
+
+## 0.31.0
+
+### Minor Changes
+
+- [`9938ddd`](https://github.com/openpatch/rrennAIbook/commit/9938ddd3fe0876f7e69507593349d8f6d090934e) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add multievent element
+
+### Patch Changes
+
+- Updated dependencies [[`9938ddd`](https://github.com/openpatch/rrennAIbook/commit/9938ddd3fe0876f7e69507593349d8f6d090934e)]:
+  - @rrennAIbook/markdown@0.28.0
+
+## 0.30.1
+
+### Patch Changes
+
+- [`8545973`](https://github.com/openpatch/rrennAIbook/commit/8545973ded8a8da94bda1485f5560a5f62c64153) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Styling Improvements:
+  - Increased the width of the navigation to utilize more horizontal space.
+  - Reduced base font size to 14px for improved readability and a more compact layout.
+  - Decreased header height to 60px to maximize vertical content space.
+- Updated dependencies [[`8545973`](https://github.com/openpatch/rrennAIbook/commit/8545973ded8a8da94bda1485f5560a5f62c64153)]:
+  - @rrennAIbook/markdown@0.27.0
+
+## 0.30.0
+
+### Minor Changes
+
+- [`ff50422`](https://github.com/openpatch/rrennAIbook/commit/ff504220e5c57607d51f858e5c9a46dde252f8fc) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add jsxgraph element
+
+### Patch Changes
+
+- Updated dependencies [[`ff50422`](https://github.com/openpatch/rrennAIbook/commit/ff504220e5c57607d51f858e5c9a46dde252f8fc)]:
+  - @rrennAIbook/markdown@0.26.0
+
+## 0.29.5
+
+### Patch Changes
+
+- [`9671fff`](https://github.com/openpatch/rrennAIbook/commit/9671fffd2f52d272e346a70f2727ed7ad9c894f7) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - The development server does not crash anymore, when an error occurs.
+
+- Updated dependencies [[`9671fff`](https://github.com/openpatch/rrennAIbook/commit/9671fffd2f52d272e346a70f2727ed7ad9c894f7)]:
+  - @rrennAIbook/fs@0.17.2
+
+## 0.29.4
+
+### Patch Changes
+
+- [`660d949`](https://github.com/openpatch/rrennAIbook/commit/660d9491198ffaeeda9141f4d634bfda202a8963) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - The reset button for GeoGebra did not rerun the initial commands.
+
+- Updated dependencies [[`660d949`](https://github.com/openpatch/rrennAIbook/commit/660d9491198ffaeeda9141f4d634bfda202a8963)]:
+  - @rrennAIbook/markdown@0.25.4
+
+## 0.29.3
+
+### Patch Changes
+
+- [`86714e6`](https://github.com/openpatch/rrennAIbook/commit/86714e6838547ccb1e779fb9ba765168c93bd37f) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fire resize event after the collapsible is expanded.
+
+- Updated dependencies [[`86714e6`](https://github.com/openpatch/rrennAIbook/commit/86714e6838547ccb1e779fb9ba765168c93bd37f)]:
+  - @rrennAIbook/markdown@0.25.3
+
+## 0.29.2
+
+### Patch Changes
+
+- [`8712ab5`](https://github.com/openpatch/rrennAIbook/commit/8712ab5557f00ef85a782f9219829e1f1eba5973) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - fire resize event when a collapsible is opened. This is need for GeoGebra to resize the applet.
+
+- Updated dependencies [[`8712ab5`](https://github.com/openpatch/rrennAIbook/commit/8712ab5557f00ef85a782f9219829e1f1eba5973)]:
+  - @rrennAIbook/markdown@0.25.2
+
+## 0.29.1
+
+### Patch Changes
+
+- [`ba25548`](https://github.com/openpatch/rrennAIbook/commit/ba255486bb005b5c1836354e8ca9292b4f3a859d) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Improve responsive scaling of the geogebra element and save/load its current state.
+
+- Updated dependencies [[`549b9d8`](https://github.com/openpatch/rrennAIbook/commit/549b9d8947a5c860bf8029a6c20a1ab86d2549df), [`ba25548`](https://github.com/openpatch/rrennAIbook/commit/ba255486bb005b5c1836354e8ca9292b4f3a859d)]:
+  - @rrennAIbook/markdown@0.25.1
+
+## 0.29.0
+
+### Minor Changes
+
+- [#964](https://github.com/openpatch/rrennAIbook/pull/964) [`6557bb3`](https://github.com/openpatch/rrennAIbook/commit/6557bb3116aff3c2091922998c34d7559fa3c863) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add h5p element
+
+### Patch Changes
+
+- Updated dependencies [[`6557bb3`](https://github.com/openpatch/rrennAIbook/commit/6557bb3116aff3c2091922998c34d7559fa3c863)]:
+  - @rrennAIbook/markdown@0.25.0
+
+## 0.28.19
+
+### Patch Changes
+
+- [`e1720b5`](https://github.com/openpatch/rrennAIbook/commit/e1720b5eec08da070bd76881e47c23b6850bb880) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update dependencies
+
+- Updated dependencies [[`e1720b5`](https://github.com/openpatch/rrennAIbook/commit/e1720b5eec08da070bd76881e47c23b6850bb880)]:
+  - @rrennAIbook/markdown@0.24.13
+  - @rrennAIbook/fs@0.17.1
+
+## 0.28.18
+
+### Patch Changes
+
+- Updated dependencies [[`2641bc4`](https://github.com/openpatch/rrennAIbook/commit/2641bc4a15b3b93d33ded59f3983847943bd1b81)]:
+  - @rrennAIbook/markdown@0.24.12
+
+## 0.28.17
+
+### Patch Changes
+
+- Updated dependencies [[`08bde20`](https://github.com/openpatch/rrennAIbook/commit/08bde20e5a832f6777963fc478a8987b86ee2921)]:
+  - @rrennAIbook/markdown@0.24.11
+
+## 0.28.16
+
+### Patch Changes
+
+- Updated dependencies [[`e2e97e7`](https://github.com/openpatch/rrennAIbook/commit/e2e97e7cc602da2fd8bb3bfba22c0ec7a1dd4cc9)]:
+  - @rrennAIbook/markdown@0.24.10
+
+## 0.28.15
+
+### Patch Changes
+
+- Updated dependencies [[`69328bb`](https://github.com/openpatch/rrennAIbook/commit/69328bb8b52cb683246a0d553941e249d89a7bf6)]:
+  - @rrennAIbook/fs@0.17.0
+
+## 0.28.14
+
+### Patch Changes
+
+- Updated dependencies [[`9139c65`](https://github.com/openpatch/rrennAIbook/commit/9139c6543491ee3295981985e523bf6757b7bf76)]:
+  - @rrennAIbook/markdown@0.24.9
+
+## 0.28.13
+
+### Patch Changes
+
+- Updated dependencies [[`b28e9d5`](https://github.com/openpatch/rrennAIbook/commit/b28e9d5359b22bae30df0fb0665a03da3f889653)]:
+  - @rrennAIbook/markdown@0.24.8
+
+## 0.28.12
+
+### Patch Changes
+
+- Updated dependencies [[`e9bfec9`](https://github.com/openpatch/rrennAIbook/commit/e9bfec9f06eccabb119f8800274c69d14b2c0211), [`de22a0c`](https://github.com/openpatch/rrennAIbook/commit/de22a0cad0cad1b8ae9ff216b1c710a03f4a3b5b)]:
+  - @rrennAIbook/fs@0.16.1
+  - @rrennAIbook/markdown@0.24.7
+
+## 0.28.11
+
+### Patch Changes
+
+- Updated dependencies [[`8adce9d`](https://github.com/openpatch/rrennAIbook/commit/8adce9d3dc345886f0b3e7a2fd3e4d848b00e183)]:
+  - @rrennAIbook/markdown@0.24.6
+
+## 0.28.10
+
+### Patch Changes
+
+- Updated dependencies [[`dcda048`](https://github.com/openpatch/rrennAIbook/commit/dcda048737044f38ec7a6c5a64e122acd0932a28)]:
+  - @rrennAIbook/markdown@0.24.5
+
+## 0.28.9
+
+### Patch Changes
+
+- Updated dependencies [[`f36eb85`](https://github.com/openpatch/rrennAIbook/commit/f36eb85b025b654dd2e217f40b7d598ae2b9c2d3)]:
+  - @rrennAIbook/markdown@0.24.4
+
+## 0.28.8
+
+### Patch Changes
+
+- Updated dependencies [[`327a4e9`](https://github.com/openpatch/rrennAIbook/commit/327a4e98cc52c0ac073a3a0b0c13ce5d4cecc6c8)]:
+  - @rrennAIbook/markdown@0.24.3
+
+## 0.28.7
+
+### Patch Changes
+
+- Updated dependencies [[`049053a`](https://github.com/openpatch/rrennAIbook/commit/049053ab19afac0d6379b33e49a7290a2e5132a2), [`e9ffcd2`](https://github.com/openpatch/rrennAIbook/commit/e9ffcd2b190fce63a9db7d15519201cd8cb8ef55)]:
+  - @rrennAIbook/markdown@0.24.2
+
+## 0.28.6
+
+### Patch Changes
+
+- [`c0f47d9`](https://github.com/openpatch/rrennAIbook/commit/c0f47d9a55c696740bb10c2e99270369d6feabe5) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix collapsible button selector not bleeding into other buttons
+
+- Updated dependencies [[`c0f47d9`](https://github.com/openpatch/rrennAIbook/commit/c0f47d9a55c696740bb10c2e99270369d6feabe5)]:
+  - @rrennAIbook/markdown@0.24.1
+
+## 0.28.5
+
+### Patch Changes
+
+- Updated dependencies [[`79ea7bb`](https://github.com/openpatch/rrennAIbook/commit/79ea7bb3c8a80776aa7a9aef1698d87145d8cc09)]:
+  - @rrennAIbook/markdown@0.24.0
+
+## 0.28.4
+
+### Patch Changes
+
+- Updated dependencies [[`8019a88`](https://github.com/openpatch/rrennAIbook/commit/8019a88ce03f80a8e8a8bbce6671f6589da38442)]:
+  - @rrennAIbook/markdown@0.23.2
+
+## 0.28.3
+
+### Patch Changes
+
+- Updated dependencies [[`e46f8ae`](https://github.com/openpatch/rrennAIbook/commit/e46f8ae9fce8915a08de3f3c5a880dbe1bfa1150)]:
+  - @rrennAIbook/markdown@0.23.1
+
+## 0.28.2
+
+### Patch Changes
+
+- Updated dependencies [[`b5a41e0`](https://github.com/openpatch/rrennAIbook/commit/b5a41e00a014a77dd13a5e8d13009c5c2462cb15), [`b5a41e0`](https://github.com/openpatch/rrennAIbook/commit/b5a41e00a014a77dd13a5e8d13009c5c2462cb15)]:
+  - @rrennAIbook/markdown@0.23.0
+  - @rrennAIbook/fs@0.16.0
+
+## 0.28.1
+
+### Patch Changes
+
+- Updated dependencies [[`2ed165e`](https://github.com/openpatch/rrennAIbook/commit/2ed165ef62341d7dd4fa073a4f913dd352da809e)]:
+  - @rrennAIbook/markdown@0.22.1
+
+## 0.28.0
+
+### Minor Changes
+
+- [`cd6535e`](https://github.com/openpatch/rrennAIbook/commit/cd6535e236f8ae64b28003dd196f37413a50e5a3) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add trailingSlash back
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rrennAIbook/fs@0.16.0
+  - @rrennAIbook/markdown@0.22.0
+
+## 0.27.12
+
+### Patch Changes
+
+- Updated dependencies [[`b0a1d3e`](https://github.com/openpatch/rrennAIbook/commit/b0a1d3e08118a3c3ba6406ec8bf9aec0683a3df5), [`b0a1d3e`](https://github.com/openpatch/rrennAIbook/commit/b0a1d3e08118a3c3ba6406ec8bf9aec0683a3df5)]:
+  - @rrennAIbook/markdown@0.22.0
+
+## 0.27.11
+
+### Patch Changes
+
+- Updated dependencies [[`3da49ba`](https://github.com/openpatch/rrennAIbook/commit/3da49baf31f414d8c1de7e4c4fcdac6b8556674f)]:
+  - @rrennAIbook/markdown@0.21.0
+
+## 0.27.10
+
+### Patch Changes
+
+- Updated dependencies [[`33724b8`](https://github.com/openpatch/rrennAIbook/commit/33724b8c46c588d30bce661c32244fc34896209f)]:
+  - @rrennAIbook/markdown@0.20.0
+
+## 0.27.9
+
+### Patch Changes
+
+- Updated dependencies [[`8d23c1a`](https://github.com/openpatch/rrennAIbook/commit/8d23c1a80c1f344a7c5bf2a43d7ebaf90d816d0c)]:
+  - @rrennAIbook/markdown@0.19.0
+
+## 0.27.8
+
+### Patch Changes
+
+- Updated dependencies [[`7af5dd0`](https://github.com/openpatch/rrennAIbook/commit/7af5dd0c41bf47f0bbd2ff4f4d16a5411e7ccccb)]:
+  - @rrennAIbook/markdown@0.18.0
+
+## 0.27.7
+
+### Patch Changes
+
+- Updated dependencies [[`124f573`](https://github.com/openpatch/rrennAIbook/commit/124f573acddab763617f6bdfd261d64aca516f26)]:
+  - @rrennAIbook/markdown@0.17.1
+
+## 0.27.6
+
+### Patch Changes
+
+- Updated dependencies [[`05b262a`](https://github.com/openpatch/rrennAIbook/commit/05b262af61d920ed4b0dc4d3b3e88c85424e74cf), [`7126cb7`](https://github.com/openpatch/rrennAIbook/commit/7126cb7349b3ad54d1593bce72dc364b14a27e68), [`769228e`](https://github.com/openpatch/rrennAIbook/commit/769228eea963ba58147747362aa50ffc4c8fba3c)]:
+  - @rrennAIbook/markdown@0.17.0
+
+## 0.27.5
+
+### Patch Changes
+
+- Updated dependencies [[`27d2f47`](https://github.com/openpatch/rrennAIbook/commit/27d2f47e0e669b3738f62206bed767d29abce18a)]:
+  - @rrennAIbook/fs@0.16.0
+
+## 0.27.4
+
+### Patch Changes
+
+- Updated dependencies [[`28d5912`](https://github.com/openpatch/rrennAIbook/commit/28d5912d977c6eb4eb57d5f222a96d3fc5387282)]:
+  - @rrennAIbook/markdown@0.16.0
+
+## 0.27.3
+
+### Patch Changes
+
+- Updated dependencies [[`d4876f7`](https://github.com/openpatch/rrennAIbook/commit/d4876f7db102a98da1d37f10a3e15633f396ce1f)]:
+  - @rrennAIbook/markdown@0.15.3
+
+## 0.27.2
+
+### Patch Changes
+
+- Updated dependencies [[`a63ee6b`](https://github.com/openpatch/rrennAIbook/commit/a63ee6b3cefac39f90ba6f368886a7ed73d9f40c)]:
+  - @rrennAIbook/markdown@0.15.2
+
+## 0.27.1
+
+### Patch Changes
+
+- [`3cdf623`](https://github.com/openpatch/rrennAIbook/commit/3cdf6235fc52061977e856f5df99df1f68a25742) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - fix searchEl not found
+
+- Updated dependencies [[`3cdf623`](https://github.com/openpatch/rrennAIbook/commit/3cdf6235fc52061977e856f5df99df1f68a25742)]:
+  - @rrennAIbook/markdown@0.15.1
+
+## 0.27.0
+
+### Minor Changes
+
+- [#909](https://github.com/openpatch/rrennAIbook/pull/909) [`88071bd`](https://github.com/openpatch/rrennAIbook/commit/88071bd13ca297a32f110e322e7142e7b0406736) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add GeoGebra element.
+
+### Patch Changes
+
+- Updated dependencies [[`88071bd`](https://github.com/openpatch/rrennAIbook/commit/88071bd13ca297a32f110e322e7142e7b0406736)]:
+  - @rrennAIbook/markdown@0.15.0
+
+## 0.26.0
+
+### Minor Changes
+
+- [#907](https://github.com/openpatch/rrennAIbook/pull/907) [`eaeaf29`](https://github.com/openpatch/rrennAIbook/commit/eaeaf293532494607385f4e8d927ffb3716dcc6f) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add option to enable search. Just set the search key to true in your rrennAIbook config and a search icon will be visible in the top right hand corner.
+
+### Patch Changes
+
+- Updated dependencies [[`eaeaf29`](https://github.com/openpatch/rrennAIbook/commit/eaeaf293532494607385f4e8d927ffb3716dcc6f)]:
+  - @rrennAIbook/markdown@0.14.0
+  - @rrennAIbook/fs@0.15.0
+
+## 0.25.11
+
+### Patch Changes
+
+- Updated dependencies [[`2ab94ae`](https://github.com/openpatch/rrennAIbook/commit/2ab94aea525c2b67c156313f13d9662efad5d8a6)]:
+  - @rrennAIbook/markdown@0.13.2
+
+## 0.25.10
+
+### Patch Changes
+
+- Updated dependencies [[`300e589`](https://github.com/openpatch/rrennAIbook/commit/300e589f9de4fa6dc5ed76e4649240c93a8eae6c)]:
+  - @rrennAIbook/markdown@0.13.1
+
+## 0.25.9
+
+### Patch Changes
+
+- Updated dependencies [[`d9f0b71`](https://github.com/openpatch/rrennAIbook/commit/d9f0b711775195fc56d9706dc196edf577591b2e)]:
+  - @rrennAIbook/markdown@0.13.0
+  - @rrennAIbook/fs@0.15.0
+
+## 0.25.8
+
+### Patch Changes
+
+- Updated dependencies [[`d5bcb38`](https://github.com/openpatch/rrennAIbook/commit/d5bcb38e2b641a292bae161ee3b1893d80b14360)]:
+  - @rrennAIbook/markdown@0.12.2
+
+## 0.25.7
+
+### Patch Changes
+
+- [`eb6c5a3`](https://github.com/openpatch/rrennAIbook/commit/eb6c5a3ae05721fee0a657ccb63124d6e1194d22) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - move qr code generation to the client
+
+- Updated dependencies [[`eb6c5a3`](https://github.com/openpatch/rrennAIbook/commit/eb6c5a3ae05721fee0a657ccb63124d6e1194d22)]:
+  - @rrennAIbook/markdown@0.12.1
+
+## 0.25.6
+
+### Patch Changes
+
+- Updated dependencies [[`8536870`](https://github.com/openpatch/rrennAIbook/commit/8536870623eb21bfaeffc0c65022584c26ea75c9)]:
+  - @rrennAIbook/markdown@0.12.0
+  - @rrennAIbook/fs@0.14.1
+
+## 0.25.5
+
+### Patch Changes
+
+- Updated dependencies [[`2074212`](https://github.com/openpatch/rrennAIbook/commit/20742126a69229186a01ed7384b7c9ff5af483bd)]:
+  - @rrennAIbook/fs@0.14.1
+
+## 0.25.4
+
+### Patch Changes
+
+- Updated dependencies [[`6347d43`](https://github.com/openpatch/rrennAIbook/commit/6347d4392318e6bc8f52c4543fc65da7317f7d13)]:
+  - @rrennAIbook/markdown@0.11.2
+
+## 0.25.3
+
+### Patch Changes
+
+- Updated dependencies [[`440abf8`](https://github.com/openpatch/rrennAIbook/commit/440abf80ffcbcf70a0aed053ce58e0a36034eec1)]:
+  - @rrennAIbook/markdown@0.11.1
+
+## 0.25.2
+
+### Patch Changes
+
+- Updated dependencies [[`4fe7d11`](https://github.com/openpatch/rrennAIbook/commit/4fe7d1127f79936a9479877d264f4988073f8859), [`cfb27a1`](https://github.com/openpatch/rrennAIbook/commit/cfb27a112ede0ac7850bddd10474d23485f9f052), [`e73a321`](https://github.com/openpatch/rrennAIbook/commit/e73a321f46eb8de4002361e259de8080266f35c1)]:
+  - @rrennAIbook/markdown@0.11.0
+
+## 0.25.1
+
+### Patch Changes
+
+- Updated dependencies [[`5588011`](https://github.com/openpatch/rrennAIbook/commit/5588011c3819816de125a3bea3513f8539f650f8)]:
+  - @rrennAIbook/markdown@0.10.1
+
+## 0.25.0
+
+### Minor Changes
+
+- [#882](https://github.com/openpatch/rrennAIbook/pull/882) [`26ae87e`](https://github.com/openpatch/rrennAIbook/commit/26ae87e19b01b6c2f45590ade4d681c5a27c932a) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - The release is a complete rewrite of the underlying process to generate the
+  HTML files. React was removed from the project and replaced with remark
+  plugins. This improves build times and give us more control over the whole
+  process. For example there is no need anymore for running `npx rrennAIbook
+setup`.
+
+  I also added a new pagelist directive, which can be used to list pages based
+  on user-defined criteria. This directive also replaces the included glossary
+  page. Therefore, you need to create on yourself. This can be easily done by
+  creating a page `glossary.md` with the following content:
+
+  ```md
+  ---
+  name: Glossary
+  ---
+
+  ::pagelist{format="glossary" source="href(/glossary/)"}
+  ```
+
+  Additionally, I added the ability to use custom JavaScript and CSS-files - see
+  the documentation under Advanced Features - in addition to using HTML in your
+  rrennAIbook, when the `allowDangerousHtml` option is enabled in your config.
+
+  I also improved the appearance of custom links, by moving them to the
+  footer on mobile devices.
+
+### Patch Changes
+
+- Updated dependencies [[`26ae87e`](https://github.com/openpatch/rrennAIbook/commit/26ae87e19b01b6c2f45590ade4d681c5a27c932a)]:
+  - @rrennAIbook/markdown@0.10.0
+  - @rrennAIbook/fs@0.14.0
+
+## 0.24.3
+
+### Patch Changes
+
+- Updated dependencies [[`2bfe682`](https://github.com/openpatch/rrennAIbook/commit/2bfe6828e578399c405bf4fc52fb1845efe2fb6a)]:
+  - @rrennAIbook/element-bitflow@0.2.3
+  - @rrennAIbook/element-mermaid@0.3.7
+  - @rrennAIbook/element-audio@0.2.3
+  - @rrennAIbook/element-video@0.2.4
+  - @rrennAIbook/element-qr@0.3.3
+  - @rrennAIbook/markdown@0.9.7
+  - @rrennAIbook/shell@0.7.6
+  - @rrennAIbook/fs@0.13.1
+
+## 0.24.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rrennAIbook/markdown@0.9.6
+
+## 0.24.1
+
+### Patch Changes
+
+- [`e9359e1`](https://github.com/openpatch/rrennAIbook/commit/e9359e1e8d51be1d2a71d76e74940e0eb844a74c) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix peer dependencies
+
+- Updated dependencies [[`e9359e1`](https://github.com/openpatch/rrennAIbook/commit/e9359e1e8d51be1d2a71d76e74940e0eb844a74c), [`c500196`](https://github.com/openpatch/rrennAIbook/commit/c500196fe68bd9af55086fd16f74b202f53b23ec)]:
+  - @rrennAIbook/element-bookmarks@0.3.3
+  - @rrennAIbook/element-dl@0.2.3
+  - @rrennAIbook/fs@0.13.0
+
+## 0.24.0
+
+### Minor Changes
+
+- [`147be5e`](https://github.com/openpatch/rrennAIbook/commit/147be5ee75becec9d7d790cf9ab6ddf23b6ca455) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - update lock file
+
+### Patch Changes
+
+- [`32848c3`](https://github.com/openpatch/rrennAIbook/commit/32848c3ce55c5eee41ad77ea16040d7f38838621) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - use correct vscode version
+
+- [`4a3a21f`](https://github.com/openpatch/rrennAIbook/commit/4a3a21f40c0355c308e8dcb723234c0434aced23) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - update dependencies
+
+- Updated dependencies [[`4a3a21f`](https://github.com/openpatch/rrennAIbook/commit/4a3a21f40c0355c308e8dcb723234c0434aced23), [`8da55e5`](https://github.com/openpatch/rrennAIbook/commit/8da55e5d20f8b924e016b60ff36c461f7be1e2c2)]:
+  - @rrennAIbook/drawer@0.1.2
+  - @rrennAIbook/element-alert@0.2.2
+  - @rrennAIbook/element-audio@0.2.2
+  - @rrennAIbook/element-bitflow@0.2.2
+  - @rrennAIbook/element-bookmarks@0.3.2
+  - @rrennAIbook/element-collapsible@0.4.2
+  - @rrennAIbook/element-dl@0.2.2
+  - @rrennAIbook/element-embed@0.2.2
+  - @rrennAIbook/element-excalidraw@0.6.2
+  - @rrennAIbook/element-mermaid@0.3.6
+  - @rrennAIbook/element-online-ide@0.6.2
+  - @rrennAIbook/element-plantuml@0.2.2
+  - @rrennAIbook/element-protect@0.4.2
+  - @rrennAIbook/element-qr@0.3.2
+  - @rrennAIbook/element-scratchblock@0.2.2
+  - @rrennAIbook/element-slideshow@0.0.2
+  - @rrennAIbook/element-sql-ide@0.5.2
+  - @rrennAIbook/element-struktog@0.2.2
+  - @rrennAIbook/element-tabs@0.2.2
+  - @rrennAIbook/element-term@0.2.2
+  - @rrennAIbook/element-tiles@0.1.4
+  - @rrennAIbook/element-video@0.2.3
+  - @rrennAIbook/element-youtube@0.2.2
+  - @rrennAIbook/fs@0.12.1
+  - @rrennAIbook/markdown@0.9.5
+  - @rrennAIbook/provider@0.4.2
+  - @rrennAIbook/shell@0.7.5
+  - @rrennAIbook/store@0.2.1
+  - @rrennAIbook/styles@0.4.0
+
+## 0.23.1
+
+### Patch Changes
+
+- Updated dependencies [[`90c99bd`](https://github.com/openpatch/rrennAIbook/commit/90c99bd0edc9ea8da5e1c6376e09d1977f881870)]:
+  - @rrennAIbook/fs@0.12.0
+  - @rrennAIbook/provider@0.4.1
+  - @rrennAIbook/shell@0.7.4
+  - @rrennAIbook/element-alert@0.2.1
+  - @rrennAIbook/element-audio@0.2.1
+  - @rrennAIbook/element-bitflow@0.2.1
+  - @rrennAIbook/element-bookmarks@0.3.1
+  - @rrennAIbook/element-collapsible@0.4.1
+  - @rrennAIbook/element-dl@0.2.1
+  - @rrennAIbook/element-embed@0.2.1
+  - @rrennAIbook/element-excalidraw@0.6.1
+  - @rrennAIbook/element-mermaid@0.3.5
+  - @rrennAIbook/element-online-ide@0.6.1
+  - @rrennAIbook/element-plantuml@0.2.1
+  - @rrennAIbook/element-protect@0.4.1
+  - @rrennAIbook/element-qr@0.3.1
+  - @rrennAIbook/element-scratchblock@0.2.1
+  - @rrennAIbook/element-slideshow@0.0.1
+  - @rrennAIbook/element-sql-ide@0.5.1
+  - @rrennAIbook/element-struktog@0.2.1
+  - @rrennAIbook/element-tabs@0.2.1
+  - @rrennAIbook/element-term@0.2.1
+  - @rrennAIbook/element-tiles@0.1.3
+  - @rrennAIbook/element-video@0.2.2
+  - @rrennAIbook/element-youtube@0.2.1
+  - @rrennAIbook/markdown@0.9.4
+  - @rrennAIbook/styles@0.3.1
+
+## 0.23.0
+
+### Minor Changes
+
+- [`bc1849c`](https://github.com/openpatch/rrennAIbook/commit/bc1849c54b13f714f10171dfcec53c5f6fb20047) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Bring VS Code extension inline with the web platfrom.
+
+## 0.22.4
+
+### Patch Changes
+
+- [`d723aaf`](https://github.com/openpatch/rrennAIbook/commit/d723aafed2eab1ebef7eda5055ba59f2d4e16a9b) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix fs module for windows. This should also fix the vscode extension on windows.
+
+- Updated dependencies [[`d723aaf`](https://github.com/openpatch/rrennAIbook/commit/d723aafed2eab1ebef7eda5055ba59f2d4e16a9b)]:
+  - @rrennAIbook/markdown@0.9.3
+  - @rrennAIbook/fs@0.11.3
+
+## 0.22.3
+
+### Patch Changes
+
+- Updated dependencies [[`919e9a5`](https://github.com/openpatch/rrennAIbook/commit/919e9a534bc34a31085fb7cb6c472fe686dbfe51)]:
+  - @rrennAIbook/element-mermaid@0.3.4
+
+## 0.22.2
+
+### Patch Changes
+
+- Updated dependencies [[`3905268`](https://github.com/openpatch/rrennAIbook/commit/390526881c0c74763ca791f225bb01edbe5ab959)]:
+  - @rrennAIbook/element-mermaid@0.3.3
+
+## 0.22.1
+
+### Patch Changes
+
+- Updated dependencies [[`a4284b6`](https://github.com/openpatch/rrennAIbook/commit/a4284b63b13fc3ce8b57cc3d9ce11f0d075c2c7d)]:
+  - @rrennAIbook/element-mermaid@0.3.2
+
+## 0.22.0
+
+### Minor Changes
+
+- [`5c90434`](https://github.com/openpatch/rrennAIbook/commit/5c90434bd37a4067cdc400a394f7caea2b18a33f) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add slideshow element
+
+## 0.21.3
+
+### Patch Changes
+
+- Updated dependencies [[`5792288`](https://github.com/openpatch/rrennAIbook/commit/57922883e159929aba257f8411fd122f0e804daf)]:
+  - @rrennAIbook/fs@0.11.2
+
+## 0.21.2
+
+### Patch Changes
+
+- [`cfdb112`](https://github.com/openpatch/rrennAIbook/commit/cfdb112f3c845db5607f681e4bb2ac521523d292) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix drawer in rrennAIbook-studio
+
+- Updated dependencies [[`cfdb112`](https://github.com/openpatch/rrennAIbook/commit/cfdb112f3c845db5607f681e4bb2ac521523d292)]:
+  - @rrennAIbook/fs@0.11.1
+
+## 0.21.1
+
+### Patch Changes
+
+- Updated dependencies [[`2eca214`](https://github.com/openpatch/rrennAIbook/commit/2eca214b355e3cdfec59f21cc067539666cdf5f7)]:
+  - @rrennAIbook/element-tiles@0.1.2
+  - @rrennAIbook/element-video@0.2.1
+
+## 0.21.0
+
+### Minor Changes
+
+- [#847](https://github.com/openpatch/rrennAIbook/pull/847) [`0b893a3`](https://github.com/openpatch/rrennAIbook/commit/0b893a39ba9f5e3fffa40fc3ce115bd379f43313) Thanks [@elielmartinsbr](https://github.com/elielmartinsbr)! - add video element
+
+### Patch Changes
+
+- Updated dependencies [[`0b893a3`](https://github.com/openpatch/rrennAIbook/commit/0b893a39ba9f5e3fffa40fc3ce115bd379f43313)]:
+  - @rrennAIbook/element-video@0.2.0
+
+## 0.20.1
+
+### Patch Changes
+
+- [`add7313`](https://github.com/openpatch/rrennAIbook/commit/add7313099754952f27a5de4534607b55043f898) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - use type module for tiles package
+
+- Updated dependencies [[`add7313`](https://github.com/openpatch/rrennAIbook/commit/add7313099754952f27a5de4534607b55043f898)]:
+  - @rrennAIbook/element-tiles@0.1.1
+
+## 0.20.0
+
+### Minor Changes
+
+- [`1e92522`](https://github.com/openpatch/rrennAIbook/commit/1e925225fb8329ddc7b26317ec7779ee008da6a2) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - add tiles
+
+### Patch Changes
+
+- Updated dependencies [[`1e92522`](https://github.com/openpatch/rrennAIbook/commit/1e925225fb8329ddc7b26317ec7779ee008da6a2)]:
+  - @rrennAIbook/element-tiles@0.1.0
+
+## 0.19.12
+
+### Patch Changes
+
+- [`4042bc1`](https://github.com/openpatch/rrennAIbook/commit/4042bc1d1e54f6c81d76243b96e8a933d40fea7d) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix mermaid bug, which lead to showing an error banner.
+
+- Updated dependencies [[`52b7fad`](https://github.com/openpatch/rrennAIbook/commit/52b7fad9129bbf1c0f3f192eddfb7c7ed07dc561), [`4042bc1`](https://github.com/openpatch/rrennAIbook/commit/4042bc1d1e54f6c81d76243b96e8a933d40fea7d)]:
+  - @rrennAIbook/element-mermaid@0.3.1
+
+## 0.19.11
+
+### Patch Changes
+
+- Updated dependencies [[`2b94605`](https://github.com/openpatch/rrennAIbook/commit/2b9460574a23fcecc66c0a187a56d236891482fe)]:
+  - @rrennAIbook/element-excalidraw@0.6.0
+  - @rrennAIbook/element-mermaid@0.3.0
+
+## 0.19.10
+
+### Patch Changes
+
+- [`1d65ed9`](https://github.com/openpatch/rrennAIbook/commit/1d65ed954ca8405c8d2102ef423c38731aac07ac) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - use the updated packages
+
+- Updated dependencies [[`183bb32`](https://github.com/openpatch/rrennAIbook/commit/183bb3253256342882a167332a1ac7209740ab43)]:
+  - @rrennAIbook/shell@0.7.3
+
+## 0.19.9
+
+### Patch Changes
+
+- Updated dependencies [[`f5ddc0c`](https://github.com/openpatch/rrennAIbook/commit/f5ddc0c53564ea426d31aff69695e8fc91dfa0e9)]:
+  - @rrennAIbook/element-excalidraw@0.5.2
+
+## 0.19.8
+
+### Patch Changes
+
+- Updated dependencies [[`2e67754`](https://github.com/openpatch/rrennAIbook/commit/2e67754670a45ce19d4974c80294bff18713f433)]:
+  - @rrennAIbook/fs@0.11.0
+
+## 0.19.7
+
+### Patch Changes
+
+- Updated dependencies [[`9cf8f9c`](https://github.com/openpatch/rrennAIbook/commit/9cf8f9c028c315b63770495b97d0567da0f69c1b)]:
+  - @rrennAIbook/element-online-ide@0.6.0
+  - @rrennAIbook/element-sql-ide@0.5.0
+
+## 0.19.6
+
+### Patch Changes
+
+- Updated dependencies [[`81c6d9e`](https://github.com/openpatch/rrennAIbook/commit/81c6d9e7b5df239db6fc240b7d75221f88587f31)]:
+  - @rrennAIbook/element-online-ide@0.5.0
+
+## 0.19.5
+
+### Patch Changes
+
+- Updated dependencies [[`bfa3016`](https://github.com/openpatch/rrennAIbook/commit/bfa30169bf2e6377385c6a1adb5aa625db7d1b68), [`e84275a`](https://github.com/openpatch/rrennAIbook/commit/e84275a11949e455be4a00742528541b969d52f1), [`42ab56f`](https://github.com/openpatch/rrennAIbook/commit/42ab56f0e07a5adca5e7485a61d21d59d41ad100)]:
+  - @rrennAIbook/markdown@0.9.2
+  - @rrennAIbook/element-excalidraw@0.5.1
+  - @rrennAIbook/element-mermaid@0.2.1
+  - @rrennAIbook/shell@0.7.2
+
+## 0.19.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rrennAIbook/markdown@0.9.1
+  - @rrennAIbook/shell@0.7.1
+
+## 0.19.3
+
+### Patch Changes
+
+- Updated dependencies [[`9bb80bb`](https://github.com/openpatch/rrennAIbook/commit/9bb80bbd711a2ec11d84f2263c581d42e92fd7de)]:
+  - @rrennAIbook/element-scratchblock@0.2.0
+  - @rrennAIbook/element-collapsible@0.4.0
+  - @rrennAIbook/element-excalidraw@0.5.0
+  - @rrennAIbook/element-online-ide@0.4.0
+  - @rrennAIbook/element-bookmarks@0.3.0
+  - @rrennAIbook/element-plantuml@0.2.0
+  - @rrennAIbook/element-struktog@0.2.0
+  - @rrennAIbook/element-bitflow@0.2.0
+  - @rrennAIbook/element-mermaid@0.2.0
+  - @rrennAIbook/element-protect@0.4.0
+  - @rrennAIbook/element-sql-ide@0.4.0
+  - @rrennAIbook/element-youtube@0.2.0
+  - @rrennAIbook/element-alert@0.2.0
+  - @rrennAIbook/element-audio@0.2.0
+  - @rrennAIbook/element-embed@0.2.0
+  - @rrennAIbook/element-tabs@0.2.0
+  - @rrennAIbook/element-term@0.2.0
+  - @rrennAIbook/element-dl@0.2.0
+  - @rrennAIbook/element-qr@0.3.0
+  - @rrennAIbook/markdown@0.9.0
+  - @rrennAIbook/provider@0.4.0
+  - @rrennAIbook/styles@0.3.0
+  - @rrennAIbook/shell@0.7.0
+  - @rrennAIbook/store@0.2.0
+  - @rrennAIbook/fs@0.10.0
+
+## 0.19.2
+
+### Patch Changes
+
+- Updated dependencies [[`c6c7d1f`](https://github.com/openpatch/rrennAIbook/commit/c6c7d1f3dda16879166398916792025545e344ea), [`9851b21`](https://github.com/openpatch/rrennAIbook/commit/9851b21db8d19c849110eca623bfc450c76e06b9)]:
+  - @rrennAIbook/markdown@0.8.1
+
+## 0.19.1
+
+### Patch Changes
+
+- Updated dependencies [[`19af1f3`](https://github.com/openpatch/rrennAIbook/commit/19af1f3baae82508091b2f49541449464d88bb28)]:
+  - @rrennAIbook/element-qr@0.2.1
+
+## 0.19.0
+
+### Minor Changes
+
+- [`ff0e867`](https://github.com/openpatch/rrennAIbook/commit/ff0e86788d967194d442026b49d23082960c66da) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Improve the build of rrennAIbooks and the generation of the toc.
+
+### Patch Changes
+
+- Updated dependencies [[`ff0e867`](https://github.com/openpatch/rrennAIbook/commit/ff0e86788d967194d442026b49d23082960c66da)]:
+  - @rrennAIbook/markdown@0.8.0
+  - @rrennAIbook/shell@0.6.0
+  - @rrennAIbook/fs@0.9.0
+
+## 0.18.3
+
+### Patch Changes
+
+- Updated dependencies [[`77c5ef4`](https://github.com/openpatch/rrennAIbook/commit/77c5ef42ecdb693c27b3eeeca098c712e0bf05b6)]:
+  - @rrennAIbook/toc@0.3.0
+
+## 0.18.2
+
+### Patch Changes
+
+- Updated dependencies [[`4e264d1`](https://github.com/openpatch/rrennAIbook/commit/4e264d166684ba476460fd48fedfae2f7e2a3195), [`902c0b3`](https://github.com/openpatch/rrennAIbook/commit/902c0b30a0aa97984350cfd58ad88d38ef7b4cd6)]:
+  - @rrennAIbook/markdown@0.7.0
+  - @rrennAIbook/element-qr@0.2.0
+  - @rrennAIbook/provider@0.3.0
+  - @rrennAIbook/styles@0.2.0
+  - @rrennAIbook/shell@0.5.0
+  - @rrennAIbook/element-alert@0.1.14
+  - @rrennAIbook/element-audio@0.1.2
+  - @rrennAIbook/element-bitflow@0.1.15
+  - @rrennAIbook/element-bookmarks@0.2.9
+  - @rrennAIbook/element-collapsible@0.3.5
+  - @rrennAIbook/element-dl@0.1.15
+  - @rrennAIbook/element-embed@0.1.5
+  - @rrennAIbook/element-excalidraw@0.4.5
+  - @rrennAIbook/element-mermaid@0.1.14
+  - @rrennAIbook/element-online-ide@0.3.3
+  - @rrennAIbook/element-plantuml@0.1.1
+  - @rrennAIbook/element-protect@0.3.5
+  - @rrennAIbook/element-scratchblock@0.1.5
+  - @rrennAIbook/element-sql-ide@0.3.3
+  - @rrennAIbook/element-struktog@0.1.14
+  - @rrennAIbook/element-tabs@0.1.15
+  - @rrennAIbook/element-term@0.1.14
+  - @rrennAIbook/element-youtube@0.1.14
+
+## 0.18.1
+
+### Patch Changes
+
+- [`fe60a2e`](https://github.com/openpatch/rrennAIbook/commit/fe60a2e8dcb41270b0095e80fce7e2cf516f9101) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - add missing css for the new audio element
+
+- Updated dependencies [[`b6f842d`](https://github.com/openpatch/rrennAIbook/commit/b6f842d222af821346382feff5c5f698a1d93e7e)]:
+  - @rrennAIbook/element-audio@0.1.1
+
+## 0.18.0
+
+### Minor Changes
+
+- [`a9d0900`](https://github.com/openpatch/rrennAIbook/commit/a9d09005a21e87e663a3a5cd2d94cfceb9b7e728) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add audio element for playing audio files and showing information about the audio file.
+
+### Patch Changes
+
+- Updated dependencies [[`fcc3033`](https://github.com/openpatch/rrennAIbook/commit/fcc30337f4ef68842e25b5a914de46af38d5e196), [`a9d0900`](https://github.com/openpatch/rrennAIbook/commit/a9d09005a21e87e663a3a5cd2d94cfceb9b7e728)]:
+  - @rrennAIbook/element-embed@0.1.4
+  - @rrennAIbook/element-audio@0.1.0
+
+## 0.17.0
+
+### Minor Changes
+
+- [`035cd2a`](https://github.com/openpatch/rrennAIbook/commit/035cd2ac6eae9beadb5c899d971019d99ec1bbb1) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add the PlantUML element. This element uses the external service Kroki to render PlantUML code to images.
+
+### Patch Changes
+
+- Updated dependencies [[`035cd2a`](https://github.com/openpatch/rrennAIbook/commit/035cd2ac6eae9beadb5c899d971019d99ec1bbb1)]:
+  - @rrennAIbook/element-plantuml@0.1.0
+
+## 0.16.3
+
+### Patch Changes
+
+- Updated dependencies [[`a3496b4`](https://github.com/openpatch/rrennAIbook/commit/a3496b4676376f16697306869733a780f9d15a56)]:
+  - @rrennAIbook/element-embed@0.1.3
+
+## 0.16.2
+
+### Patch Changes
+
+- Updated dependencies [[`9977ab2`](https://github.com/openpatch/rrennAIbook/commit/9977ab26b3e75727acfc33e969ca70df544ad183)]:
+  - @rrennAIbook/element-embed@0.1.2
+
+## 0.16.1
+
+### Patch Changes
+
+- [`edf8e94`](https://github.com/openpatch/rrennAIbook/commit/edf8e943e9b9c393121cfc1d859dc91e44af30c1) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - fix data not defined
+
+- Updated dependencies [[`aa0d719`](https://github.com/openpatch/rrennAIbook/commit/aa0d7197aa78e7d42b2393d8850c6983c3681f07), [`edf8e94`](https://github.com/openpatch/rrennAIbook/commit/edf8e943e9b9c393121cfc1d859dc91e44af30c1), [`ed5a41d`](https://github.com/openpatch/rrennAIbook/commit/ed5a41d3c324e55e932a3c375d9daf89ebd6b675)]:
+  - @rrennAIbook/element-embed@0.1.1
+  - @rrennAIbook/element-scratchblock@0.1.4
+  - @rrennAIbook/element-collapsible@0.3.4
+  - @rrennAIbook/element-excalidraw@0.4.4
+  - @rrennAIbook/element-online-ide@0.3.2
+  - @rrennAIbook/element-bookmarks@0.2.8
+  - @rrennAIbook/element-struktog@0.1.13
+  - @rrennAIbook/element-bitflow@0.1.14
+  - @rrennAIbook/element-mermaid@0.1.13
+  - @rrennAIbook/element-protect@0.3.4
+  - @rrennAIbook/element-sql-ide@0.3.2
+  - @rrennAIbook/element-youtube@0.1.13
+  - @rrennAIbook/element-alert@0.1.13
+  - @rrennAIbook/element-tabs@0.1.14
+  - @rrennAIbook/element-term@0.1.13
+  - @rrennAIbook/element-dl@0.1.14
+  - @rrennAIbook/element-qr@0.1.14
+  - @rrennAIbook/markdown@0.6.4
+  - @rrennAIbook/provider@0.2.5
+  - @rrennAIbook/styles@0.1.13
+  - @rrennAIbook/shell@0.4.6
+  - @rrennAIbook/store@0.1.5
+  - @rrennAIbook/toc@0.2.3
+
+## 0.16.0
+
+### Minor Changes
+
+- [`f98c89e`](https://github.com/openpatch/rrennAIbook/commit/f98c89ed582a155d5b005ec72a04ae2619c35c47) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add element embed. This elements allow embedding content like GeoGebra Applets, LearningApps etc.
+
+### Patch Changes
+
+- [`832678b`](https://github.com/openpatch/rrennAIbook/commit/832678b39f6a1a6e5cdd361c9c384d341762c09e) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - update packages
+
+- Updated dependencies [[`f98c89e`](https://github.com/openpatch/rrennAIbook/commit/f98c89ed582a155d5b005ec72a04ae2619c35c47), [`832678b`](https://github.com/openpatch/rrennAIbook/commit/832678b39f6a1a6e5cdd361c9c384d341762c09e)]:
+  - @rrennAIbook/element-embed@0.1.0
+  - @rrennAIbook/element-alert@0.1.12
+  - @rrennAIbook/element-bitflow@0.1.13
+  - @rrennAIbook/element-bookmarks@0.2.7
+  - @rrennAIbook/element-collapsible@0.3.3
+  - @rrennAIbook/element-dl@0.1.13
+  - @rrennAIbook/element-excalidraw@0.4.3
+  - @rrennAIbook/element-mermaid@0.1.12
+  - @rrennAIbook/element-online-ide@0.3.1
+  - @rrennAIbook/element-protect@0.3.3
+  - @rrennAIbook/element-qr@0.1.13
+  - @rrennAIbook/element-scratchblock@0.1.3
+  - @rrennAIbook/element-sql-ide@0.3.1
+  - @rrennAIbook/element-struktog@0.1.12
+  - @rrennAIbook/element-tabs@0.1.13
+  - @rrennAIbook/element-term@0.1.12
+  - @rrennAIbook/element-youtube@0.1.12
+  - @rrennAIbook/fs@0.8.1
+  - @rrennAIbook/markdown@0.6.3
+  - @rrennAIbook/provider@0.2.4
+  - @rrennAIbook/shell@0.4.5
+  - @rrennAIbook/store@0.1.4
+  - @rrennAIbook/styles@0.1.12
+  - @rrennAIbook/toc@0.2.2
+
+## 0.15.3
+
+### Patch Changes
+
+- [`c9792c8`](https://github.com/openpatch/rrennAIbook/commit/c9792c873b1e435deb238829ce08ff017e7949e4) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix handlebars not in allow file types
+
+## 0.15.2
+
+### Patch Changes
+
+- Updated dependencies [[`13bfad5`](https://github.com/openpatch/rrennAIbook/commit/13bfad58f5a16d2d54b4043ce855cf6c3bc397a0), [`511f497`](https://github.com/openpatch/rrennAIbook/commit/511f497e3e19c4294ddacb4e2b98cb47f35901d9)]:
+  - @rrennAIbook/fs@0.8.0
+
+## 0.15.1
+
+### Patch Changes
+
+- Updated dependencies [[`4221fe1`](https://github.com/openpatch/rrennAIbook/commit/4221fe145a6dfffd9f97459fa2d2694da4b5d78e)]:
+  - @rrennAIbook/element-online-ide@0.3.0
+  - @rrennAIbook/element-sql-ide@0.3.0
+  - @rrennAIbook/fs@0.7.5
+  - @rrennAIbook/provider@0.2.3
+  - @rrennAIbook/shell@0.4.4
+  - @rrennAIbook/element-alert@0.1.11
+  - @rrennAIbook/element-bitflow@0.1.12
+  - @rrennAIbook/element-bookmarks@0.2.6
+  - @rrennAIbook/element-collapsible@0.3.2
+  - @rrennAIbook/element-dl@0.1.12
+  - @rrennAIbook/element-excalidraw@0.4.2
+  - @rrennAIbook/element-mermaid@0.1.11
+  - @rrennAIbook/element-protect@0.3.2
+  - @rrennAIbook/element-qr@0.1.12
+  - @rrennAIbook/element-scratchblock@0.1.2
+  - @rrennAIbook/element-struktog@0.1.11
+  - @rrennAIbook/element-tabs@0.1.12
+  - @rrennAIbook/element-term@0.1.11
+  - @rrennAIbook/element-youtube@0.1.11
+  - @rrennAIbook/markdown@0.6.2
+  - @rrennAIbook/styles@0.1.11
+
+## 0.15.0
+
+### Minor Changes
+
+- [`f3ee6cd`](https://github.com/openpatch/rrennAIbook/commit/f3ee6cd24cadf4856c72403cb76c53d5b1973006) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Allow all external content. This is necessary for the Online IDE and SQL IDE elements
+
+## 0.14.0
+
+### Minor Changes
+
+- [`3efd112`](https://github.com/openpatch/rrennAIbook/commit/3efd1121fe4052fcff083b17ecb9cc6f716e33aa) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - allow all external scripts
+
+## 0.13.0
+
+### Minor Changes
+
+- [`cb65222`](https://github.com/openpatch/rrennAIbook/commit/cb652224860a718149be4c34234eeb8dcdfbfc91) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - add element sql ide
+
+### Patch Changes
+
+- Updated dependencies [[`cb65222`](https://github.com/openpatch/rrennAIbook/commit/cb652224860a718149be4c34234eeb8dcdfbfc91)]:
+  - @rrennAIbook/element-sql-ide@0.2.0
+
+## 0.12.1
+
+### Patch Changes
+
+- Updated dependencies [[`8da1b46`](https://github.com/openpatch/rrennAIbook/commit/8da1b46c9462aee8432e8697aee88628b0531ed8)]:
+  - @rrennAIbook/element-online-ide@0.2.0
+
+## 0.12.0
+
+### Minor Changes
+
+- [`086019c`](https://github.com/openpatch/rrennAIbook/commit/086019c276dc42d1262dc104c894065b89203b24) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add element online ide for java
+
+### Patch Changes
+
+- [`cf58c13`](https://github.com/openpatch/rrennAIbook/commit/cf58c13ca19aaba8e20e6e1cb27ab3ebbfb74d37) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - update dependencies
+
+- Updated dependencies [[`086019c`](https://github.com/openpatch/rrennAIbook/commit/086019c276dc42d1262dc104c894065b89203b24), [`cf58c13`](https://github.com/openpatch/rrennAIbook/commit/cf58c13ca19aaba8e20e6e1cb27ab3ebbfb74d37), [`bf7d452`](https://github.com/openpatch/rrennAIbook/commit/bf7d452cc1608507166a9e0c499d2db42740a307)]:
+  - @rrennAIbook/element-online-ide@0.1.0
+  - @rrennAIbook/element-scratchblock@0.1.1
+  - @rrennAIbook/element-collapsible@0.3.1
+  - @rrennAIbook/element-excalidraw@0.4.1
+  - @rrennAIbook/element-bookmarks@0.2.5
+  - @rrennAIbook/element-struktog@0.1.10
+  - @rrennAIbook/element-bitflow@0.1.11
+  - @rrennAIbook/element-mermaid@0.1.10
+  - @rrennAIbook/element-protect@0.3.1
+  - @rrennAIbook/element-youtube@0.1.10
+  - @rrennAIbook/element-alert@0.1.10
+  - @rrennAIbook/element-tabs@0.1.11
+  - @rrennAIbook/element-term@0.1.10
+  - @rrennAIbook/element-dl@0.1.11
+  - @rrennAIbook/element-qr@0.1.11
+  - @rrennAIbook/markdown@0.6.1
+  - @rrennAIbook/provider@0.2.2
+  - @rrennAIbook/styles@0.1.10
+  - @rrennAIbook/shell@0.4.3
+  - @rrennAIbook/store@0.1.3
+  - @rrennAIbook/toc@0.2.1
+  - @rrennAIbook/fs@0.7.5
+
+## 0.11.16
+
+### Patch Changes
+
+- Updated dependencies [[`e087609`](https://github.com/openpatch/rrennAIbook/commit/e087609de23c4d2868793fec65deee8beb144a78)]:
+  - @rrennAIbook/element-excalidraw@0.4.0
+
+## 0.11.15
+
+### Patch Changes
+
+- Updated dependencies [[`f1d2219`](https://github.com/openpatch/rrennAIbook/commit/f1d2219791491e6ae7579503864b3795f5bf7dc9)]:
+  - @rrennAIbook/element-dl@0.1.10
+
+## 0.11.14
+
+### Patch Changes
+
+- Updated dependencies [[`e581f06`](https://github.com/openpatch/rrennAIbook/commit/e581f06ddb5291528d46ba8c797f5cf8f54072e1)]:
+  - @rrennAIbook/fs@0.7.4
+
+## 0.11.13
+
+### Patch Changes
+
+- [`0e8778a`](https://github.com/openpatch/rrennAIbook/commit/0e8778a069615ca133f8476d05ae27a425ece036) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Change fsPath to platform independent path
+
+## 0.11.12
+
+### Patch Changes
+
+- [`80b90df`](https://github.com/openpatch/rrennAIbook/commit/80b90df51f37e67a6296c79b379f3bb5910f161c) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix: Link to glossary not working
+
+## 0.11.11
+
+### Patch Changes
+
+- [`dcdbfef`](https://github.com/openpatch/rrennAIbook/commit/dcdbfef0927b224c25392083e078d6c226e2bca1) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Reduce unnecessary updates
+
+## 0.11.10
+
+### Patch Changes
+
+- Updated dependencies [[`764a681`](https://github.com/openpatch/rrennAIbook/commit/764a681e4a8b0135ffa83f0a30c4cda23b79babd), [`fa2719e`](https://github.com/openpatch/rrennAIbook/commit/fa2719ebb2bd535aa09a9358ebb53c5c277ad630)]:
+  - @rrennAIbook/markdown@0.6.0
+
+## 0.11.9
+
+### Patch Changes
+
+- Updated dependencies [[`70e4131`](https://github.com/openpatch/rrennAIbook/commit/70e4131de7d3e2c81061dba8afe87c16e80372b4)]:
+  - @rrennAIbook/shell@0.4.2
+
+## 0.11.8
+
+### Patch Changes
+
+- [`17ad5eb`](https://github.com/openpatch/rrennAIbook/commit/17ad5eb263ce6c45a04482483d2efa3fc1697f76) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix extension did not find the .git folder.
+
+- Updated dependencies [[`17ad5eb`](https://github.com/openpatch/rrennAIbook/commit/17ad5eb263ce6c45a04482483d2efa3fc1697f76)]:
+  - @rrennAIbook/fs@0.7.3
+
+## 0.11.7
+
+### Patch Changes
+
+- Updated dependencies [[`c6414c8`](https://github.com/openpatch/rrennAIbook/commit/c6414c8e4c32ec96143a8da4fe8fb0e611ec8c7a)]:
+  - @rrennAIbook/fs@0.7.2
+
+## 0.11.6
+
+### Patch Changes
+
+- Updated dependencies [[`6fa6eba`](https://github.com/openpatch/rrennAIbook/commit/6fa6eba7b6753ed434c3aa94c713bb9486189c1a)]:
+  - @rrennAIbook/fs@0.7.1
+
+## 0.11.5
+
+### Patch Changes
+
+- Updated dependencies [[`ff21264`](https://github.com/openpatch/rrennAIbook/commit/ff2126432223b7abefd44c711c42c915ab839d94)]:
+  - @rrennAIbook/fs@0.7.0
+
+## 0.11.4
+
+### Patch Changes
+
+- Updated dependencies [[`6e3fcd5`](https://github.com/openpatch/rrennAIbook/commit/6e3fcd5616af81f41fb1ff412066f94660ea5cfd)]:
+  - @rrennAIbook/fs@0.6.3
+
+## 0.11.3
+
+### Patch Changes
+
+- Updated dependencies [[`1614352`](https://github.com/openpatch/rrennAIbook/commit/16143528449b1bfd2d70ab781df66f945b14f3ea)]:
+  - @rrennAIbook/fs@0.6.2
+
+## 0.11.2
+
+### Patch Changes
+
+- Updated dependencies [[`e4712b2`](https://github.com/openpatch/rrennAIbook/commit/e4712b20601a96e8e6c2c748a3bd3c9719a6d523), [`cad9962`](https://github.com/openpatch/rrennAIbook/commit/cad99629cae32de462f1145b082f6cc11cbf3cb3)]:
+  - @rrennAIbook/fs@0.6.1
+
+## 0.11.1
+
+### Patch Changes
+
+- Updated dependencies [[`56a42f6`](https://github.com/openpatch/rrennAIbook/commit/56a42f6a4b67de082fc90b812a248c5b7e004c31)]:
+  - @rrennAIbook/fs@0.6.0
+
+## 0.11.0
+
+### Minor Changes
+
+- [`b134e02`](https://github.com/openpatch/rrennAIbook/commit/b134e027db1b11cbd0a7e46858dfa60b93c05653) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add more helpers for templates and snippets. See documentation of snippets for more details.
+
+### Patch Changes
+
+- Updated dependencies [[`b134e02`](https://github.com/openpatch/rrennAIbook/commit/b134e027db1b11cbd0a7e46858dfa60b93c05653)]:
+  - @rrennAIbook/fs@0.5.0
+
+## 0.10.0
+
+### Minor Changes
+
+- [`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add syntax highlighting for scratchblock.
+
+- [`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add templates to rrennAIbook. Templates allow for resuing a layout. See the documentation for more details.
+
+### Patch Changes
+
+- [`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - When opening a rrennAIbook.json file the logo and the fonts now load correctly.
+
+- Updated dependencies [[`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978), [`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978), [`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978), [`0c58ad8`](https://github.com/openpatch/rrennAIbook/commit/0c58ad80c3c8b145868d2c0303d42478ec0a9978)]:
+  - @rrennAIbook/markdown@0.5.3
+  - @rrennAIbook/fs@0.4.0
+  - @rrennAIbook/shell@0.4.1
+
+## 0.9.0
+
+### Minor Changes
+
+- [`dfe9200`](https://github.com/openpatch/rrennAIbook/commit/dfe9200ff5a05cdc81328e2ba8317ab5f5363424) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add element scratchblock for rendering scratch blocks.
+
+### Patch Changes
+
+- Updated dependencies [[`dfe9200`](https://github.com/openpatch/rrennAIbook/commit/dfe9200ff5a05cdc81328e2ba8317ab5f5363424)]:
+  - @rrennAIbook/element-scratchblock@0.1.0
+
+## 0.8.0
+
+### Minor Changes
+
+- [`9298af0`](https://github.com/openpatch/rrennAIbook/commit/9298af040b16836c632e234f6ccbb61d67e1246d) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add the snippet element. Snippets are helpful for making the handling of repeated blocks easiert. For example you can define a protect-block, which uses the same password across your rrennAIbook in a snippet. If you want to change the password, you can just change it in the snippet. See the documentation for snippets to get a more in detail view on snippets.
+
+### Patch Changes
+
+- Updated dependencies [[`ac262ca`](https://github.com/openpatch/rrennAIbook/commit/ac262ca4a60b313dafbce33e5c0d753fd504f012), [`9298af0`](https://github.com/openpatch/rrennAIbook/commit/9298af040b16836c632e234f6ccbb61d67e1246d), [`9298af0`](https://github.com/openpatch/rrennAIbook/commit/9298af040b16836c632e234f6ccbb61d67e1246d), [`ac262ca`](https://github.com/openpatch/rrennAIbook/commit/ac262ca4a60b313dafbce33e5c0d753fd504f012)]:
+  - @rrennAIbook/markdown@0.5.2
+  - @rrennAIbook/element-protect@0.3.0
+  - @rrennAIbook/fs@0.3.0
+  - @rrennAIbook/element-collapsible@0.3.0
+  - @rrennAIbook/shell@0.4.0
+
+## 0.7.0
+
+### Minor Changes
+
+- [`104f2de`](https://github.com/openpatch/rrennAIbook/commit/104f2de6fa054ecadaf19811c5f8c3c560ca5a64) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Repo can now be configured. So you can customize the label of the edit button on a page and you can insert the current path anywhere in the link, by using "%path%" placeholder.
+
+### Patch Changes
+
+- Updated dependencies [[`104f2de`](https://github.com/openpatch/rrennAIbook/commit/104f2de6fa054ecadaf19811c5f8c3c560ca5a64)]:
+  - @rrennAIbook/fs@0.2.0
+  - @rrennAIbook/shell@0.3.0
+  - @rrennAIbook/provider@0.2.1
+  - @rrennAIbook/element-alert@0.1.9
+  - @rrennAIbook/element-bitflow@0.1.10
+  - @rrennAIbook/element-bookmarks@0.2.4
+  - @rrennAIbook/element-collapsible@0.2.5
+  - @rrennAIbook/element-dl@0.1.9
+  - @rrennAIbook/element-excalidraw@0.3.1
+  - @rrennAIbook/element-mermaid@0.1.9
+  - @rrennAIbook/element-protect@0.2.4
+  - @rrennAIbook/element-qr@0.1.10
+  - @rrennAIbook/element-struktog@0.1.9
+  - @rrennAIbook/element-tabs@0.1.10
+  - @rrennAIbook/element-term@0.1.9
+  - @rrennAIbook/element-youtube@0.1.9
+  - @rrennAIbook/markdown@0.5.1
+  - @rrennAIbook/styles@0.1.9
+
+## 0.6.0
+
+### Minor Changes
+
+- [`1b0b6e7`](https://github.com/openpatch/rrennAIbook/commit/1b0b6e702aacbb39ec8b03e39754f041fe6b35a3) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add option for setting a root path. This allows rrennAIbook projects to be in a subfolder of the main workspace.
+
+## 0.5.13
+
+### Patch Changes
+
+- Updated dependencies [[`60e8fb1`](https://github.com/openpatch/rrennAIbook/commit/60e8fb1a3a95d7797234a0ba4f64adba65b74792), [`2562e84`](https://github.com/openpatch/rrennAIbook/commit/2562e847152902cc72d155d760ee87c0a8aff11c), [`40ec0fd`](https://github.com/openpatch/rrennAIbook/commit/40ec0fde2cbb2ef823bf11be2b2db365f8c37d9c)]:
+  - @rrennAIbook/markdown@0.5.0
+  - @rrennAIbook/shell@0.2.0
+  - @rrennAIbook/fs@0.1.3
+
+## 0.5.12
+
+### Patch Changes
+
+- Updated dependencies [[`af4964b`](https://github.com/openpatch/rrennAIbook/commit/af4964b7c1c12134a1d08f74d387e8b42844b4a5)]:
+  - @rrennAIbook/fs@0.1.2
+
+## 0.5.11
+
+### Patch Changes
+
+- Updated dependencies [[`fc4b3fd`](https://github.com/openpatch/rrennAIbook/commit/fc4b3fd5a56ab69a885299c0d41601cf936a81f7)]:
+  - @rrennAIbook/toc@0.2.0
+
+## 0.5.10
+
+### Patch Changes
+
+- Updated dependencies [[`5758cf0`](https://github.com/openpatch/rrennAIbook/commit/5758cf025f81b3ec6e5c33d6309ca47166e6db3a)]:
+  - @rrennAIbook/markdown@0.4.3
+
+## 0.5.9
+
+### Patch Changes
+
+- Updated dependencies [[`23413c7`](https://github.com/openpatch/rrennAIbook/commit/23413c74ae0338c063d13f98a78b08ffb8d7f065)]:
+  - @rrennAIbook/markdown@0.4.2
+
+## 0.5.8
+
+### Patch Changes
+
+- Updated dependencies [[`f906c50`](https://github.com/openpatch/rrennAIbook/commit/f906c5075ec26263f90fabfa2a8ad556619c86da)]:
+  - @rrennAIbook/fs@0.1.1
+
+## 0.5.7
+
+### Patch Changes
+
+- [#458](https://github.com/openpatch/rrennAIbook/pull/458) [`27032d1`](https://github.com/openpatch/rrennAIbook/commit/27032d1d76a07b590c18094139ba4a4bf74780c3) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Optimize line breaks. We now insert an optional word break point into links. So the browser knows when to break it. For this we follow this guide: https://css-tricks.com/better-line-breaks-for-long-urls/. This does also fix issue #451
+
+- Updated dependencies [[`27032d1`](https://github.com/openpatch/rrennAIbook/commit/27032d1d76a07b590c18094139ba4a4bf74780c3)]:
+  - @rrennAIbook/markdown@0.4.1
+
+## 0.5.6
+
+### Patch Changes
+
+- Updated dependencies [[`28b803e`](https://github.com/openpatch/rrennAIbook/commit/28b803efbeac6835afc0040b7f1fb03c210cc72d), [`13a8313`](https://github.com/openpatch/rrennAIbook/commit/13a8313f60a89b697f638845327bbd4ddbae4af8), [`42cf26c`](https://github.com/openpatch/rrennAIbook/commit/42cf26cacd32026fa95ab850c4d5e8f2b96b9c37), [`c526071`](https://github.com/openpatch/rrennAIbook/commit/c526071d11e9c248c933bade1ac1298a0fcbeefb)]:
+  - @rrennAIbook/markdown@0.4.0
+  - @rrennAIbook/shell@0.1.3
+
+## 0.5.5
+
+### Patch Changes
+
+- Updated dependencies [[`2e61eef`](https://github.com/openpatch/rrennAIbook/commit/2e61eef5ca40446ae28046659cb1eac96fd6ccf1)]:
+  - @rrennAIbook/shell@0.1.2
+
+## 0.5.4
+
+### Patch Changes
+
+- [`71ae6d0`](https://github.com/openpatch/rrennAIbook/commit/71ae6d07271e151ebed4ad33f927a9a67a604199) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix completion when using a hyperlibrary.
+
+- Updated dependencies [[`2e92be1`](https://github.com/openpatch/rrennAIbook/commit/2e92be1fb5b1128cc43fbf0451aa4a493c6bafd7), [`b1415aa`](https://github.com/openpatch/rrennAIbook/commit/b1415aaf8905a0fa7d119074e3b6731167023671)]:
+  - @rrennAIbook/shell@0.1.1
+  - @rrennAIbook/element-excalidraw@0.3.0
+
+## 0.5.3
+
+### Patch Changes
+
+- [`5caaf3a`](https://github.com/openpatch/rrennAIbook/commit/5caaf3aa596ad305b7778ffe588eeea4d07dd266) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Only generate link when hyperlibrary.json is in the root of the workspace.
+
+## 0.5.2
+
+### Patch Changes
+
+- [`c2d0f6c`](https://github.com/openpatch/rrennAIbook/commit/c2d0f6c26a157d87ff2bc1a4c859d15780f4d519) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Highlight current page in navigation drawer in preview.
+
+- [`89a23ed`](https://github.com/openpatch/rrennAIbook/commit/89a23edd783af4d14f223c3f22a32577901812c0) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix clicking on a section does not open the corresponding file.
+
+## 0.5.1
+
+### Patch Changes
+
+- [`93c7bd9`](https://github.com/openpatch/rrennAIbook/commit/93c7bd963ff99af555af2d4112dded50cc6cb759) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Fix link to Changelog
+
+## 0.5.0
+
+### Minor Changes
+
+- [#392](https://github.com/openpatch/rrennAIbook/pull/392) [`8d53899`](https://github.com/openpatch/rrennAIbook/commit/8d538999fc924f7b3e3115416cba4978c9589b68) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Show a full preview of a rrennAIbook and a Hyperlibrary. This uses the new packages under the hood.
+
+### Patch Changes
+
+- Updated dependencies [[`8d53899`](https://github.com/openpatch/rrennAIbook/commit/8d538999fc924f7b3e3115416cba4978c9589b68)]:
+  - @rrennAIbook/fs@0.1.0
+  - @rrennAIbook/provider@0.2.0
+  - @rrennAIbook/shell@0.1.0
+  - @rrennAIbook/toc@0.1.0
+  - @rrennAIbook/element-alert@0.1.8
+  - @rrennAIbook/element-bitflow@0.1.9
+  - @rrennAIbook/element-bookmarks@0.2.3
+  - @rrennAIbook/element-collapsible@0.2.4
+  - @rrennAIbook/element-dl@0.1.8
+  - @rrennAIbook/element-excalidraw@0.2.3
+  - @rrennAIbook/element-mermaid@0.1.8
+  - @rrennAIbook/element-protect@0.2.3
+  - @rrennAIbook/element-qr@0.1.9
+  - @rrennAIbook/element-struktog@0.1.8
+  - @rrennAIbook/element-tabs@0.1.9
+  - @rrennAIbook/element-term@0.1.8
+  - @rrennAIbook/element-youtube@0.1.8
+  - @rrennAIbook/markdown@0.3.4
+  - @rrennAIbook/styles@0.1.8
+
+## 0.4.4
+
+### Patch Changes
+
+- Updated dependencies [[`e526943`](https://github.com/openpatch/rrennAIbook/commit/e526943fec3ef91cfce853af6a0c5cdaf3f22eef)]:
+  - @rrennAIbook/markdown@0.3.3
+
+## 0.4.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rrennAIbook/provider@0.1.7
+  - @rrennAIbook/element-alert@0.1.7
+  - @rrennAIbook/element-bitflow@0.1.8
+  - @rrennAIbook/element-bookmarks@0.2.2
+  - @rrennAIbook/element-collapsible@0.2.3
+  - @rrennAIbook/element-dl@0.1.7
+  - @rrennAIbook/element-excalidraw@0.2.2
+  - @rrennAIbook/element-mermaid@0.1.7
+  - @rrennAIbook/element-protect@0.2.2
+  - @rrennAIbook/element-qr@0.1.8
+  - @rrennAIbook/element-struktog@0.1.7
+  - @rrennAIbook/element-tabs@0.1.8
+  - @rrennAIbook/element-term@0.1.7
+  - @rrennAIbook/element-youtube@0.1.7
+  - @rrennAIbook/markdown@0.3.2
+  - @rrennAIbook/styles@0.1.7
+
+## 0.4.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rrennAIbook/provider@0.1.6
+  - @rrennAIbook/element-alert@0.1.6
+  - @rrennAIbook/element-bitflow@0.1.7
+  - @rrennAIbook/element-bookmarks@0.2.1
+  - @rrennAIbook/element-collapsible@0.2.2
+  - @rrennAIbook/element-dl@0.1.6
+  - @rrennAIbook/element-excalidraw@0.2.1
+  - @rrennAIbook/element-mermaid@0.1.6
+  - @rrennAIbook/element-protect@0.2.1
+  - @rrennAIbook/element-qr@0.1.7
+  - @rrennAIbook/element-struktog@0.1.6
+  - @rrennAIbook/element-tabs@0.1.7
+  - @rrennAIbook/element-term@0.1.6
+  - @rrennAIbook/element-youtube@0.1.6
+  - @rrennAIbook/markdown@0.3.1
+  - @rrennAIbook/styles@0.1.6
+
+## 0.4.1
+
+### Patch Changes
+
+- Updated dependencies [[`2574ee6`](https://github.com/openpatch/rrennAIbook/commit/2574ee6f0f4c70b1f05a70bbd8b1d5ba0eba013f)]:
+  - @rrennAIbook/element-protect@0.2.0
+
+## 0.4.0
+
+### Minor Changes
+
+- [#354](https://github.com/openpatch/rrennAIbook/pull/354) [`8d4067c`](https://github.com/openpatch/rrennAIbook/commit/8d4067c244fddd54e005688429973c33af144fcb) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Make vscode extension compatible with vscode web like vscode.dev or github.dev
+
+## 0.3.3
+
+### Patch Changes
+
+- Updated dependencies [[`69e76ae`](https://github.com/openpatch/rrennAIbook/commit/69e76aec46f3b83ecd4dc9e7e5fceb0fe7fb8148)]:
+  - @rrennAIbook/element-collapsible@0.2.1
+
+## 0.3.2
+
+### Patch Changes
+
+- Updated dependencies [[`b1d976c`](https://github.com/openpatch/rrennAIbook/commit/b1d976cfcad7d9be760c595d23becc48187d641e)]:
+  - @rrennAIbook/element-collapsible@0.2.0
+
+## 0.3.1
+
+### Patch Changes
+
+- Updated dependencies [[`774405b`](https://github.com/openpatch/rrennAIbook/commit/774405b936b10bf90e884ec7201cb38c734db8c3)]:
+  - @rrennAIbook/markdown@0.3.0
+
+## 0.3.0
+
+### Minor Changes
+
+- [#326](https://github.com/openpatch/rrennAIbook/pull/326) [`9472583`](https://github.com/openpatch/rrennAIbook/commit/947258359e33a39362c070f6c7128f214a79c4c5) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add configuration options to the rrennAIbook.json for the element bookmarks and excalidraw.
+
+### Patch Changes
+
+- Updated dependencies [[`9472583`](https://github.com/openpatch/rrennAIbook/commit/947258359e33a39362c070f6c7128f214a79c4c5)]:
+  - @rrennAIbook/element-bookmarks@0.2.0
+  - @rrennAIbook/element-excalidraw@0.2.0
+  - @rrennAIbook/markdown@0.2.0
+  - @rrennAIbook/provider@0.1.5
+  - @rrennAIbook/element-alert@0.1.5
+  - @rrennAIbook/element-bitflow@0.1.6
+  - @rrennAIbook/element-collapsible@0.1.5
+  - @rrennAIbook/element-dl@0.1.5
+  - @rrennAIbook/element-mermaid@0.1.5
+  - @rrennAIbook/element-protect@0.1.5
+  - @rrennAIbook/element-qr@0.1.6
+  - @rrennAIbook/element-struktog@0.1.5
+  - @rrennAIbook/element-tabs@0.1.6
+  - @rrennAIbook/element-term@0.1.5
+  - @rrennAIbook/element-youtube@0.1.5
+  - @rrennAIbook/styles@0.1.5
+
+## 0.2.16
+
+### Patch Changes
+
+- use urls for images since vs code marketplace does not load local images
+
+## 0.2.15
+
+### Patch Changes
+
+- add screenshots to README
+
+## 0.2.14
+
+### Patch Changes
+
+- Fix error when no tab is present.
+
+- Updated dependencies []:
+  - @rrennAIbook/element-tabs@0.1.5
+
+## 0.2.13
+
+### Patch Changes
+
+- Catch errors when rendering
+
+## 0.2.12
+
+### Patch Changes
+
+- Fix tabs snippet and syntax
+
+## 0.2.11
+
+### Patch Changes
+
+- Remove trigger character from completion
+
+## 0.2.10
+
+### Patch Changes
+
+- Fix aspectRatio in snippet for excalidraw
+
+## 0.2.9
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @rrennAIbook/markdown@0.1.6
+
+## 0.2.8
+
+### Patch Changes
+
+- [#318](https://github.com/openpatch/rrennAIbook/pull/318) [`1a6d9cb`](https://github.com/openpatch/rrennAIbook/commit/1a6d9cbd0799292a65e262b7e81aad8009d585c0) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Add trigger character
+
+## 0.2.7
+
+### Patch Changes
+
+- [#316](https://github.com/openpatch/rrennAIbook/pull/316) [`cedb551`](https://github.com/openpatch/rrennAIbook/commit/cedb55191fd025b5a214df406a53cbab5d1b1bc1) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Extract rrennAIbook types into a separate package
+
+- Updated dependencies [[`cedb551`](https://github.com/openpatch/rrennAIbook/commit/cedb55191fd025b5a214df406a53cbab5d1b1bc1)]:
+  - @rrennAIbook/provider@0.1.4
+  - @rrennAIbook/element-alert@0.1.4
+  - @rrennAIbook/element-bitflow@0.1.5
+  - @rrennAIbook/element-bookmarks@0.1.4
+  - @rrennAIbook/element-collapsible@0.1.4
+  - @rrennAIbook/element-dl@0.1.4
+  - @rrennAIbook/element-excalidraw@0.1.4
+  - @rrennAIbook/element-mermaid@0.1.4
+  - @rrennAIbook/element-protect@0.1.4
+  - @rrennAIbook/element-qr@0.1.5
+  - @rrennAIbook/element-struktog@0.1.4
+  - @rrennAIbook/element-tabs@0.1.4
+  - @rrennAIbook/element-term@0.1.4
+  - @rrennAIbook/element-youtube@0.1.4
+  - @rrennAIbook/markdown@0.1.5
+  - @rrennAIbook/styles@0.1.4
+
+## 0.2.6
+
+### Patch Changes
+
+- [`1d486f8`](https://github.com/openpatch/rrennAIbook/commit/1d486f887914bcd01d726d32575b498ef1ea4e22) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Update README
+
+## 0.2.5
+
+### Patch Changes
+
+- [`c3e747a`](https://github.com/openpatch/rrennAIbook/commit/c3e747ab7b95c3e526b3800b169aa8f505f9b9a2) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Do not rely on process.env.NODE_ENV and use env prodivded by the provider.
+
+- Updated dependencies [[`9b2b71b`](https://github.com/openpatch/rrennAIbook/commit/9b2b71b8bbd728294ff4c4c97502e58e99619300), [`c3e747a`](https://github.com/openpatch/rrennAIbook/commit/c3e747ab7b95c3e526b3800b169aa8f505f9b9a2)]:
+  - @rrennAIbook/element-qr@0.1.4
+  - @rrennAIbook/element-excalidraw@0.1.3
+  - @rrennAIbook/provider@0.1.3
+  - @rrennAIbook/element-alert@0.1.3
+  - @rrennAIbook/element-bitflow@0.1.4
+  - @rrennAIbook/element-bookmarks@0.1.3
+  - @rrennAIbook/element-collapsible@0.1.3
+  - @rrennAIbook/element-dl@0.1.3
+  - @rrennAIbook/element-mermaid@0.1.3
+  - @rrennAIbook/element-protect@0.1.3
+  - @rrennAIbook/element-struktog@0.1.3
+  - @rrennAIbook/element-tabs@0.1.3
+  - @rrennAIbook/element-term@0.1.3
+  - @rrennAIbook/element-youtube@0.1.3
+  - @rrennAIbook/markdown@0.1.4
+  - @rrennAIbook/styles@0.1.3
+
+## 0.2.4
+
+### Patch Changes
+
+- Updated dependencies [[`a7be20c`](https://github.com/openpatch/rrennAIbook/commit/a7be20c426ee96cefdc198e843b30eda32e96c75)]:
+  - @rrennAIbook/markdown@0.1.3
+
+## 0.2.3
+
+### Patch Changes
+
+- Updated dependencies [[`2459c34`](https://github.com/openpatch/rrennAIbook/commit/2459c343e89f890c10132cfb36bb466b5800133d)]:
+  - @rrennAIbook/element-bitflow@0.1.3
+  - @rrennAIbook/element-qr@0.1.3
+
+## 0.2.2
+
+### Patch Changes
+
+- Updated dependencies [[`2c34554`](https://github.com/openpatch/rrennAIbook/commit/2c34554f64359fb995190b1465daddfa3e0101c0)]:
+  - @rrennAIbook/element-collapsible@0.1.2
+  - @rrennAIbook/element-protect@0.1.2
+  - @rrennAIbook/element-tabs@0.1.2
+  - @rrennAIbook/provider@0.1.2
+  - @rrennAIbook/store@0.1.2
+  - @rrennAIbook/element-alert@0.1.2
+  - @rrennAIbook/element-bitflow@0.1.2
+  - @rrennAIbook/element-bookmarks@0.1.2
+  - @rrennAIbook/element-dl@0.1.2
+  - @rrennAIbook/element-excalidraw@0.1.2
+  - @rrennAIbook/element-mermaid@0.1.2
+  - @rrennAIbook/element-qr@0.1.2
+  - @rrennAIbook/element-struktog@0.1.2
+  - @rrennAIbook/element-term@0.1.2
+  - @rrennAIbook/element-youtube@0.1.2
+  - @rrennAIbook/markdown@0.1.2
+  - @rrennAIbook/styles@0.1.2
+
+## 0.2.1
+
+### Patch Changes
+
+- [`9ea5483`](https://github.com/openpatch/rrennAIbook/commit/9ea5483512fd5134f6823104a68fecea2c50cb00) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - Force package update due to failed pipeline
+
+- Updated dependencies [[`9ea5483`](https://github.com/openpatch/rrennAIbook/commit/9ea5483512fd5134f6823104a68fecea2c50cb00)]:
+  - @rrennAIbook/element-alert@0.1.1
+  - @rrennAIbook/element-bitflow@0.1.1
+  - @rrennAIbook/element-bookmarks@0.1.1
+  - @rrennAIbook/element-collapsible@0.1.1
+  - @rrennAIbook/element-excalidraw@0.1.1
+  - @rrennAIbook/element-mermaid@0.1.1
+  - @rrennAIbook/element-protect@0.1.1
+  - @rrennAIbook/element-qr@0.1.1
+  - @rrennAIbook/element-struktog@0.1.1
+  - @rrennAIbook/element-tabs@0.1.1
+  - @rrennAIbook/element-term@0.1.1
+  - @rrennAIbook/element-youtube@0.1.1
+  - @rrennAIbook/markdown@0.1.1
+  - @rrennAIbook/provider@0.1.1
+  - @rrennAIbook/store@0.1.1
+  - @rrennAIbook/styles@0.1.1
+  - @rrennAIbook/element-dl@0.1.1
+
+## 0.2.0
+
+### Minor Changes
+
+- [`09af0c5`](https://github.com/openpatch/rrennAIbook/commit/09af0c5bee8fc95f04138a660e4a7c2e0e963f17) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - rename download element to dl, since npm does not allow download in the package name.
+
+### Patch Changes
+
+- Updated dependencies [[`09af0c5`](https://github.com/openpatch/rrennAIbook/commit/09af0c5bee8fc95f04138a660e4a7c2e0e963f17)]:
+  - @rrennAIbook/element-dl@0.1.0
+
+## 0.1.0
+
+### Minor Changes
+
+- [`4d6de5f`](https://github.com/openpatch/rrennAIbook/commit/4d6de5f39b06d976119067b59e901670cc5836fe) Thanks [@mikebarkmin](https://github.com/mikebarkmin)! - First release of our VS Code extension
+
+### Patch Changes
+
+- Updated dependencies [[`6c1bd51`](https://github.com/openpatch/rrennAIbook/commit/6c1bd51e7ded1b2094ba590e5d8ddc5c0f6254b8)]:
+  - @rrennAIbook/element-alert@0.1.0
+  - @rrennAIbook/element-bitflow@0.1.0
+  - @rrennAIbook/element-bookmarks@0.1.0
+  - @rrennAIbook/element-collapsible@0.1.0
+  - @rrennAIbook/element-download@0.1.0
+  - @rrennAIbook/element-excalidraw@0.1.0
+  - @rrennAIbook/element-mermaid@0.1.0
+  - @rrennAIbook/element-protect@0.1.0
+  - @rrennAIbook/element-qr@0.1.0
+  - @rrennAIbook/element-struktog@0.1.0
+  - @rrennAIbook/element-tabs@0.1.0
+  - @rrennAIbook/element-term@0.1.0
+  - @rrennAIbook/element-youtube@0.1.0
+  - @rrennAIbook/markdown@0.1.0
+  - @rrennAIbook/provider@0.1.0
+  - @rrennAIbook/store@0.1.0
+  - @rrennAIbook/styles@0.1.0

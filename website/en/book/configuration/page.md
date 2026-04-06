@@ -1,0 +1,41 @@
+---
+name: Page Configuration
+index: 1
+lang: de
+---
+
+# Page Configuration
+
+A page is a markdown file. It consists of a frontmatter and a content.
+
+The frontmatter gives rrennAIbook some information to work with. The frontmatter is at the very top of the markdown file and is fenced by three ---.
+
+```md
+---
+name: The Name of a Page
+---
+
+# A Headline
+
+And some content
+```
+
+Here are the properties you can set in the frontmatter:
+
+| Property    | Description                                                                                                                         |
+| :---------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| name        | Name of the page used in the navigation                                                                                             |
+| title       | Alternative to `name` for compatibility with other tools like MkDocs. If both are set, `name` takes precedence                     |
+| description | Description of the page used for SEO                                                                                                |
+| permaid     | An id which will make the page also available at e.g. /@/audio, when setting permaid to audio |
+| keywords    | A list of keywords used for SEO                                                                                                     |
+| index       | A number indicating the position in the menu in relation to pages on the same level                                                 |
+| prev        | The absolute path to the prev page or a absolute path to a permaid e.g. /@/audio. This overrides index and hide. You can also set it to nothing and it will hide the prev button. |
+| next        | The absoulte path to the next page or a absolute path to a permaid e.g. /@/audio. This overrides index and hide. You can also set it to nothing and it will hide the next button. |
+| hide        | Hides the page from the navigation (deprecated, use `navigation: hidden` instead)                                                  |
+| navigation  | Controls how the page appears in navigation. Options: `default` (normal display), `hidden` (hides from navigation)                 |
+| toc         | Show or hide a table of content for the page. This is on for pages and off for glossary entries by default                          |
+| layout      | Choose the page layout. Options: `default` (standard layout with sidebar), `wide` (full-width content with navigation in drawer mode), or `standalone` (content only, hides all navigation - ideal for iframe embedding). The standalone layout can also be activated via URL parameter: `?standalone=true` |
+| styles            | Here you can add Links to custom CSS files. |
+| scripts            | Here you can add links to custom JavaScript files. |
+| qrcode | Shows an icon, which opens a qr code to this page. |

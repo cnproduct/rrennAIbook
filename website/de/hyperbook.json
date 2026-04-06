@@ -1,0 +1,54 @@
+{
+  "name": "rrennAIbook Dokumenation",
+  "version": "text",
+  "qrcode": true,
+  "breadcrumb": true,
+  "llms": true,
+  "importExport": true,
+  "search": true,
+  "description": "Dokumentation für rrennAIbook erstellt mit rrennAIbook",
+  "author": {
+    "name": "OpenPatch",
+    "url": "https://openpatch.org"
+  },
+  "allowDangerousHtml": true,
+  "links": [
+    {
+      "label": "Changelog",
+      "href": "/changelog"
+    },
+    {
+      "label": "Kontakt",
+      "links": [
+        {
+          "label": "Mail",
+          "icon": "📧",
+          "href": "mailto:contact@openpatch.org"
+        },
+        {
+          "label": "Twitter",
+          "icon": "🐦",
+          "href": "https://twitter.com/openpatchorg"
+        },
+        {
+          "label": "Mastodon",
+          "icon": "🐘",
+          "href": "https://fosstodon.org/@openpatch"
+        },
+        {
+          "label": "Matrix (Chat)",
+          "icon": "👨‍💻",
+          "href": "https://matrix.to/#/#rrennAIbook:matrix.org"
+        }
+      ]
+    }
+  ],
+  "elements": {
+    "code": {
+      "showLineNumbers": true
+    }
+  },
+  "language": "de",
+  "logo": "/logo.svg",
+  "repo": "https://github.com/openpatch/rrennAIbook/edit/main/website/de"
+}

@@ -1,0 +1,162 @@
+---
+name: Web IDE
+permaid: webide
+lang: de 
+---
+
+:::learningmap
+
+```yaml
+title: Modern Web Development Roadmap
+background:
+  color: '#f8fafc'
+  image:
+    src: 'bg.svg'
+    x: 0
+    y: 0
+edges:
+  animated: false
+  color: '#94a3b8'
+  width: 2
+  type: bezier
+nodes:
+  - id: '1'
+    type: topic
+    data:
+      label: Introduction to HTML
+      description: |
+        Understand the structure and semantics of HTML documents.
+      duration: 1 hour
+      position:
+        x: 20
+        y: 10
+      unlock: {}
+      completion: {}
+      video: https://youtube.com/watch?v=UB1O30fR-EE
+      resources:
+        - label: MDN HTML Introduction
+          url: https://developer.mozilla.org/en-US/docs/Web/HTML
+        - label: HTML Basics Tutorial
+          url: https://www.w3schools.com/html/
+
+  - id: '2'
+    type: task
+    data:
+      label: Create Your First Webpage
+      description: Build a simple HTML page with headings, paragraphs, and links.
+      duration: 1 hour
+      unlock:
+        after:
+          - "1"
+      resources:
+        - label: HTML Page Guide
+          url: https://www.freecodecamp.org/news/how-to-build-your-first-web-page/
+
+  - id: '3'
+    type: topic
+    data:
+      label: Styling with CSS
+      description: Learn how to style HTML elements using CSS selectors and properties.
+      duration: 2 hours
+      unlock:
+        after:
+          - "2"
+      completion:
+        needs:
+          - id: "2"
+            source: bottom
+            target: top
+      resources:
+        - label: MDN CSS Basics
+          url: https://developer.mozilla.org/en-US/docs/Web/CSS
+        - label: CSS Tutorial
+          url: https://www.w3schools.com/css/
+
+  - id: '4'
+    type: task
+    data:
+      label: Style Your Webpage
+      description: Apply colors, fonts, and layout to your HTML page using CSS.
+      duration: 1 hour
+      unlock:
+        after:
+          - "3"
+      resources:
+        - label: CSS Styling Guide
+          url: https://css-tricks.com/snippets/css/
+
+  - id: '5'
+    type: topic
+    data:
+      label: Interactive JavaScript
+      description: Discover how to add interactivity to web pages with JavaScript.
+      duration: 2 hours
+      unlock:
+        after:
+          - "4"
+      completion:
+        needs:
+          - id: "4"
+            source: bottom
+            target: top
+      resources:
+        - label: MDN JavaScript Guide
+          url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+        - label: JavaScript Tutorial
+          url: https://javascript.info/
+
+  - id: '6'
+    type: task
+    data:
+      label: Add Interactivity
+      description: Make your webpage interactive by handling user events with JavaScript.
+      duration: 1 hour
+      unlock:
+        after:
+          - "5"
+      resources:
+        - label: JavaScript Event Handling
+          url: https://www.freecodecamp.org/news/javascript-event-handling/
+
+  - id: '7'
+    type: topic
+    data:
+      label: "Advanced Topic: Responsive Design"
+      description: |
+        Learn how to make your web pages look great on any device.
+      duration: 2 hours
+      unlock:
+        after:
+          - "6"
+        date: "2025-10-01"
+      completion:
+        needs:
+          - id: "6"
+            source: bottom
+            target: top
+      resources:
+        - label: Responsive Design Basics
+          url: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+        - label: Flexbox Guide
+          url: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+  - id: '8'
+    type: topic
+    data:
+      label: "Bonus: Unlock with Password"
+      description: | 
+        Access bonus content by entering the password.
+      duration: 1 hour
+      unlock:
+        password: "webdev2025"
+      completion:
+        needs:
+          - id: "1"
+            source: bottom
+            target: top
+      resources:
+        - label: Bonus Content
+          url: https://developer.mozilla.org/en-US/docs/Web/Guide
+```
+
+:::

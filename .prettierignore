@@ -1,0 +1,4 @@
+*.hbs
+rrennAIbook.schema.json
+hyperlibrary.schema.json
+pnpm-lock.yaml

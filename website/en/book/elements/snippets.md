@@ -1,0 +1,333 @@
+---
+name: Snippets
+permaid: snippets
+---
+
+# Snippets
+
+Sometimes you want to repeat a certain element, or you want to create
+your own element. Snippets allow you to do exactly that.
+
+:::alert{warn}
+Snippet files need to be placed in the `snippets` folder at the root of
+your rrennAIbook beside the glossary and book folders.
+
+Here we use a capital S for snippet. You need to use a small s.
+:::
+
+You can access your rrennAIbook config in your snippets like so: `{{{ rrennAIbook.name }}}`.
+
+## Examples
+
+### Example 1: Block
+Here is a simple example of a snippet for using a protect element with
+the same password and id across your rrennAIbook.
+The snippet located in `snippets/password.md.hbs`:
+```md
+:::protect{id="1" password="rrennAIbook" description="The password is the name of this project."}
+{{{ content }}}
+:::
+{{#if hint}}
+:::alert{info}
+rrennAIbook is the password.
+:::
+{{/if}}
+```
+The markdown you need to place in your rrennAIbook:
+```md
+:::Snippet{#password}
+:smiley:
+:::
+```
+The result:
+:::snippet{#password}
+:smiley:
+:::
+
+### Example 2: Dynamic Colon Levels
+Snippets automatically provide variables for different colon levels to handle proper nesting:
+
+The snippet located in `snippets/alert.md.hbs`:
+```md
+{{{ c1 }}}alert{label="Info" color="#3B82F6"}
+{{{ content }}}
+{{{ c1 }}}
+```
+
+Available colon level variables:
+- `c` - Same number of colons as the snippet block
+- `c1`, `c2`, `c3`, `c4` - One to four **more** colons (for deeper nesting)
+- `l1`, `l2`, `l3`, `l4` - One to four **fewer** colons (for shallower nesting)
+
+Example usage with different nesting levels:
+```md
+::::Snippet{#alert}
+This will be wrapped in a 5-colon alert block.
+::::
+
+::Snippet{#alert}
+This will be wrapped in a 3-colon alert block.
+::
+```
+
+Results in:
+- First case: `:::::alert{...}` (4 + 1 = 5 colons using `c1`)
+- Second case: `:::alert{...}` (2 + 1 = 3 colons using `c1`)
+
+This ensures proper nesting regardless of how deeply your snippet is nested within other markdown blocks.
+
+### Example 3: Block with Parameter
+
+You can also pass parameters to your snippet to make them dynamic. For
+example our password snippet from above allows to pass a hint
+parameter. If the hint parameter is true, a alert element will be shown.
+
+```md
+:::Snippet{#password hint=true}
+
+::qr{value="https://rrennAIbook.openpatch.org" size="XL"}
+
+:::
+```
+
+:::snippet{#password hint=true}
+
+::qr{value="https://rrennAIbook.openpatch.org" size="XL"}
+
+:::
+
+### Example 4: Inline
+
+```hbs
+{{#times n}}
+  :smiley:
+{{/times}}
+```
+
+```md
+:Snippet{#smiley n=10}
+```
+
+We are ten smilies: :snippet{#smiley n=10}
+
+## Parameters
+
+You can use the parameters by using curly brackets and the name of the
+parameter.
+
+```hbs
+{{{p1}}}
+```
+
+Three curly brackets will give you the raw content.
+
+Two curly brackets will give the HTML-escaped content.
+
+### Content
+
+If your snippet spans across multiple lines, you can use the content
+parameter to use those. See Example 1.
+
+:::alert{warn}
+You need to use three curly brackets for the content parameter.
+:::
+
+## Helpers
+
+You can use the following helpers in your snippets
+
+### if
+
+You can use the if helper to conditionally render a block.
+
+```hbs
+{{#if p}}
+  content
+{{/if}}
+```
+
+### unless
+
+You can use the unless helper as the inverse of the if helper. Its block will be rendered if the expression returns a falsy value.
+
+```hbs
+{{#unless hint}}
+  content
+{{/unless}}
+```
+
+### times
+
+You can use the times helper to repeat block.
+
+```hbs
+{{#times 10}}
+  Hi
+{{/times}}
+```
+
+### file
+
+You can use the file helper to include the content of a file.
+
+```hbs
+{{{file "/archives/project-1/main.c"}}}
+```
+
+You can also only use a few lines of the file.
+
+```hbs
+{{{file "/archives/project-1/main.c" "1,3-4"}}}
+```
+
+And you can define an ellipsis.
+
+```hbs
+{{{file "/archives/project-1/main.c" "1,3-4" "// ..."}}}
+```
+
+### rfile
+
+rfile work like file, but will read from root of a git repository. This is useful, when your rrennAIbook is in a subdirectory and you want to reference files from the root of the repository.
+
+```hbs
+{{{rfile "/path/to/file"}}}
+```
+
+### base64
+
+You can use the bae64 helper to embedded media, even from external folders.
+
+```hbs
+{{base64 "path/relative/to/root/folder"}}
+```
+
+This works best in conjunction with the image block:
+
+```hbs
+![]({{base64 "path/relative/to/root/folder"}})
+```
+
+### concat
+
+```hbs
+{{concat "Hi" " there"}}
+```
+
+Hi there
+
+### camelcase
+
+```hbs
+{{camcelcase "This is a test"}}
+```
+
+thisIsATest
+
+### pascalcase
+
+```hbs
+{{pascalcase "This is a test"}}
+```
+
+ThisIsATest
+
+### dashcase
+
+```hbs
+{{dashcase "This is a test"}}
+```
+
+This-is-a-test
+
+### lowercase
+
+```hbs
+{{lowercase "This is a test"}}
+```
+
+this is a test
+
+### uppercase
+
+```hbs
+{{lowercase "This is a test"}}
+```
+
+THIS IS A TEST
+
+### replace
+
+```hbs
+{{replace "Give me Banana Banana" "Banana" "Apple"}}
+```
+
+Give me Apple Banana
+
+### replaceAll
+
+```hbs
+{{replaceAll "Give me Banana Banana" "Banana" "Apple"}}
+```
+
+Give me Apple Apple
+
+### dateformat
+
+Format a date string or Date object using a format pattern.
+
+```hbs
+{{dateformat "2026-01-09T19:29:01.557Z" "YYYY-MM-DD"}}
+```
+
+2026-01-09
+
+Supported format tokens:
+- `YYYY` - 4-digit year
+- `YY` - 2-digit year
+- `MM` - padded month (01-12)
+- `M` - month (1-12)
+- `DD` - padded day (01-31)
+- `D` - day (1-31)
+- `HH` - padded hours (00-23)
+- `H` - hours (0-23)
+- `mm` - padded minutes (00-59)
+- `m` - minutes (0-59)
+- `ss` - padded seconds (00-59)
+- `s` - seconds (0-59)
+
+```hbs
+{{dateformat "2026-01-09T19:29:01.557Z" "DD.MM.YYYY HH:mm:ss"}}
+```
+
+09.01.2026 19:29:01
+
+### truncate
+
+Truncate a string to a specified character limit with a suffix.
+
+```hbs
+{{truncate "Hello World, this is a long string" 11 "..."}}
+```
+
+Hello World...
+
+Parameters:
+- `str` - the string to truncate
+- `limit` - maximum number of characters (default: 100)
+- `suffix` - string to append when truncated (default: "...")
+
+### truncateWords
+
+Truncate a string to a specified word limit with a suffix.
+
+```hbs
+{{truncateWords "one two three four five six" 3 "..."}}
+```
+
+one two three...
+
+Parameters:
+- `str` - the string to truncate
+- `limit` - maximum number of words (default: 10)
+- `suffix` - string to append when truncated (default: "...")

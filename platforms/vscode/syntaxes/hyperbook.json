@@ -1,0 +1,1579 @@
+{
+  "name": "rrennAIbook",
+  "scopeName": "markdown.rrennAIbook",
+  "injectionSelector": "L:text.html",
+  "patterns": [
+    {
+      "include": "#directive-multievent"
+    },
+    {
+      "include": "#directive-abc-music"
+    },
+    {
+      "include": "#directive-alert"
+    },
+    {
+      "include": "#directive-archive"
+    },
+    {
+      "include": "#directive-bookmarks"
+    },
+    {
+      "include": "#directive-collapsible"
+    },
+    {
+      "include": "#directive-download"
+    },
+    {
+      "include": "#directive-h5p"
+    },
+    {
+      "include": "#directive-emoji"
+    },
+    {
+      "include": "#directive-excalidraw"
+    },
+    {
+      "include": "#directive-geogebra"
+    },
+    {
+      "include": "#directive-glossary"
+    },
+    {
+      "include": "#directive-jsxgraph"
+    },
+    {
+      "include": "#directive-learningmap"
+    },
+    {
+      "include": "#directive-protect"
+    },
+    {
+      "include": "#directive-qr"
+    },
+    {
+      "include": "#directive-scratchblock"
+    },
+    {
+      "include": "#directive-snippets-inline"
+    },
+    {
+      "include": "#directive-snippets-block"
+    },
+    {
+      "include": "#directive-struktog"
+    },
+    {
+      "include": "#directive-textinput"
+    },
+    {
+      "include": "#directive-youtube"
+    },
+    {
+      "include": "#directive-tabs"
+    },
+    {
+      "include": "#directive-mermaid"
+    },
+    {
+      "include": "#directive-bitflow"
+    },
+    {
+      "include": "#directive-onlineide"
+    },
+    {
+      "include": "#directive-sqlide"
+    },
+    {
+      "include": "#directive-embed"
+    },
+    {
+      "include": "#directive-plantuml"
+    },
+    {
+      "include": "#directive-slideshow"
+    },
+    {
+      "include": "#directive-audio"
+    },
+    {
+      "include": "#directive-tiles"
+    },
+    {
+      "include": "#directive-video"
+    },
+    {
+      "include": "#directive-pagelist"
+    },
+    {
+      "include": "#directive-p5"
+    },
+    {
+      "include": "#directive-webide"
+    },
+    {
+      "include": "#directive-pyide"
+    },
+    {
+      "include": "#directive-term"
+    },
+    {
+      "include": "#directive-typst"
+    },
+    {
+      "include": "#directive-unpack"
+    }
+  ],
+  "repository": {
+    "directive-multievent": {
+      "name": "meta.directive.multievent",
+      "begin": "(^|\\G)(:{3,})(multievent)\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "patterns": [
+        {
+          "name": "meta.multievent.nested",
+          "begin": "\\{([rRcCaBbAkKlLtTzSvwyYBWnXhHZ]{1}[0-9]*)\\{",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.multievent.nested.identifier"
+            }
+          },
+          "end": "\\}\\}",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.multievent.nested.end"
+            }
+          },
+          "patterns": [
+            {
+              "name": "string.unquoted.multievent.nested.content",
+              "match": "[^{}~\\n]+"
+            },
+            {
+              "name": "punctuation.definition.multievent.nested",
+              "match": "[{}|~]+"
+            }
+          ]
+        },
+        {
+          "include": "rrennAIbook"
+        }
+      ]
+    },
+    "directive-alert": {
+      "name": "meta.directive.alert.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(alert)(?:{(error|success|info|warn)})?\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.alert.rrennAIbook"
+        },
+        "4": {
+          "name": "keyword.directive.alert.severity.rrennAIbook"
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "rrennAIbook"
+        }
+      ]
+    },
+    "directive-archive": {
+      "name": "meta.directive.archive.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(archive)\\[(.+)\\]{(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.archive.rrennAIbook"
+        },
+        "4": {
+          "name": "string.unquoted"
+        },
+        "5": {
+          "patterns": [
+            {
+              "match": "(name)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.archive.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-bookmarks": {
+      "name": "entity.name.function.directive.bookmarks.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(bookmarks)"
+    },
+    "directive-collapsible": {
+      "name": "meta.directive.collapsible.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(collapsible)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.collapsible.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(title|id)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.archive.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "rrennAIbook"
+        }
+      ]
+    },
+    "directive-download": {
+      "name": "meta.directive.download.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(download)\\[(.+)\\]{(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.download.rrennAIbook"
+        },
+        "4": {
+          "name": "string.unquoted"
+        },
+        "5": {
+          "patterns": [
+            {
+              "match": "(src)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.download.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-h5p": {
+      "name": "meta.directive.h5p.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(h5p){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.h5p.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.h5p.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-emoji": {
+      "name": "meta.directive.emoji.rrennAIbook",
+      "match": "(:)([a-zA-z]+)(:)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "2": {
+          "name": "entity.name.function.directive.download.rrennAIbook"
+        },
+        "3": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      }
+    },
+    "directive-excalidraw": {
+      "name": "meta.directive.excalidraw.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(excalidraw){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.excalidraw.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src|aspectRatio|file)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.download.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(autoZoom|center|edit)=(?:(false)|(true))",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.download.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.language.boolean.false"
+                },
+                "3": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-glossary": {
+      "name": "meta.directive.glossary.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(t|term)\\[(.+)\\]{(#[0-9a-zA-z-]+)(\\.[0-9a-zA-z-]+)?}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.glossary.rrennAIbook"
+        },
+        "4": {
+          "name": "string.unquoted"
+        },
+        "5": {
+          "name": "string.unquoted"
+        },
+        "6": {
+          "name": "string.unquoted"
+        }
+      }
+    },
+    "directive-protect": {
+      "name": "meta.directive.protect.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(protect){(.*)}\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.protect.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(password|description)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.protect.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "rrennAIbook"
+        }
+      ]
+    },
+    "directive-qr": {
+      "name": "meta.directive.qr.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(qr){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.qr.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(value|size|label)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.qr.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-bitflow": {
+      "name": "meta.directive.bitflow.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(task|flow){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.bitflow.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.bitflow.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=\"([0-9]+)(px|%)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.bitflow.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-struktog": {
+      "name": "meta.directive.struktog.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(struktog){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.struktog.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(data)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.struktog.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-youtube": {
+      "name": "meta.directive.youtube.rrennAIbook",
+      "match": "(^|\\G)(::)(youtube)\\[(.+)\\]{(#[0-9a-zA-z-]+)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.youtube.rrennAIbook"
+        },
+        "4": {
+          "name": "string.unquoted"
+        },
+        "5": {
+          "name": "string.unquoted"
+        }
+      }
+    },
+    "directive-tabs": {
+      "name": "meta.directive.tabs.rrennAIbook",
+      "begin": "(^|\\G)(:{4,})(tabs)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.tabs.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(id)=\"([a-zA-z0-9-.]+)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.tabs.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#directive-tab"
+        }
+      ]
+    },
+    "directive-tab": {
+      "name": "meta.directive.tab.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(tab)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.tab.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(id|title)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.tab.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "rrennAIbook"
+        }
+      ]
+    },
+    "directive-scratchblock": {
+      "name": "meta.directive.scratchblock.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(scratchblock)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.scratchblock.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(language)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.scratchblock.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-onlineide": {
+      "name": "meta.directive.onlineide.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(onlineide)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.onlineide.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(url|id)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=\"([0-9]+)(px|%)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(fileList|console|pCode|errorList|bottomPanel)=(?:(false)|(true))",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.language.boolean.false"
+                },
+                "3": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-sqlide": {
+      "name": "meta.directive.sqlide.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(sqlide)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.sqlide.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(url|id|db)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=\"([0-9]+)(px|%)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.onlineide.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-embed": {
+      "name": "meta.directive.embed.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(embed){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.embed.rrennAIbook"
+        },
+        "4": {
+          "name": "string.unquoted"
+        },
+        "5": {
+          "patterns": [
+            {
+              "match": "(src|title|aspectRatio)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.embed.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height|width)=\"([0-9]+)(px|%)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.embed.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height|width)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.embed.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(allowFullscreen)=(?:(false)|(true))",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.embed.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.language.boolean.false"
+                },
+                "3": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-plantuml": {
+      "name": "meta.directive.plantuml.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(plantuml)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.plantuml.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(alt)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.plantuml.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(width)=\"([0-9]+)(px|%)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.plantuml.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.wsd"
+        }
+      ]
+    },
+    "directive-slideshow": {
+      "name": "meta.directive.slideshow.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(slideshow)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.slideshow.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.slideshow.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-audio": {
+      "name": "meta.directive.audio.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(audio){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.audio.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src|thumbnail|title|author)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.audio.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(position)=\"(left|right)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.audio.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-tiles": {
+      "name": "meta.directive.tiles.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(tiles)\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.tiles.rrennAIbook"
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#directive-tile"
+        }
+      ]
+    },
+    "directive-tile": {
+      "name": "meta.directive.tile.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(tile)({.*})?\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.tile.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(title|href|size|icon)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.tile.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-video": {
+      "name": "meta.directive.video.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(video){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.video.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src|poster|title|author)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.video.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-pagelist": {
+      "name": "meta.directive.pagelist.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(pagelist){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.pagelist.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(source|orderBy|format)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.pagelist.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-p5-inline": {
+      "name": "meta.directive.p5inline.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(p5){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.p5.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.p5.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.p5.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(editor)=(?:(false)|(true))",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.p5.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.language.boolean.false"
+                },
+                "3": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-p5": {
+      "name": "meta.directive.p5.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(p5)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.p5.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.p5.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.p5.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(editor)=(?:(false)|(true))",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.p5.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.language.boolean.false"
+                },
+                "3": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-abc-music": {
+      "name": "meta.directive.abc-music.rrennAIbook",
+      "match": "(^|\\G)```(abcjs)(\\s+editor)?\\s*$",
+      "captures": {
+        "2": {
+          "name": "entity.name.function.directive.abc-music.rrennAIbook"
+        },
+        "3": {
+          "name": "keyword.parameter.directive.abc-music.rrennAIbook"
+        }
+      }
+    },
+    "directive-geogebra": {
+      "name": "meta.directive.geogebra.rrennAIbook",
+      "begin": "(^|\\G)(:{2,})(geogebra)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{2,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.geogebra.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src|perspective|coordsystem|axislabels|xaxislabel|yaxislabel|zaxislabel|algebraInputPosition)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.geogebra.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height|width)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.geogebra.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(showToolBar|showAlgebraInput|enableUndoRedo|showMenuBar|enableFileFeatures|showZoomButtons|showFullscreenButton|showResetIcon|hidecursorwhendragging|repaintingactive|errordialogsactive)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.geogebra.rrennAIbook"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-jsxgraph": {
+      "name": "meta.directive.jsxgraph.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(jsxgraph)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.jsxgraph.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(id|boundingbox)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.jsxgraph.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height|width)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.jsxgraph.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            },
+            {
+              "match": "(axis|grid|showNavigation|zoom|pan|keyboard|keepaspetcratio)=(?:(false)|(true))",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.jsxgraph.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.language.boolean.false"
+                },
+                "3": {
+                  "name": "constant.language.boolean.true"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-learningmap": {
+      "name": "meta.directive.learningmap.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(learningmap){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.learningmap.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(src|id|height)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.learningmap.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-textinput": {
+      "name": "meta.directive.textinput.rrennAIbook",
+      "match": "(^|\\G)(:{2,})(textinput){(.*)}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.textinput.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(placeholder|id|height)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.textinput.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "directive-webide": {
+      "name": "meta.directive.webide.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(webide)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.webide.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(url|id)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.webide.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.webide.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-mermaid": {
+      "name": "meta.directive.mermaid.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(mermaid)\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.mermaid.rrennAIbook"
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-pyide": {
+      "name": "meta.directive.pyide.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(pyide)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2|:{3,})\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.pyide.rrennAIbook"
+        },
+        "4": {
+          "patterns": [
+            {
+              "match": "(url|id)=\"([^\"]*)\"",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.pyide.rrennAIbook"
+                },
+                "2": {
+                  "name": "string.quoted.double.untitled"
+                }
+              }
+            },
+            {
+              "match": "(height)=([0-9]+)",
+              "captures": {
+                "1": {
+                  "name": "keyword.parameter.directive.pyide.rrennAIbook"
+                },
+                "2": {
+                  "name": "constant.numeric"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-term": {
+      "name": "meta.directive.term.rrennAIbook",
+      "match": "(^|\\G)(:{1,})(t|term)\\[(.+)\\]{(#[0-9a-zA-z-]+)(\\.[0-9a-zA-z-]+)?}\\s*$",
+      "captures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.term.rrennAIbook"
+        },
+        "4": {
+          "name": "string.unquoted"
+        },
+        "5": {
+          "name": "string.unquoted"
+        },
+        "6": {
+          "name": "string.unquoted"
+        }
+      }
+    },
+    "directive-typst": {
+      "name": "meta.directive.typst.rrennAIbook",
+      "begin": "(^|\\G)(:{3,})(typst)\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.typst.rrennAIbook"
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    },
+    "directive-unpack": {
+      "name": "meta.directive.unpack.rrennAIbook",
+      "begin": "(^|\\G)(:{1,3})(\\w+)({.*})?\\s*$",
+      "end": "(^|\\G)(\\2)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        },
+        "3": {
+          "name": "entity.name.function.directive.unpack.rrennAIbook"
+        },
+        "4": {
+          "name": "meta.directive.unpack.attributes.rrennAIbook"
+        }
+      },
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.directive.level.rrennAIbook"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.markdown"
+        }
+      ]
+    }
+  }
+}

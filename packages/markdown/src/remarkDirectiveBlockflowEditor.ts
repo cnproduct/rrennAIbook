@@ -1,0 +1,156 @@
+/// <reference types="mdast-util-directive" />
+import { rrennAIbookContext } from "@rrennAIbook/types";
+import { Root } from "mdast";
+import { visit } from "unist-util-visit";
+import { VFile } from "vfile";
+import {
+  expectContainerDirective,
+  isDirective,
+  registerDirective,
+} from "./remarkHelper";
+import { toString } from "mdast-util-to-string";
+import { deflate } from "pako";
+
+interface BlockflowStep {
+  title?: string;
+  text?: string;
+  image?: string;
+  video?: string;
+}
+
+interface BlockflowConfig {
+  title?: string;
+  sb3?: string;
+  ui?: {
+    allowExtensions?: boolean;
+  };
+  toolbox?: {
+    categories?: string[];
+    blocks?: Record<string, string[]>;
+  };
+  steps?: BlockflowStep[];
+  costumes?: {
+    enabled?: boolean;
+  };
+  sounds?: {
+    enabled?: boolean;
+  };
+}
+
+export default (ctx: rrennAIbookContext) => () => {
+  const name = "blockflow-editor";
+  return (tree: Root, file: VFile) => {
+    visit(tree, function (node) {
+      if (isDirective(node)) {
+        if (node.name !== name) return;
+
+        const data = node.data || (node.data = {});
+
+        expectContainerDirective(node, file, name);
+        registerDirective(file, name, ["client.js"], ["style.css"], ["step"]);
+
+        const {
+          title,
+          src,
+          project,
+          width = "100%",
+          height = "700px",
+          aspectRatio,
+          allowExtensions,
+          showCostumesTab,
+          showSoundsTab,
+          categories,
+          ...rest
+        } = node.attributes || {};
+
+        let projectParam: string;
+
+        if (project) {
+          // Use the provided project JSON URL directly
+          const projectSrc = ctx.makeUrl(project, "public", ctx.navigation.current || undefined);
+          projectParam = encodeURIComponent(projectSrc);
+        } else {
+          const steps: BlockflowStep[] = [];
+
+          for (const child of (node as any).children || []) {
+            if (!isDirective(child) || child.name !== "step") continue;
+
+            const stepAttrs = child.attributes || {};
+            const text = toString(child).trim() || undefined;
+
+            steps.push({
+              title: stepAttrs.title || undefined,
+              text,
+              image: stepAttrs.image ? ctx.makeUrl(stepAttrs.image, "public", ctx.navigation.current || undefined) : undefined,
+              video: stepAttrs.video ? ctx.makeUrl(stepAttrs.video, "public", ctx.navigation.current || undefined) : undefined,
+            });
+          }
+
+          const config: BlockflowConfig = {};
+          if (title) config.title = title;
+          if (src) config.sb3 = ctx.makeUrl(src, "public", ctx.navigation.current || undefined);
+        
+          if (allowExtensions !== undefined) {
+            config.ui = { allowExtensions: allowExtensions !== "false" };
+          }
+
+          if (showCostumesTab !== undefined) {
+            config.costumes = { enabled: showCostumesTab !== "false" };
+          }
+          if (showSoundsTab !== undefined) {
+            config.sounds = { enabled: showSoundsTab !== "false" };
+          }
+
+          if (categories || Object.keys(rest).some((k) => k.startsWith("blocks-"))) {
+            config.toolbox = {};
+            if (categories) {
+              config.toolbox.categories = (categories as string)
+                .split(",")
+                .map((c) => c.trim());
+            }
+            const blocks: Record<string, string[]> = {};
+            for (const [key, value] of Object.entries(rest)) {
+              if (key.startsWith("blocks-") && value) {
+                const category = key.slice("blocks-".length);
+                blocks[category] = (value as string)
+                  .split(",")
+                  .map((b) => b.trim());
+              }
+            }
+            if (Object.keys(blocks).length > 0) {
+              config.toolbox.blocks = blocks;
+            }
+          }
+
+          if (steps.length > 0) config.steps = steps;
+
+          const configJson = JSON.stringify(config);
+          const compressed = deflate(configJson);
+          const encoded = "pako:" + Buffer.from(compressed).toString("base64");
+          projectParam = encodeURIComponent(encoded);
+        }
+
+        const iframeSrc = `https://blockflow.openpatch.org/editor?project=${projectParam}`;
+
+        data.hName = "div";
+        data.hProperties = {
+          class: "directive-blockflow-editor",
+          style: `aspect-ratio: ${aspectRatio}; height: ${height}; width: ${width}`,
+        };
+        data.hChildren = [
+          {
+            type: "element",
+            tagName: "iframe",
+            properties: {
+              src: iframeSrc,
+              allowfullscreen: true,
+            },
+            children: [],
+          },
+        ];
+
+        node.children = [];
+      }
+    });
+  };
+};

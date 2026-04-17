@@ -3,7 +3,7 @@ name: Deploy to Tencent Cloud
 on:
   push:
     branches:
-       - main # 
+      - main
 
 jobs:
   deploy:
@@ -12,13 +12,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Tencent Cloud CLI
-        uses: tencentcloud/tencentcloud-cli-action@v1
+      # 替换掉原来的 tencentcloud-cli-action，改用直接安装 CLI
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          secret_id: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
-          secret_key: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
-          region: ap-siliconvalley  
+          node-version: 18
+
+      - name: Install Tencent Cloud CLI
+        run: npm install -g tencentcloud-cli
+
+      - name: Configure Tencent Cloud CLI
+        run: |
+          tccli configure set secretId ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          tccli configure set secretKey ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+          tccli configure set region ap-siliconvalley
 
       - name: Deploy using TAT
         run: |
-          tccli tat InvokeCommand --InstanceIds '["lhins-rv24ophb"]' --CommandContent 'Write-Host \"自动部署脚本测试成功！\"'
+          tccli tat InvokeCommand --InstanceIds '["lhins-rv24ophb"]' --CommandContent 'Write-Host "自动部署脚本测试成功！"'

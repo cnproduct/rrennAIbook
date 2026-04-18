@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -12,70 +13,119 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 直接用 PowerShell 调用腾讯云 TAT API，无需安装任何 CLI
       - name: Invoke TAT Command via API
+        shell: pwsh
         env:
-          TENCENT_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          TENCENT_SECRET_ID:  ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
-          REGION: ap-siliconvalley
-          INSTANCE_ID: lhins-rv24ophb
-          COMMAND_CONTENT: "Write-Host '自动部署脚本测试成功！'"
+          REGION:             ap-siliconvalley
+          INSTANCE_ID:        lhins-rv24ophb
+          COMMAND_CONTENT:    "Write-Host '自动部署脚本测试成功!'"
+          COMMAND_TYPE:       POWERSHELL   # SHELL | POWERSHELL | BAT
         run: |
-          # 生成时间戳和签名
-          $timestamp = [int](Get-Date -UFormat %s)
-          $date = Get-Date -Format "yyyy-MM-dd"
-          $service = "tat"
-          $host = "tat.$($env:REGION).tencentcloudapi.com"
-          $endpoint = "https://$host"
-          $version = "2020-10-28"
-          $action = "InvokeCommand"
+          $ErrorActionPreference = "Stop"
 
-          # 构建请求参数
-          $payload = @{
-            InstanceIds    = @($env:INSTANCE_ID)
-            CommandContent = $env:COMMAND_CONTENT
-          } | ConvertTo-Json -Depth 10
-
-          # 生成签名
+          # ---------- 1. Basic parameters ----------
+          $secretId  = $env:TENCENT_SECRET_ID
+          $secretKey = $env:TENCENT_SECRET_KEY
+          $region    = $env:REGION
+          $service   = "tat"
+          $action    = "InvokeCommand"
+          $version   = "2020-10-28"
+          $apiHost   = "tat.$region.tencentcloudapi.com"
+          $endpoint  = "https://$apiHost"
           $algorithm = "TC3-HMAC-SHA256"
-          $canonicalUri = "/"
-          $canonicalQueryString = ""
-          $canonicalHeaders = "content-type:application/json; charset=utf-8`nhost:$host"
-          $signedHeaders = "content-type;host"
-          $hashedRequestPayload = [System.BitConverter]::ToString([System.Security.Cryptography.SHA256]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($payload))).Replace("-", "").ToLower()
-          $canonicalRequest = "POST`n$canonicalUri`n$canonicalQueryString`n$canonicalHeaders`n$signedHeaders`n$hashedRequestPayload"
-          $hashedCanonicalRequest = [System.BitConverter]::ToString([System.Security.Cryptography.SHA256]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($canonicalRequest))).Replace("-", "").ToLower()
-          $credentialScope = "$date/$service/tc3_request"
-          $stringToSign = "$algorithm`n$timestamp`n$credentialScope`n$hashedCanonicalRequest"
 
-          # 计算签名密钥
-          $secretDate = New-Object System.Security.Cryptography.HMACSHA256
-          $secretDate.Key = [System.Text.Encoding]::UTF8.GetBytes("TC3$($env:TENCENT_SECRET_KEY)")
-          $signatureDate = [System.BitConverter]::ToString($secretDate.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($date))).Replace("-", "").ToLower()
-          $secretService = New-Object System.Security.Cryptography.HMACSHA256
-          $secretService.Key = [System.Text.Encoding]::UTF8.GetBytes($signatureDate)
-          $signatureService = [System.BitConverter]::ToString($secretService.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($service))).Replace("-", "").ToLower()
-          $secretSigning = New-Object System.Security.Cryptography.HMACSHA256
-          $secretSigning.Key = [System.Text.Encoding]::UTF8.GetBytes($signatureService)
-          $signatureSigning = [System.BitConverter]::ToString($secretSigning.ComputeHash([System.Text.Encoding]::UTF8.GetBytes("tc3_request"))).Replace("-", "").ToLower()
+          # ---------- 2. Timestamp / date ----------
+          $timestamp = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
+          $date      = [DateTimeOffset]::FromUnixTimeSeconds($timestamp).ToString("yyyy-MM-dd")
 
-          # 计算最终签名
-          $hmac = New-Object System.Security.Cryptography.HMACSHA256
-          $hmac.Key = [System.Text.Encoding]::UTF8.GetBytes($signatureSigning)
-          $signature = [System.BitConverter]::ToString($hmac.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($stringToSign))).Replace("-", "").ToLower()
+          # ---------- 3. Base64-encode the command ----------
+          $contentBytes  = [System.Text.Encoding]::UTF8.GetBytes($env:COMMAND_CONTENT)
+          $contentBase64 = [Convert]::ToBase64String($contentBytes)
 
-          # 构建授权头
-          $authorization = "$algorithm Credential=$($env:TENCENT_SECRET_ID)/$credentialScope, SignedHeaders=$signedHeaders, Signature=$signature"
+          # ---------- 4. Request payload ----------
+          $payloadObj = [ordered]@{
+            Content     = $contentBase64
+            InstanceIds = @($env:INSTANCE_ID)
+            CommandType = $env:COMMAND_TYPE
+            Username    = "root"
+            WorkingDirectory = "/root"
+            Timeout     = 600
+          }
+          $payload = $payloadObj | ConvertTo-Json -Compress -Depth 5
 
-          # 发送请求
-          $headers = @{
-            "Authorization"   = $authorization
-            "Content-Type"    = "application/json; charset=utf-8"
-            "Host"            = $host
-            "X-TC-Action"     = $action
-            "X-TC-Version"    = $version
-            "X-TC-Timestamp"  = $timestamp
-            "X-TC-Region"     = $env:REGION
+          # ---------- 5. Canonical request ----------
+          $httpRequestMethod = "POST"
+          $canonicalUri      = "/"
+          $canonicalQuery    = ""
+          $contentType       = "application/json; charset=utf-8"
+          $canonicalHeaders  = "content-type:$contentType`nhost:$apiHost`nx-tc-action:$($action.ToLower())`n"
+          $signedHeaders     = "content-type;host;x-tc-action"
+
+          $sha256 = [System.Security.Cryptography.SHA256]::Create()
+          function Get-Sha256Hex([string]$text) {
+            $bytes = [System.Text.Encoding]::UTF8.GetBytes($text)
+            ($sha256.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join ""
           }
 
-          Invoke-RestMethod -Uri $endpoint -Method Post -Headers $headers -Body $payload
+          $hashedPayload = Get-Sha256Hex $payload
+          $canonicalRequest = "$httpRequestMethod`n$canonicalUri`n$canonicalQuery`n$canonicalHeaders`n$signedHeaders`n$hashedPayload"
+
+          # ---------- 6. String to sign ----------
+          $credentialScope  = "$date/$service/tc3_request"
+          $hashedCanonical  = Get-Sha256Hex $canonicalRequest
+          $stringToSign     = "$algorithm`n$timestamp`n$credentialScope`n$hashedCanonical"
+
+          # ---------- 7. Derive signing key ----------
+          function Get-HmacSha256Bytes([byte[]]$key, [string]$msg) {
+            $hmac = New-Object System.Security.Cryptography.HMACSHA256
+            $hmac.Key = $key
+            $hmac.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($msg))
+          }
+
+          $secretDateBytes    = Get-HmacSha256Bytes ([System.Text.Encoding]::UTF8.GetBytes("TC3$secretKey")) $date
+          $secretServiceBytes = Get-HmacSha256Bytes $secretDateBytes $service
+          $secretSigningBytes = Get-HmacSha256Bytes $secretServiceBytes "tc3_request"
+
+          $signatureBytes = Get-HmacSha256Bytes $secretSigningBytes $stringToSign
+          $signature      = ($signatureBytes | ForEach-Object { $_.ToString("x2") }) -join ""
+
+          # ---------- 8. Authorization header ----------
+          $authorization = "$algorithm Credential=$secretId/$credentialScope, SignedHeaders=$signedHeaders, Signature=$signature"
+
+          # ---------- 9. Send the request ----------
+          $headers = @{
+            "Authorization"  = $authorization
+            "Content-Type"   = $contentType
+            "Host"           = $apiHost
+            "X-TC-Action"    = $action
+            "X-TC-Timestamp" = "$timestamp"
+            "X-TC-Version"   = $version
+            "X-TC-Region"    = $region
+          }
+
+          Write-Host "==> POST $endpoint"
+          Write-Host "==> Action: $action"
+          Write-Host "==> Region: $region"
+          Write-Host "==> Instance: $($env:INSTANCE_ID)"
+
+          try {
+            $response = Invoke-RestMethod -Method Post -Uri $endpoint -Headers $headers -Body $payload -ContentType $contentType
+          } catch {
+            Write-Host "❌ Request failed:"
+            Write-Host $_.Exception.Message
+            if ($_.ErrorDetails) { Write-Host $_.ErrorDetails.Message }
+            exit 1
+          }
+
+          $response | ConvertTo-Json -Depth 10 | Write-Host
+
+          # ---------- 10. Check API response ----------
+          if ($response.Response.Error) {
+            Write-Host "❌ API returned error: $($response.Response.Error.Code) - $($response.Response.Error.Message)"
+            exit 1
+          }
+
+          $invocationId = $response.Response.InvocationId
+          Write-Host "✅ Command invoked successfully. InvocationId: $invocationId"

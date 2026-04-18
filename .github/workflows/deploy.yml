@@ -4,128 +4,29 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    # 改用 Ubuntu 环境，自带 curl 和 Docker，部署更稳定
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Invoke TAT Command via API
-        shell: pwsh
+      # 直接使用腾讯云官方 tccli Docker 镜像执行命令
+      - name: Run TAT command via official TCCLI image
         env:
-          TENCENT_SECRET_ID:  ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
-          REGION:             ap-siliconvalley
-          INSTANCE_ID:        lhins-rv24ophb
-          COMMAND_CONTENT:    "Write-Host '自动部署脚本测试成功!'"
-          COMMAND_TYPE:       POWERSHELL   # SHELL | POWERSHELL | BAT
+          REGION: ap-siliconvalley
+          INSTANCE_ID: lhins-rv24ophb
+          COMMAND_CONTENT: "Write-Host '自动部署脚本测试成功！'"
         run: |
-          $ErrorActionPreference = "Stop"
-
-          # ---------- 1. Basic parameters ----------
-          $secretId  = $env:TENCENT_SECRET_ID
-          $secretKey = $env:TENCENT_SECRET_KEY
-          $region    = $env:REGION
-          $service   = "tat"
-          $action    = "InvokeCommand"
-          $version   = "2020-10-28"
-          $apiHost   = "tat.$region.tencentcloudapi.com"
-          $endpoint  = "https://$apiHost"
-          $algorithm = "TC3-HMAC-SHA256"
-
-          # ---------- 2. Timestamp / date ----------
-          $timestamp = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
-          $date      = [DateTimeOffset]::FromUnixTimeSeconds($timestamp).ToString("yyyy-MM-dd")
-
-          # ---------- 3. Base64-encode the command ----------
-          $contentBytes  = [System.Text.Encoding]::UTF8.GetBytes($env:COMMAND_CONTENT)
-          $contentBase64 = [Convert]::ToBase64String($contentBytes)
-
-          # ---------- 4. Request payload ----------
-          $payloadObj = [ordered]@{
-            Content     = $contentBase64
-            InstanceIds = @($env:INSTANCE_ID)
-            CommandType = $env:COMMAND_TYPE
-            Username    = "root"
-            WorkingDirectory = "/root"
-            Timeout     = 600
-          }
-          $payload = $payloadObj | ConvertTo-Json -Compress -Depth 5
-
-          # ---------- 5. Canonical request ----------
-          $httpRequestMethod = "POST"
-          $canonicalUri      = "/"
-          $canonicalQuery    = ""
-          $contentType       = "application/json; charset=utf-8"
-          $canonicalHeaders  = "content-type:$contentType`nhost:$apiHost`nx-tc-action:$($action.ToLower())`n"
-          $signedHeaders     = "content-type;host;x-tc-action"
-
-          $sha256 = [System.Security.Cryptography.SHA256]::Create()
-          function Get-Sha256Hex([string]$text) {
-            $bytes = [System.Text.Encoding]::UTF8.GetBytes($text)
-            ($sha256.ComputeHash($bytes) | ForEach-Object { $_.ToString("x2") }) -join ""
-          }
-
-          $hashedPayload = Get-Sha256Hex $payload
-          $canonicalRequest = "$httpRequestMethod`n$canonicalUri`n$canonicalQuery`n$canonicalHeaders`n$signedHeaders`n$hashedPayload"
-
-          # ---------- 6. String to sign ----------
-          $credentialScope  = "$date/$service/tc3_request"
-          $hashedCanonical  = Get-Sha256Hex $canonicalRequest
-          $stringToSign     = "$algorithm`n$timestamp`n$credentialScope`n$hashedCanonical"
-
-          # ---------- 7. Derive signing key ----------
-          function Get-HmacSha256Bytes([byte[]]$key, [string]$msg) {
-            $hmac = New-Object System.Security.Cryptography.HMACSHA256
-            $hmac.Key = $key
-            $hmac.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($msg))
-          }
-
-          $secretDateBytes    = Get-HmacSha256Bytes ([System.Text.Encoding]::UTF8.GetBytes("TC3$secretKey")) $date
-          $secretServiceBytes = Get-HmacSha256Bytes $secretDateBytes $service
-          $secretSigningBytes = Get-HmacSha256Bytes $secretServiceBytes "tc3_request"
-
-          $signatureBytes = Get-HmacSha256Bytes $secretSigningBytes $stringToSign
-          $signature      = ($signatureBytes | ForEach-Object { $_.ToString("x2") }) -join ""
-
-          # ---------- 8. Authorization header ----------
-          $authorization = "$algorithm Credential=$secretId/$credentialScope, SignedHeaders=$signedHeaders, Signature=$signature"
-
-          # ---------- 9. Send the request ----------
-          $headers = @{
-            "Authorization"  = $authorization
-            "Content-Type"   = $contentType
-            "Host"           = $apiHost
-            "X-TC-Action"    = $action
-            "X-TC-Timestamp" = "$timestamp"
-            "X-TC-Version"   = $version
-            "X-TC-Region"    = $region
-          }
-
-          Write-Host "==> POST $endpoint"
-          Write-Host "==> Action: $action"
-          Write-Host "==> Region: $region"
-          Write-Host "==> Instance: $($env:INSTANCE_ID)"
-
-          try {
-            $response = Invoke-RestMethod -Method Post -Uri $endpoint -Headers $headers -Body $payload -ContentType $contentType
-          } catch {
-            Write-Host "❌ Request failed:"
-            Write-Host $_.Exception.Message
-            if ($_.ErrorDetails) { Write-Host $_.ErrorDetails.Message }
-            exit 1
-          }
-
-          $response | ConvertTo-Json -Depth 10 | Write-Host
-
-          # ---------- 10. Check API response ----------
-          if ($response.Response.Error) {
-            Write-Host "❌ API returned error: $($response.Response.Error.Code) - $($response.Response.Error.Message)"
-            exit 1
-          }
-
-          $invocationId = $response.Response.InvocationId
-          Write-Host "✅ Command invoked successfully. InvocationId: $invocationId"
+          docker run --rm \
+            -e TENCENTCLOUD_SECRET_ID=${{ secrets.TENCENT_CLOUD_SECRET_ID }} \
+            -e TENCENTCLOUD_SECRET_KEY=${{ secrets.TENCENT_CLOUD_SECRET_KEY }} \
+            tencentcloud/tccli:latest \
+            tccli tat InvokeCommand \
+              --InstanceIds '["$INSTANCE_ID"]' \
+              --CommandContent "$COMMAND_CONTENT" \
+              --Region $REGION

@@ -15,18 +15,23 @@ jobs:
       - name: Install tools
         run: |
           sudo apt update
-          sudo apt install -y openssh-client sshpass rsync
+          sudo apt install -y openssh-client sshpass
 
-      # 同步代码到 Windows 服务器（修复了主机密钥验证问题）
-      - name: Sync code
+      # 打包代码（排除不必要文件）
+      - name: Package code
+        run: |
+          tar -czf deploy.tar.gz --exclude=.git --exclude=.github --exclude=.gitignore .
+
+      # 用 scp 上传压缩包到服务器
+      - name: Upload code via scp
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
-          sshpass -p "$SERVER_PASSWORD" rsync -av --exclude=.git --exclude=.github -e 'ssh -o StrictHostKeyChecking=no' ./ $SERVER_USER@$SERVER_IP:/C/rrennAibook/
+          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.tar.gz $SERVER_USER@$SERVER_IP:/C/rrennAibook/
 
-      # 部署 + 启动项目
+      # 登录服务器，解压并部署
       - name: Deploy & Start Project
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
@@ -35,6 +40,8 @@ jobs:
         run: |
           sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
             cd C:\rrennAibook
+            tar -xzf deploy.tar.gz
+            del deploy.tar.gz
             npm install
             npm run build
             if (pm2 list | Select-String 'rrennAibook') { pm2 restart rrennAibook } else { pm2 start app.js --name rrennAibook }

@@ -17,16 +17,16 @@ jobs:
           sudo apt update
           sudo apt install -y openssh-client sshpass rsync
 
-      # 同步代码到 Windows 服务器
+      # 同步代码到 Windows 服务器（修复了主机密钥验证问题）
       - name: Sync code
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
-          sshpass -p "$SERVER_PASSWORD" rsync -av --exclude=.git --exclude=.github ./ $SERVER_USER@$SERVER_IP:/C/rrennAibook/
+          sshpass -p "$SERVER_PASSWORD" rsync -av --exclude=.git --exclude=.github -e 'ssh -o StrictHostKeyChecking=no' ./ $SERVER_USER@$SERVER_IP:/C/rrennAibook/
 
-      # 部署 + 启动项目（真正可用）
+      # 部署 + 启动项目
       - name: Deploy & Start Project
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}

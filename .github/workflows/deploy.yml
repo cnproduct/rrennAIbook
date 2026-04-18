@@ -12,23 +12,41 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 安装 Python 和腾讯云 CLI
-      - name: Install Tencent Cloud CLI
+      # 安装 scp 和 sshpass，用于上传代码到服务器
+      - name: Install deployment tools
         run: |
           sudo apt update
-          sudo apt install -y python3-pip
-          pip3 install tencentcloudcli
+          sudo apt install -y openssh-client sshpass
 
-      # 配置 CLI 并执行 TAT 命令
-      - name: Run TAT command
-        env:
-          TENCENT_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
-          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
-          REGION: ap-siliconvalley
-          INSTANCE_ID: lhins-rv24ophb
-          COMMAND_CONTENT: "Write-Host '自动部署脚本测试成功！'"
+      # 打包代码
+      - name: Package code
         run: |
-          tccli configure set secretId $TENCENT_SECRET_ID
-          tccli configure set secretKey $TENCENT_SECRET_KEY
-          tccli configure set region $REGION
-          tccli tat InvokeCommand --InstanceIds '["$INSTANCE_ID"]' --CommandContent "$COMMAND_CONTENT"
+          tar -czf deploy.tar.gz . --exclude=.git --exclude=.github
+
+      # 上传代码到腾讯云服务器
+      - name: Upload code to server
+        env:
+          SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
+          SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
+          SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
+          DEPLOY_PATH: "/root/rrennAibook"
+        run: |
+          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.tar.gz $SERVER_USER@$SERVER_IP:/tmp/
+
+      # 登录服务器，解压代码并执行部署脚本
+      - name: Deploy code on server
+        env:
+          SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
+          SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
+          SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
+          DEPLOY_PATH: "/root/rrennAibook"
+        run: |
+          sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
+            mkdir -p $DEPLOY_PATH
+            cd $DEPLOY_PATH
+            rm -rf *
+            tar -xzf /tmp/deploy.tar.gz -C $DEPLOY_PATH
+            rm -f /tmp/deploy.tar.gz
+            # 这里写你的部署命令，比如启动服务
+            Write-Host '代码已上传并部署成功！'
+          "

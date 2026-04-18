@@ -17,22 +17,21 @@ jobs:
           sudo apt update
           sudo apt install -y openssh-client sshpass zip
 
-      # 打包代码
+      # 打包代码（zip 格式，兼容 Windows）
       - name: Package code with zip
         run: |
           zip -r deploy.zip . -x '*.git*' -x '*.github*' -x '*.gitignore*'
 
-      # 先创建目标目录，然后上传 zip 文件
-      - name: Create directory & Upload via scp
+      # 上传 zip 文件到服务器（目标直接用 C:/，不指定子目录）
+      - name: Upload zip via scp
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
-          sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "mkdir -p C:/rrennAibook"
-          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.zip $SERVER_USER@$SERVER_IP:/C/rrennAibook/
+          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.zip $SERVER_USER@$SERVER_IP:/C/
 
-      # 登录服务器，解压并部署
+      # 登录服务器，创建目录、解压、部署（纯 PowerShell 命令）
       - name: Deploy & Start Project
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
@@ -40,11 +39,25 @@ jobs:
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
           sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
+            # 用 PowerShell 命令创建目录
+            New-Item -ItemType Directory -Path C:\rrennAibook -Force
+            # 移动 zip 文件到目标目录
+            Move-Item -Path C:\deploy.zip -Destination C:\rrennAibook\
+            # 进入目录
             cd C:\rrennAibook
-            Expand-Archive deploy.zip -DestinationPath .
-            del deploy.zip
+            # 解压 zip 文件
+            Expand-Archive -Path deploy.zip -DestinationPath .
+            # 删除 zip 文件
+            Remove-Item -Path deploy.zip
+            # 安装依赖
             npm install
+            # 构建项目
             npm run build
-            if (pm2 list | Select-String 'rrennAibook') { pm2 restart rrennAibook } else { pm2 start app.js --name rrennAibook }
+            # 启动/重启项目（pm2）
+            if (pm2 list | Select-String 'rrennAibook') {
+              pm2 restart rrennAibook
+            } else {
+              pm2 start app.js --name rrennAibook
+            }
             Write-Host '✅ 部署完成！项目已启动'
           "

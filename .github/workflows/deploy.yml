@@ -15,21 +15,21 @@ jobs:
       - name: Install tools
         run: |
           sudo apt update
-          sudo apt install -y openssh-client sshpass
+          sudo apt install -y openssh-client sshpass zip
 
-      # 打包代码（排除不必要文件）
-      - name: Package code
+      # 用 zip 打包（更稳定，不会出现文件被修改的错误）
+      - name: Package code with zip
         run: |
-          tar -czf deploy.tar.gz --exclude=.git --exclude=.github --exclude=.gitignore .
+          zip -r deploy.zip . -x '*.git*' -x '*.github*' -x '*.gitignore*'
 
-      # 用 scp 上传压缩包到服务器
-      - name: Upload code via scp
+      # 上传 zip 文件到服务器
+      - name: Upload zip via scp
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
-          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.tar.gz $SERVER_USER@$SERVER_IP:/C/rrennAibook/
+          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.zip $SERVER_USER@$SERVER_IP:/C/rrennAibook/
 
       # 登录服务器，解压并部署
       - name: Deploy & Start Project
@@ -40,8 +40,8 @@ jobs:
         run: |
           sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
             cd C:\rrennAibook
-            tar -xzf deploy.tar.gz
-            del deploy.tar.gz
+            tar -xf deploy.zip
+            del deploy.zip
             npm install
             npm run build
             if (pm2 list | Select-String 'rrennAibook') { pm2 restart rrennAibook } else { pm2 start app.js --name rrennAibook }

@@ -12,35 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 安装 rsync 和 sshpass
-      - name: Install deployment tools
-        run: |
-          sudo apt update
-          sudo apt install -y openssh-client sshpass rsync
+      - name: Install tools
+        run: sudo apt update && sudo apt install -y openssh-client sshpass
 
-      # 直接同步代码到服务器（跳过打包步骤）
-      - name: Sync code to server
+      # 测试服务器连接（先不做同步，先确认能不能连上）
+      - name: Test SSH connection
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
-          DEPLOY_PATH: "/root/rrennAibook"
         run: |
-          sshpass -p "$SERVER_PASSWORD" rsync -av --exclude=.git --exclude=.github \
-            ./ $SERVER_USER@$SERVER_IP:$DEPLOY_PATH
-
-      # 登录服务器执行部署命令
-      - name: Deploy on server
-        env:
-          SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
-          SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
-          SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
-          DEPLOY_PATH: "/root/rrennAibook"
-        run: |
-          sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
-            cd $DEPLOY_PATH
-            echo '代码已同步成功！'
-            # 这里写你的服务启动命令，比如：
-            # npm install
-            # pm2 restart app
-          "
+          sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "echo '连接成功！'"

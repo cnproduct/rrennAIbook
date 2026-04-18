@@ -12,16 +12,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 安装 scp 和 sshpass，用于上传代码到服务器
+      # 安装 scp 和 sshpass
       - name: Install deployment tools
         run: |
           sudo apt update
           sudo apt install -y openssh-client sshpass
 
-      # 打包代码
+      # 修复后的打包命令
       - name: Package code
         run: |
-          tar -czf deploy.tar.gz . --exclude=.git --exclude=.github
+          tar -czf deploy.tar.gz --exclude=.git --exclude=.github .
 
       # 上传代码到腾讯云服务器
       - name: Upload code to server
@@ -29,11 +29,10 @@ jobs:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
-          DEPLOY_PATH: "/root/rrennAibook"
         run: |
           sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.tar.gz $SERVER_USER@$SERVER_IP:/tmp/
 
-      # 登录服务器，解压代码并执行部署脚本
+      # 登录服务器，解压并部署
       - name: Deploy code on server
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
@@ -47,6 +46,6 @@ jobs:
             rm -rf *
             tar -xzf /tmp/deploy.tar.gz -C $DEPLOY_PATH
             rm -f /tmp/deploy.tar.gz
-            # 这里写你的部署命令，比如启动服务
-            Write-Host '代码已上传并部署成功！'
+            echo '代码已上传并部署成功！'
+            # 这里可以写你的服务启动命令，比如 npm install && npm start
           "

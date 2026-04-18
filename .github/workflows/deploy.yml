@@ -7,14 +7,20 @@ on:
 
 jobs:
   deploy:
-    # 改用 Ubuntu 环境，自带 curl 和 Docker，部署更稳定
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 直接使用腾讯云官方 tccli Docker 镜像执行命令
-      - name: Run TAT command via official TCCLI image
+      # 安装 Python 和腾讯云 CLI
+      - name: Install Tencent Cloud CLI
+        run: |
+          sudo apt update
+          sudo apt install -y python3-pip
+          pip3 install tencentcloudcli
+
+      # 配置 CLI 并执行 TAT 命令
+      - name: Run TAT command
         env:
           TENCENT_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
           TENCENT_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
@@ -22,11 +28,7 @@ jobs:
           INSTANCE_ID: lhins-rv24ophb
           COMMAND_CONTENT: "Write-Host '自动部署脚本测试成功！'"
         run: |
-          docker run --rm \
-            -e TENCENTCLOUD_SECRET_ID=${{ secrets.TENCENT_CLOUD_SECRET_ID }} \
-            -e TENCENTCLOUD_SECRET_KEY=${{ secrets.TENCENT_CLOUD_SECRET_KEY }} \
-            tencentcloud/tccli:latest \
-            tccli tat InvokeCommand \
-              --InstanceIds '["$INSTANCE_ID"]' \
-              --CommandContent "$COMMAND_CONTENT" \
-              --Region $REGION
+          tccli configure set secretId $TENCENT_SECRET_ID
+          tccli configure set secretKey $TENCENT_SECRET_KEY
+          tccli configure set region $REGION
+          tccli tat InvokeCommand --InstanceIds '["$INSTANCE_ID"]' --CommandContent "$COMMAND_CONTENT"

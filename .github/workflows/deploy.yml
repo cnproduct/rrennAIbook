@@ -1,4 +1,4 @@
-name: Deploy to Tencent Cloud
+name: Deploy to Windows Server
 
 on:
   push:
@@ -13,13 +13,30 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install tools
-        run: sudo apt update && sudo apt install -y openssh-client sshpass
+        run: |
+          sudo apt update
+          sudo apt install -y openssh-client sshpass rsync
 
-      # 测试服务器连接（先不做同步，先确认能不能连上）
-      - name: Test SSH connection
+      # 同步代码到 Windows 服务器
+      - name: Sync code
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
-          sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "echo '连接成功！'"
+          sshpass -p "$SERVER_PASSWORD" rsync -av --exclude=.git --exclude=.github ./ $SERVER_USER@$SERVER_IP:/C/rrennAibook/
+
+      # 部署 + 启动项目（真正可用）
+      - name: Deploy & Start Project
+        env:
+          SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
+          SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
+          SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
+        run: |
+          sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
+            cd C:\rrennAibook
+            npm install
+            npm run build
+            if (pm2 list | Select-String 'rrennAibook') { pm2 restart rrennAibook } else { pm2 start app.js --name rrennAibook }
+            echo '✅ 部署完成！项目已启动'
+          "

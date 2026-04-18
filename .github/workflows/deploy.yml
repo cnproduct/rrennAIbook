@@ -12,28 +12,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 安装 scp 和 sshpass
+      # 安装 rsync 和 sshpass
       - name: Install deployment tools
         run: |
           sudo apt update
-          sudo apt install -y openssh-client sshpass
+          sudo apt install -y openssh-client sshpass rsync
 
-      # 修复后的打包命令
-      - name: Package code
-        run: |
-          tar -czf deploy.tar.gz --exclude=.git --exclude=.github .
-
-      # 上传代码到腾讯云服务器
-      - name: Upload code to server
+      # 直接同步代码到服务器（跳过打包步骤）
+      - name: Sync code to server
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
+          DEPLOY_PATH: "/root/rrennAibook"
         run: |
-          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.tar.gz $SERVER_USER@$SERVER_IP:/tmp/
+          sshpass -p "$SERVER_PASSWORD" rsync -av --exclude=.git --exclude=.github \
+            ./ $SERVER_USER@$SERVER_IP:$DEPLOY_PATH
 
-      # 登录服务器，解压并部署
-      - name: Deploy code on server
+      # 登录服务器执行部署命令
+      - name: Deploy on server
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
@@ -41,11 +38,9 @@ jobs:
           DEPLOY_PATH: "/root/rrennAibook"
         run: |
           sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "
-            mkdir -p $DEPLOY_PATH
             cd $DEPLOY_PATH
-            rm -rf *
-            tar -xzf /tmp/deploy.tar.gz -C $DEPLOY_PATH
-            rm -f /tmp/deploy.tar.gz
-            echo '代码已上传并部署成功！'
-            # 这里可以写你的服务启动命令，比如 npm install && npm start
+            echo '代码已同步成功！'
+            # 这里写你的服务启动命令，比如：
+            # npm install
+            # pm2 restart app
           "

@@ -10,24 +10,23 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      # 安装腾讯云官方 SDK（替代不存在的 CLI 包）
-      - name: Install Tencent Cloud SDK
-        run: npm install -g tencentcloud-sdk-nodejs
-
-      - name: Configure Tencent Cloud TAT command
+      # 直接用 winget 安装官方 tccli，替代 npm 方式
+      - name: Install Tencent Cloud CLI via winget
         run: |
-          # 直接使用 TAT 命令，腾讯云 Windows 服务器默认已预装 tccli
+          winget install TencentCloud.TCCLI --silent
+          refreshenv
+          echo "C:\Program Files\Tencent Cloud\TCCLI" | Out-File -FilePath $env:GITHUB_PATH -Append
+
+      # 配置 CLI
+      - name: Configure Tencent Cloud CLI
+        run: |
           tccli configure set secretId ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
           tccli configure set secretKey ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
-          tccli configure set region ap-guangzhou # 改成你实际的地域，比如 ap-siliconvalley
+          tccli configure set region ap-siliconvalley
 
+      # 执行 TAT 部署命令
       - name: Deploy using TAT
         run: |
           tccli tat InvokeCommand --InstanceIds '["lhins-rv24ophb"]' --CommandContent 'Write-Host "自动部署脚本测试成功！"'

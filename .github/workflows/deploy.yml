@@ -12,21 +12,70 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 直接用 winget 安装官方 tccli，替代 npm 方式
-      - name: Install Tencent Cloud CLI via winget
+      # 直接用 PowerShell 调用腾讯云 TAT API，无需安装任何 CLI
+      - name: Invoke TAT Command via API
+        env:
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+          REGION: ap-siliconvalley
+          INSTANCE_ID: lhins-rv24ophb
+          COMMAND_CONTENT: "Write-Host '自动部署脚本测试成功！'"
         run: |
-          winget install TencentCloud.TCCLI --silent
-          refreshenv
-          echo "C:\Program Files\Tencent Cloud\TCCLI" | Out-File -FilePath $env:GITHUB_PATH -Append
+          # 生成时间戳和签名
+          $timestamp = [int](Get-Date -UFormat %s)
+          $date = Get-Date -Format "yyyy-MM-dd"
+          $service = "tat"
+          $host = "tat.$($env:REGION).tencentcloudapi.com"
+          $endpoint = "https://$host"
+          $version = "2020-10-28"
+          $action = "InvokeCommand"
 
-      # 配置 CLI
-      - name: Configure Tencent Cloud CLI
-        run: |
-          tccli configure set secretId ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
-          tccli configure set secretKey ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
-          tccli configure set region ap-siliconvalley
+          # 构建请求参数
+          $payload = @{
+            InstanceIds    = @($env:INSTANCE_ID)
+            CommandContent = $env:COMMAND_CONTENT
+          } | ConvertTo-Json -Depth 10
 
-      # 执行 TAT 部署命令
-      - name: Deploy using TAT
-        run: |
-          tccli tat InvokeCommand --InstanceIds '["lhins-rv24ophb"]' --CommandContent 'Write-Host "自动部署脚本测试成功！"'
+          # 生成签名
+          $algorithm = "TC3-HMAC-SHA256"
+          $canonicalUri = "/"
+          $canonicalQueryString = ""
+          $canonicalHeaders = "content-type:application/json; charset=utf-8`nhost:$host"
+          $signedHeaders = "content-type;host"
+          $hashedRequestPayload = [System.BitConverter]::ToString([System.Security.Cryptography.SHA256]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($payload))).Replace("-", "").ToLower()
+          $canonicalRequest = "POST`n$canonicalUri`n$canonicalQueryString`n$canonicalHeaders`n$signedHeaders`n$hashedRequestPayload"
+          $hashedCanonicalRequest = [System.BitConverter]::ToString([System.Security.Cryptography.SHA256]::Create().ComputeHash([System.Text.Encoding]::UTF8.GetBytes($canonicalRequest))).Replace("-", "").ToLower()
+          $credentialScope = "$date/$service/tc3_request"
+          $stringToSign = "$algorithm`n$timestamp`n$credentialScope`n$hashedCanonicalRequest"
+
+          # 计算签名密钥
+          $secretDate = New-Object System.Security.Cryptography.HMACSHA256
+          $secretDate.Key = [System.Text.Encoding]::UTF8.GetBytes("TC3$($env:TENCENT_SECRET_KEY)")
+          $signatureDate = [System.BitConverter]::ToString($secretDate.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($date))).Replace("-", "").ToLower()
+          $secretService = New-Object System.Security.Cryptography.HMACSHA256
+          $secretService.Key = [System.Text.Encoding]::UTF8.GetBytes($signatureDate)
+          $signatureService = [System.BitConverter]::ToString($secretService.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($service))).Replace("-", "").ToLower()
+          $secretSigning = New-Object System.Security.Cryptography.HMACSHA256
+          $secretSigning.Key = [System.Text.Encoding]::UTF8.GetBytes($signatureService)
+          $signatureSigning = [System.BitConverter]::ToString($secretSigning.ComputeHash([System.Text.Encoding]::UTF8.GetBytes("tc3_request"))).Replace("-", "").ToLower()
+
+          # 计算最终签名
+          $hmac = New-Object System.Security.Cryptography.HMACSHA256
+          $hmac.Key = [System.Text.Encoding]::UTF8.GetBytes($signatureSigning)
+          $signature = [System.BitConverter]::ToString($hmac.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($stringToSign))).Replace("-", "").ToLower()
+
+          # 构建授权头
+          $authorization = "$algorithm Credential=$($env:TENCENT_SECRET_ID)/$credentialScope, SignedHeaders=$signedHeaders, Signature=$signature"
+
+          # 发送请求
+          $headers = @{
+            "Authorization"   = $authorization
+            "Content-Type"    = "application/json; charset=utf-8"
+            "Host"            = $host
+            "X-TC-Action"     = $action
+            "X-TC-Version"    = $version
+            "X-TC-Timestamp"  = $timestamp
+            "X-TC-Region"     = $env:REGION
+          }
+
+          Invoke-RestMethod -Uri $endpoint -Method Post -Headers $headers -Body $payload

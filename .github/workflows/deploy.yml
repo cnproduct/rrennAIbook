@@ -22,14 +22,14 @@ jobs:
         run: |
           zip -r deploy.zip . -x '*.git*' -x '*.github*' -x '*.gitignore*'
 
-      # 上传 zip 文件到服务器（目标直接用 C:/，不指定子目录）
+      # 上传 zip 文件到服务器的用户根目录（最稳妥的方式）
       - name: Upload zip via scp
         env:
           SERVER_IP: ${{ secrets.TENCENT_SERVER_IP }}
           SERVER_USER: ${{ secrets.TENCENT_SERVER_USER }}
           SERVER_PASSWORD: ${{ secrets.TENCENT_SERVER_PASSWORD }}
         run: |
-          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.zip $SERVER_USER@$SERVER_IP:/C/
+          sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no deploy.zip $SERVER_USER@$SERVER_IP:
 
       # 登录服务器，创建目录、解压、部署（纯 PowerShell 命令）
       - name: Deploy & Start Project
@@ -42,7 +42,7 @@ jobs:
             # 用 PowerShell 命令创建目录
             New-Item -ItemType Directory -Path C:\rrennAibook -Force
             # 移动 zip 文件到目标目录
-            Move-Item -Path C:\deploy.zip -Destination C:\rrennAibook\
+            Move-Item -Path C:\Users\$env:USERNAME\deploy.zip -Destination C:\rrennAibook\
             # 进入目录
             cd C:\rrennAibook
             # 解压 zip 文件
